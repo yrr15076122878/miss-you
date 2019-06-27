@@ -1,0 +1,176 @@
+		<script>
+				/*  这部分是提交时的校验，需放到具体使用的页面js中  */
+			// event.preventDefault();
+			//提交校验
+			checkForm(formname);
+
+			var flag = $(""+formname+" input,.showMsg").hasClass("errorInp");
+
+			if(!flag) {
+				//校验通过
+
+				return true;
+
+			} else {
+				//校验没通过
+				layer.alert("请检查表单红色信息！<br/> <span style='color:red;'>*</span> 标注的为必填项。", {
+					icon: 2,
+					title: '错误提示'
+				});
+				return false;
+			}
+
+
+		/*  这部分可以做成公共的  */
+		//input 输入时
+		$(""+formname+"input,.require-text").on("input blur", function() {
+			valide(this);
+		});
+		//提示信息
+		var index = "";
+		$(""+formname+"input,.showMsg").on("mouseover", function() {
+			var errorMsg = $(this).attr("Msg");
+			if(errorMsg) {
+				index = layer.tips(errorMsg, this, {
+					tips: [1, '#0f74cc']
+				});
+			}
+		});
+		$(""+formname+"input,.showMsg").on("mouseout", function() {
+			if(index) {
+				layer.close(index);
+				index = "";
+			}
+		});
+
+
+	/**
+	 * reg ：正则
+	 * nTitle ：输入框名称
+	 * errorMsg ：输入错误是的提示
+	 * data-bind ：ele|bele //密码框需要
+	 *
+	 * 示例：
+	 * 普通输入框 <input type="text" name="UserName" id="UserName" class="width" required reg="/^[a-zA-Z0-9_-]{6,12}$/" nTitle="用户名" errorMsg="为 6 到 12 位（字母，数字，下划线，减号）">
+	 * 密码框：<input type="password" name="password" id="password" class="width" required reg="/^[\w\W]{4,}$/" nTitle="密码" errorMsg="有误" data-bind="this|#confPass">
+	 * 确认密码框：<input type="password" name="confPass" id="confPass" class="width" required errorMsg="两次密码输入不一致" data-bind="#password|this">
+	 *
+	 *
+	 * 其他：
+	 * 显示层添加 class : showMsg
+	 * 值控制元素添加（暂时为input）  class="require-text" errorMsg="错误提示信息"
+	 */
+	function checkForm() {
+		$(""+formname+"input,.require-text").each(function(index, $this) {
+			valide(this);
+		});
+	}
+
+	function valide($this) {
+		var _this = $($this);
+		if(_this.hasClass("require-text")) {
+			valideOther($this);
+		} else {
+			var type = _this[0]["type"]; // 输入框类型
+			var nTitle = _this.attr("nTitle") || ""; //输入框标题
+			var errorMsg = _this.attr("errorMsg") || ""; //报错提示
+			var databind = _this.attr("data-bind") || "";
+			if(type === "password" && databind) {
+				var bindArr = databind.split("|");
+				var b = bindArr[0];
+				var b2 = bindArr[1];
+				var flag = false;
+				if(b === "this") {
+					b = $this;
+				}
+				if(b2 === "this") {
+					b2 = $this;
+					flag = true;
+				}
+				var _pass0 = $(b);
+				var _pass1 = $(b2);
+				var _passV0 = $.trim(_pass0.val());
+				var _passV1 = $.trim(_pass1.val());
+				if(flag) {
+					if(_passV0 !== _passV1) {
+						var msg = nTitle + errorMsg;
+						addRemoveError(_pass1, "add", msg);
+					} else {
+						addRemoveError(_pass1, "remove");
+					}
+				} else {
+					valideInput(b);
+				}
+			} else {
+				valideInput($this);
+			}
+		}
+
+	}
+
+	function valideInput($this) {
+
+		var _this = $($this);
+		var required = _this.prop("required"); //必填
+		var type = _this[0]["type"]; // 输入框类型
+
+		var reg = _this.attr("reg"); //正则
+		var nTitle = _this.attr("nTitle") || ""; //输入框标题
+		var errorMsg = _this.attr("errorMsg") || ""; //报错提示
+		var val = $.trim(_this.val()); //值
+		var e;
+		if(reg) {
+			e = eval(reg);
+		}
+		if(required) {
+			if(val) {
+				if(e && !e.test(val)) { //校验没通过
+					var msg = nTitle + errorMsg;
+					addRemoveError(_this, "add", msg);
+				} else {
+					addRemoveError(_this, "remove");
+				}
+			} else {
+
+				var msg = nTitle + "为必填项";
+				addRemoveError(_this, "add", msg);
+
+			}
+		} else {
+
+			if(val && e && !e.test(val)) { //校验没通过
+				var msg = nTitle + errorMsg;
+				addRemoveError(_this, "add", msg);
+			} else {
+				addRemoveError(_this, "remove");
+			}
+		}
+	}
+
+	function valideOther($this) {
+		var _this = $($this);
+		var msg = _this.attr("errorMsg");
+		var pEle = _this.parents(".showMsg");
+		var val = _this.val();
+		if(!val) {
+			addRemoveError(pEle, "add", msg);
+		} else {
+			addRemoveError(pEle, "remove");
+		}
+
+	}
+
+	function addRemoveError(_this, ar, text) {
+		if(ar === "add") {
+			_this.attr("Msg", text).addClass("errorInp");
+		} else if(ar === "remove") {
+			_this.removeAttr("Msg").removeClass("errorInp");
+		}
+	}
+})
+		</script>
+		<!--<script type="text/javascript">
+				function fun1(){
+					alert()
+				}
+		</script>-->

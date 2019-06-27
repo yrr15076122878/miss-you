@@ -1,0 +1,4 @@
+{
+    "frist":"[{icon:'icon-yundun','text':'报馆首页','url':'./nOffHome.html'},{icon:'icon-yundun','text':'设备列表','url':'./DeviceList.html'},{icon:'icon-yundun','text':'展台管理','url':'./eStandMg.html'},{'icon':'icon-yundun','text':'付款','url':'./payment.html'},{'icon':'icon-yundun','text':'用户（有次级菜单）','url':'aliyunUI/iframe4.html','sub':'true','Their':'Their--这是用户'},{'icon':'icon-yundun','text':'用户2（有次级菜单）','url':'aliyunUI/iframe4.html','sub':'true','Their':'Their--这是用户'}]",
+    "two":"[{'text':'展台设计-我的名字比较的长，很长，相当长。。。。。。。。','url':'./boothDesign.html'},{'text':'报馆首页','url':'./nOffHome.html'},{'text':'用户','url':'./payment.html'},{'text':'设备列表','url':'./DeviceList.html'}]"
+}

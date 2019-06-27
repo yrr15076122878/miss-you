@@ -1,0 +1,163 @@
+/*确认支付按钮*/
+
+* {
+	font-family: simhei;
+}
+
+.cop-inned>h2>a {
+	display: block;
+	margin: auto;
+	text-align: center;
+	width: 166px;
+	height: 44px;
+	background: #f8b551;
+	line-height: 44px;
+	color: #FFFFFF;
+	border-radius: 8px;
+	margin-top: 0px;
+}
+
+.cop-inned {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	clear: both;
+	overflow: hidden;
+}
+
+.cop-inned>span:nth-child(1) {
+	font-size: 24px;
+	color: #666666;
+}
+
+.cop-inned>p:nth-child(2) {
+	margin-left: 50px;
+	font-size: 24px;
+	color: #666666;
+	margin-right: 30px;
+	margin-top: 3rem;
+}
+
+.cop-inned>p:nth-child(3) {
+	display: inline-block;
+	margin-left: 50px;
+	font-size: 24px;
+	color: #666666;
+	margin-top: 3rem;
+}
+
+
+/*支付金额*/
+
+.cop-over {
+	text-align: center;
+}
+
+.cop-over>h2>span {
+	color: #f8b551;
+}
+
+.cop-inned {
+	clear: both;
+	overflow: hidden;
+}
+
+.cop-inned>span {
+	float: left;
+}
+
+.cop-inned {
+	overflow: hidden;
+	clear: both;
+}
+
+.cop-inned>p {
+	float: left;
+}
+
+.cop-inned>p>input {
+	margin-right: 10px;
+}
+
+.layui-table {
+	width: 80% !important;
+	background-color: #fff;
+	color: #666;
+	margin: auto;
+	height: 157px !important;
+}
+
+
+/*底部确认按钮*/
+
+.footer>h3 {
+	text-align: center;
+	font-weight: normal;
+	margin-top: 3rem;
+	color: #666666;
+	font-size: 14px;
+}
+
+.footer>h3>span {
+	font-weight: 700;
+}
+
+.footer-in>h2>a {
+	display: block;
+	margin: auto;
+	text-align: center;
+	width: 166px;
+	height: 44px;
+	background: #f8b551;
+	line-height: 44px;
+	color: #FFFFFF;
+	border-radius: 8px;
+	margin-top: 3rem;
+}
+
+.footer-pay>h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.footer-pay>h2>span {
+	color: #f8b551;
+}
+
+.zhifubao {
+	display: inline-block;
+	background: url(../layui/images/zhifubao.png)no-repeat;
+	background-size: 30px;
+	padding-left: 38px;
+	font-size: 24px;
+}
+
+.weixin {
+	display: inline-block;
+	background: url(../layui/images/weixin.png)no-repeat;
+	background-size: 30px;
+	padding-left: 38px;
+	font-size: 24px;
+}
+
+@media (max-width:768px) {
+	.layui-input-block {
+		margin-left: 0px;
+	}
+	.cop-inned {
+		width: 100% !important;
+	}
+	.cop-inned>p {
+		float: none;
+		padding: 20px 0px;
+	}
+	.cop-inned>span {
+		float: none;
+	}
+	.cop-over {
+		margin: 0px;
+		padding: 0px;
+	}
+	.cop-inned>p:nth-child(3) {
+		margin-top: 0px;
+	}
+}

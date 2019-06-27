@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传</title>
+    <link rel="stylesheet" href="plugin/webuploader-0.1.5/css/webuploader.css">
+    <script src="Public/Js/jquery-1.9.1.min.js"></script>
+    <script src="plugin/webuploader-0.1.5/js/webuploader.min.js"></script>
+    <!--<link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">-->
+    <script>
+        window.onload = function () {
+            var $list = $('#fileList'),
+                $btn = $('#startUpload'),
+                state = 'pending',
+                size=110 * 1024;//上传图片的大小 （1M = 1*1024*1024）
+
+            // 初始化Web Uploader
+            var uploader = WebUploader.create({
+                auto: false, // 选完文件后，是否自动上传。
+                swf: './plugin/webuploader-0.1.5/js/Uploader.swf',// swf文件路径
+                server: 'http://webuploader.duapp.com/server/fileupload.php',// 文件接收服务端。
+                //选择文件的按钮。可选。 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#filePicker',
+                // 只允许选择图片文件。
+                accept: {
+                    title: 'Images',
+                    extensions: 'gif,jpg,jpeg,bmp,png',
+                    mimeTypes: 'image/*'
+                },
+                method:"post",
+                fileNumLimit:1,
+                threads:1,//上传并发数。允许同时最大上传进程数。
+                /*fileSizeLimit:500,*/
+                fileSingleSizeLimit:size,
+                compress:false,
+                thumb:{
+                    width: 110,
+                    height: 110,
+                    // 图片质量，只有type为`image/jpeg`的时候才有效。
+                    quality: 100,
+                    // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
+                    allowMagnify: true,
+                    // 是否允许裁剪。
+                    crop: false,
+                    // 为空的话则保留原有图片格式。
+                    // 否则强制转换成指定的类型。
+                    type: 'image/*'
+                }
+            });
+
+            /*上传过程中触发，携带上传进度
+             文件上传过程中创建进度条实时显示。
+             file {File}File对象
+             percentage {Number}上传进度
+             */
+            uploader.on( 'uploadProgress', function( file, percentage ) {
+                var $li = $( '#'+file.id ),
+                    $percent = $li.find('.progress .progress-bar');
+                // 避免重复创建
+                if ( !$percent.length ) {
+                    $percent = $('<div class="progress progress-striped active">' +
+                        '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+                        '</div>' +
+                        '</div>').appendTo( $li ).find('.progress-bar');
+                }
+                $li.find('p.state').text('上传中');
+                $percent.css( 'width', percentage * 100 + '%' );
+            });
+
+            // 当有文件添加进来的时候
+            uploader.on( 'fileQueued', function( file ) {
+                var $li = $(
+                        '<div id="' + file.id + '" class="file-item thumbnail">' +
+                        '<img>' +
+                        '<div class="info">' + file.name + '</div>' +
+                        '</div>'
+                    ),
+                    $img = $li.find('img');
+
+                // $list为容器jQuery实例
+                $list.append( $li );
+
+                // 创建缩略图
+                // 如果为非图片文件，可以不用调用此方法。
+                // thumbnailWidth x thumbnailHeight 为 100 x 100
+                uploader.makeThumb( file, function( error, src ) {
+                    if ( error ) {
+                        $img.replaceWith('<span>不能预览</span>');
+                        return;
+                    }
+
+                    $img.attr( 'src', src );
+                });
+            });
+
+            uploader.on('beforeFileQueued', function (file) {
+                if(size < file.size){
+                    console.log("文件过大");
+                }
+                uploader.removeFile(file, true );
+
+            });
+
+            //文件上传成功
+            uploader.on( 'uploadSuccess', function( file ) {
+                $( '#'+file.id ).find('p.state').text('已上传');
+
+            });
+            //文件上传失败
+            uploader.on( 'uploadError', function( file ) {
+                console.log("上传出错！");
+                $( '#'+file.id ).find('p.state').text('上传出错');
+            });
+
+            //不管成功或者失败，在文件上传完后都会触发
+            uploader.on( 'uploadComplete', function( file ) {
+                //删除进度条
+                $('#' + file.id).find('.progress').remove();
+            });
+
+
+            uploader.on( 'all', function( type ) {
+                if ( type === 'startUpload' ) {
+                    state = 'uploading';
+                } else if ( type === 'stopUpload' ) {
+                    state = 'paused';
+                } else if ( type === 'uploadFinished' ) {
+                    state = 'done';
+                }
+
+                if ( state === 'uploading' ) {
+                    $btn.text('暂停上传');
+                } else {
+                    $btn.text('开始上传');
+                }
+            });
+
+            // 开始上传
+            $btn.on( 'click', function() {
+                if ( state === 'uploading' ) {
+                    uploader.stop();
+                } else {
+                    uploader.upload();
+                }
+            });
+
+
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <div id="uploader-demo">
+        <!--用来存放item-->
+        <div id="fileList" class="uploader-list"></div>
+        <div id="filePicker" style="float:left;">选择图片</div>
+        <div style="float:left;margin-left: 20px;">
+            <button id="startUpload" class="btn btn-default">开始上传</button>
+        </div>
+        <div style="float:left;margin-left: 20px;">
+            <button id="stopUpload" class="btn btn-default">暂停上传</button>
+        </div>
+    </div>
+    <img id="demoImg" src="" alt="">
+</body>
+</html>

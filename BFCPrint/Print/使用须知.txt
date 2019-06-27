@@ -1,0 +1,7 @@
+1.每个文件夹中都有对应的js和css配置文件，可调整胸卡的图片，胸卡大小，文字位置和粗细，文件名称：configItem.js 和 configCss.css
+2.批量打印胸卡css样式配置与其他的不可使用同一套。
+3.js/configFontSize.js 控制全局的胸卡最小文字 （如：20px 大小的文字）
+4.css/fontFamily.css  控制全局的胸卡文字类型（如：宋体，黑体）
+5.configCssAll.css
+
+

@@ -1,0 +1,9 @@
+/* 控制全局最小字体  */
+
+var fontSize = {
+	nameMinFontSize:24,       //姓名最小字体大小，单位：像素（px）
+    companyMinFontSize:15,    //公司和职位最小字体大小，单位：像素（px）
+    CPMinFontSize:18,         //国家省份最小字体大小，单位：像素（px）
+    boothNumMinFontSize:14,   //展位号最小字体大小，单位：像素（px）
+	categoryMinFontSize:26    //种类最小字体大小，单位：像素 （px）
+}

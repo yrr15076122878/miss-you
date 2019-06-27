@@ -1,0 +1,9 @@
+<div class="group" id="new" style="margin-bottom: 22px;">
+
+.news{
+					margin-bottom: 22px !important;
+				}
+$("#new").addClass("news")
+
+
+$("#new").removeClass("news") 

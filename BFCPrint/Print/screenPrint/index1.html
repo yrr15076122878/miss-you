@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>Self Help Print</title>
+    <!--getinfo.ashx-->
+    <!--Bootstrap plugins-->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+    <!--SweetAlert2 plugins-->
+    <link rel="stylesheet" href="../plugins/sweetAlertT/dist/sweetalert2.min.css">
+    <!--Plugins Progress bar-->
+    <link rel="stylesheet" href="../css/modernizr.css">
+    <link rel="stylesheet" href="../css/fontFamily.css">
+    <!--Base-->
+ <link rel="stylesheet" href="css/base.css">
+ <link rel="stylesheet" href="../css/configCssAll.css">
+    <!--<link rel="shortcut icon" href="media/images/favicon.ico">-->
+</head>
+<body>
+    <!--整体布局-->
+    <div class="layout_box">
+
+        <div class="lyt_header">
+            <div class="banner_box clearfix">
+                <img src="./images/banner.jpg" class="img-rounded center-block col-md-12" alt="banner">
+            </div>
+        </div>
+
+        <div class="search_box col-sm-12" style="height: 160px;margin-top: 15px;">
+            <input id="searchIpt" readonly="readonly" class="search-control col-md-offset-1 col-sm-8" type="text" placeholder="请输入注册号"/>
+            <!--<input id="searchCode" readonly="readonly" class="search-control-cent col-sm-4" type="text" placeholder="请输入手机后4位"/>-->
+            <button class=" btn-search col-sm-2" aria-hidden="true" id="btnSearch">搜索</button>
+        </div>
+        <div class="lyt_body" style="display: none;">
+            <div class="container lyt_div">
+                 <!-- IE 插件 插入打印控件  -->
+                <object class="no-print" ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="../jatoolsPrinter/jatoolsPrinter.cab#version=8,6,0,0"></object>
+                <!-- 胸卡隐藏域 -->
+                <div class="card_hiden"></div>
+                <!-- 条码暂存区域 -->
+                <div id="jQBarcode"></div>
+            </div>
+        </div>
+
+        <div class="lyt_footer col-sm-12">
+            <div id="inputContent">
+                <table id="calculatorTable" border="0" cellspacing="0" cellpadding="0">
+                    <tr><td stn="1">1</td><td stn="2">2</td><td stn="3">3</td></tr>
+                    <tr><td stn="4">4</td><td stn="5">5</td><td stn="6">6</td></tr>
+                    <tr><td stn="7">7</td><td stn="8">8</td><td stn="9">9</td></tr>
+                    <tr>
+                        <td stn="delete" style="background-color:#c9302c;color:#fff;font-size:6.5em;">删除</td>
+                        <td stn="0">0</td>
+                        <td stn="empty" style="background-color:#f0ad4e;color:#fff;font-size:6.5em;">清空</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--Ie全屏需要设置html宽度为100%-->
+        <div class="full_screen" id="fullScreenP">
+            <span class="glyphicon glyphicon-fullscreen"></span>
+        </div>
+
+        <div class="lyt_foot_banner" style="">
+            <h2>知名厂商推荐</h2>
+            <div class="clearfix"></div>
+                <div id="COperative" class="scroll-img">
+                    <ul style="padding-top:30px;">
+                        <li><a href="#"><img src="images/1.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/2.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/3.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/4.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/5.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/6.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/7.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/8.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/9.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/10.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/11.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/12.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/13.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/14.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/15.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/16.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/17.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/18.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/19.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/20.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/21.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/22.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/23.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/24.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/25.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/26.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/27.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/28.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/29.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/30.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/31.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/32.jpg" alt="" style="height:100px"></a></li>
+                        <!--<li><a href="#"><img src="images/33.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/34.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/35.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/36.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/37.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/38.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/39.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/40.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/41.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/42.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/43.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/44.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/45.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/46.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/47.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/48.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/49.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/50.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/51.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/52.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/53.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/54.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/55.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/56.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/57.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/58.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/59.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/60.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/61.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/62.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/63.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/64.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/65.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/66.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/67.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/68.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/69.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/70.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/71.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/72.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/73.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/74.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/75.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/76.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/77.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/78.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/79.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/80.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/81.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/82.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/83.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/84.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/85.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/86.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/87.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/88.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/89.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/90.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/91.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/92.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/93.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/94.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/95.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/96.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/97.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/98.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/99.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/100.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/101.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/102.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/103.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/104.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/105.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/106.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/107.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/108.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/109.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/110.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/111.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/112.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/113.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/114.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/115.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/116.jpg" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/117.png" alt="" style="height:100px"></a></li>
+                        <li><a href="#"><img src="images/118.jpg" alt="" style="height:100px"></a></li>-->
+                    </ul>
+
+
+
+
+                </div>
+        </div>
+
+
+    </div>
+
+    <!--整体布局结束-->
+
+    <!--<div class="container"></div>-->
+
+    <!--引入Js-->
+    <!--jQuery Plugins-->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/jquery-barcode.js"></script>
+    <script src="../js/jquery.jqprint-0.3.js"></script>
+    <!--<script src="media/js/JsBarcode.code128.min.js"></script>-->
+    <!--FullScreen-->
+    <script src="../js/screenfull.js"></script>
+    <!--SweetAlert2 plugins-->
+    <script src="../plugins/sweetAlertT/libs/core.js"></script>
+    <script src="../plugins/sweetAlertT/dist/sweetalert2.min.js"></script>
+    <!--keyboard plugins-->
+    <!--<script src="media/js/keyboard.js"></script>-->
+    <!--Auto play banner Plugins-->
+    <script src="../js/jquery.scrollbox.js"></script>
+    <script src="../js/configFontSize.js"></script>
+    <!--<script src="../js/PublicMethod.js"></script>-->
+    <!--Script-->
+    <script src="js/script.js"></script>
+    <!--引入Js结束-->
+    <script>
+        $(function () {
+			/* 知名厂商 */
+            $('#COperative').scrollbox({
+                direction: 'h',
+                switchItems: 1,
+                distance: 150
+            });
+        });
+    </script>
+</body>
+</html>

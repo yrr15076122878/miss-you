@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>2019中国铸造展览会 | CHINA CAST 2019</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/jquery-accordion-menu.css" rel="stylesheet" />
+		<link href="css/font-awesome.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-accordion-menu.js"></script>
+		<script src="js/javascript.js"></script>
+		<!--[if lt IE 9]>
+       <script src="js/html5shiv.min.js"></script>
+       <script src="js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default hidden-md hidden-lg">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="#">导航栏</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li num="1">
+							<a href="/BasicInfo/Index"><i class="fa fa-glass"></i>基本信息</a>
+						</li>
+						<li num="2">
+							<a href="/QuestionSurveyGZ/Index"><i class="fa fa-list-alt"></i>问卷调查</a>
+						</li>
+						<li num="3">
+							<a href="/BasicInfo/Confirmation"><i class="fa fa-home"></i>确认函</a>
+						</li>
+						<li num="4">
+							<a href="/BasicInfo/RegisterIndex"><i class="fa fa-home"></i>帮同事注册</a>
+						</li>
+						<li num="5">
+							<a href="/BasicInfo/InvitePeers"><i class="fa fa-home"></i>邀请同行</a>
+						</li>
+
+						<li>
+							<a href="#" onclick="openwindow('http://www.chinacastexpo.com/product/product_search')"><i class="fa fa-home"></i>展商/展品预览</a>
+						</li>
+						<li num="7">
+							<a href="/BasicInfo/Contact"><i class="fa fa-home"></i>联系我们</a>
+						</li>
+						<li>
+							<a href="/UserAuth/Logout"><i class="fa fa-home"></i>账号退出</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--BannerImage-->
+		<div class="banner-images container" style="padding:0 0">
+			<img src="Images/regbanner.jpg" alt="..." class="img-responsive center-block" style="border: 1px solid #ccc;" />
+		</div>
+		<!--Main-->
+		<div class="container" style="border: 1px solid #ccc;">
+			<!--PC Menu-->
+			<div id="jquery-accordion-menu" class="jquery-accordion-menu red col-md-3 hidden-xs hidden-sm" style="margin-top:15px;">
+				<div class="jquery-accordion-menu-header" id="form">
+					<h3>导航栏</h3>
+				</div>
+				<ul id="demo-list">
+					<li num="1">
+						<a href="/BasicInfo/Index"><i class="fa fa-glass"></i>基本信息</a>
+					</li>
+					<li num="2">
+						<a href="/QuestionSurveyGZ/Index"><i class="fa fa-list-alt"></i>问卷调查</a>
+					</li>
+					<li num="3">
+						<a href="/BasicInfo/Confirmation"><i class="fa fa-home"></i>确认函</a>
+					</li>
+					<li num="4">
+						<a href="/BasicInfo/RegisterIndex"><i class="fa fa-home"></i>帮同事注册</a>
+					</li>
+					<li num="5">
+						<a href="/BasicInfo/InvitePeers"><i class="fa fa-home"></i>邀请同行</a>
+					</li>
+
+					<li>
+						<a href="#" onclick="openwindow('http://www.chinacastexpo.com/product/product_search')"><i class="fa fa-home"></i>展商/展品预览</a>
+					</li>
+					<li num="7">
+						<a href="/BasicInfo/Contact"><i class="fa fa-home"></i>联系我们</a>
+					</li>
+					<li>
+						<a href="/UserAuth/Logout"><i class="fa fa-home"></i>账号退出</a>
+					</li>
+				</ul>
+				<div class="jquery-accordion-menu-footer">&nbsp;</div>
+			</div>
+			<div class="container col-md-9 body_t" style="border-left: 1px solid #ccc; margin-top: 17px;">
+
+				<html>
+
+				<body>
+					<input type="hidden" value="2" id="menunum" />
+					<h3 class="auto-centerh3"><strong>问卷调查</strong></h3>
+
+					<input type="hidden" id="hd_id" value="9" />
+					<form id="questionform" method="post">
+						<label>1.贵公司的性质（可多选）</label>
+						<input type="hidden" id="idList_0" value="5ad62a7d-17e8-4886-8e77-fb31d8755261" /><input type="hidden" id="IsRequired_0" value="yes" /><input type="hidden" id="Alert_0" value="请选择贵公司的性质" /><input type="hidden" id="QuestionType_0" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check0_0" checked="checked" class="idList_0" name="duo_0" value="P62">制造与加工</label></div>
+						<div class="checkbox"><label onclick="showValue('duo',0,0)">　<input type="checkbox" class="redios"　onChange="showValue('duo',0,0)" id="check0_0" name="duo_0"    value="P57">生产商（铸造设备或周边）</label></div>
+						<div class="checkbox"><label onclick="showValue('duo',0,0)">　<input type="checkbox" class="redios"　onChange="showValue('duo',0,0)" id="check0_0" name="duo_0"    value="P86">铸件生产商</label></div>
+						<div class="checkbox"><label onclick="showValue('duo',0,0)">　<input type="checkbox" class="redios"　onChange="showValue('duo',0,0)" id="check0_0" name="duo_0"    value="P39">采购商</label></div>
+						<div class="checkbox"><label onclick="showValue('duo',0,0)">　<input type="checkbox"  group="qt"  class="redios" id="check0_0_3" name="duo_0"    value="P70">其它<input type="text" name="P70" id="Content0_0_3"  onChange="showSonValue('duo',0,0,3)" placeholder="请注明"></label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check0_1"    class="idList_0" name="duo_0" value="P26">代理与分销</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check0_2"    class="idList_0" name="duo_0" value="P35">进出口商</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check0_3"    class="idList_0" name="duo_0" value="P14">研究机构/大学</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check0_4"    class="idList_0" name="duo_0" value="P80">行业协会</label></div>
+						<div class="checkbox"><label><input type="checkbox"   group="qt" id="check0_5"  class="idList_0" name="duo_0" value="P29">其它<input type="text" name="P29" id="Content0_5"  onChange="showValue('duo',0,5)" placeholder="请注明"></label></div> <label>2.贵公司雇员人数（单选）</label>
+						<input type="hidden" id="idList_1" value="b9233afc-b6e8-4150-b5cc-297a5b329460" /><input type="hidden" id="IsRequired_1" value="yes" /><input type="hidden" id="Alert_1" value="请选择贵公司雇员人数" /><input type="hidden" id="QuestionType_1" value="dan">
+						<div class="radio"><label><input type="radio" class="redios" id="check1_0" name="dan_1"  value="P9">50人以内</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check1_1" checked="checked" name="dan_1" value="P99">50-200人</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check1_2" name="dan_1"  value="P30">200人以上</label></div> <label>3.您的工作性质（单选）</label>
+						<input type="hidden" id="idList_2" value="80959436-69f0-46aa-9328-0e3e17d1e4c4" /><input type="hidden" id="IsRequired_2" value="yes" /><input type="hidden" id="Alert_2" value="请填写您的工作性质" /><input type="hidden" id="QuestionType_2" value="dan">
+						<div class="radio"><label><input type="radio" class="redios" id="check2_0" name="dan_2"  value="P13">行政管理</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check2_1" name="dan_2"  value="P71">采购</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check2_2" name="dan_2"  value="P12">生产/制造</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check2_3" name="dan_2"  value="P90">技术/研发工程师</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check2_4" checked="checked" name="dan_2" value="P32">市场</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check2_5" name="dan_2"  value="P7">销售</label></div>
+						<div class="radio"><label><input type="radio" class="redios"   group="qt"  id="check2_6" name="dan_2" value="P89">其它<input type="text" name="P89" id="Content2_6"  onChange="showValue('dan',2,6)" placeholder="请注明"></label></div> <label>4.您的岗位职责（单选）</label>
+						<input type="hidden" id="idList_3" value="5a2ef61f-7b6c-44d0-864d-e3351cbba09a" /><input type="hidden" id="IsRequired_3" value="yes" /><input type="hidden" id="Alert_3" value="请填写您的岗位职责" /><input type="hidden" id="QuestionType_3" value="dan">
+						<div class="radio"><label><input type="radio" class="redios" id="check3_0" name="dan_3"  value="P23">企业主/董事</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check3_1" checked="checked" name="dan_3" value="P46">高管</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check3_2" name="dan_3"  value="P36">中层管理</label></div>
+						<div class="radio"><label><input type="radio" class="redios" id="check3_3" name="dan_3"  value="P2">职员</label></div> <label>5.您感兴趣的产品（可多选）</label>
+						<input type="hidden" id="idList_4" value="1d2a3a49-cd41-41d2-b062-5e5cf47362a2" /><input type="hidden" id="IsRequired_4" value="yes" /><input type="hidden" id="Alert_4" value="请填写您感兴趣的产品" /><input type="hidden" id="QuestionType_4" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check4_0" checked="checked" class="idList_4" name="duo_4" value="P56">铸造及其自动化相关设备</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_1"    class="idList_4" name="duo_4" value="P60">铸造材料</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_2"    class="idList_4" name="duo_4" value="P74">铸造模具</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_3" checked="checked" class="idList_4" name="duo_4" value="P96">铸造辅助材料</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_4"    class="idList_4" name="duo_4" value="P27">铸件质量检测设备</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_5"    class="idList_4" name="duo_4" value="P8">计算机辅助软件</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_6"    class="idList_4" name="duo_4" value="P61">铸件后处理设备</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_7"    class="idList_4" name="duo_4" value="P84">铸件清整设备及工具</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_8"    class="idList_4" name="duo_4" value="P91">清洁生产及废物处理</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_9"    class="idList_4" name="duo_4" value="P82">安全操作与环境</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check4_10"    class="idList_4" name="duo_4" value="P73">金属铸造件</label></div>
+						<div class="checkbox"><label><input type="checkbox"   group="qt" id="check4_11"  class="idList_4" name="duo_4" value="P40">其它与铸造相关<input type="text" name="P40" id="Content4_11"  onChange="showValue('duo',4,11)" placeholder="请注明"></label></div> <label>6.贵公司属于哪个领域（可多选）</label>
+						<input type="hidden" id="idList_5" value="b48801df-84c3-4598-ad0a-3fa4c2306a87" /><input type="hidden" id="IsRequired_5" value="yes" /><input type="hidden" id="Alert_5" value="请填写贵公司属于哪个领域" /><input type="hidden" id="QuestionType_5" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check5_0"    class="idList_5" name="duo_5" value="P49">汽车</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_1"    class="idList_5" name="duo_5" value="P55">机床</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_2"    class="idList_5" name="duo_5" value="P11">航空航天</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_3"    class="idList_5" name="duo_5" value="P72">核电</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_4"    class="idList_5" name="duo_5" value="P64">轨道交通</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_5"    class="idList_5" name="duo_5" value="P78">海洋工程</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_6"    class="idList_5" name="duo_5" value="P93">石化</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check5_7"    class="idList_5" name="duo_5" value="P85"> 船舶</label></div>
+						<div class="checkbox"><label><input type="checkbox"  group="qt"  checked="checked" id="check5_8"  class="idList_5" name="duo_5" value="P88">其它<input type="text" name="P88" id="Content5_8" value="自动化设备"  onChange="showValue('duo',5,8)" placeholder="请注明"></label></div> <label>7.您参观本次展会的目的（可多选）</label>
+						<input type="hidden" id="idList_6" value="41af2c28-fa37-4294-a0c1-a4ed2dd50f51" /><input type="hidden" id="IsRequired_6" value="yes" /><input type="hidden" id="Alert_6" value="请填写您参观本次展会的目的" /><input type="hidden" id="QuestionType_6" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check6_0"    class="idList_6" name="duo_6" value="P15">设备、产品采购</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check6_1"    class="idList_6" name="duo_6" value="P59">寻找产品商/ 合伙人</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check6_2" checked="checked" class="idList_6" name="duo_6" value="P47">搜集市场/ 产品资料</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check6_3"    class="idList_6" name="duo_6" value="P68">与供应商见面</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check6_4"    class="idList_6" name="duo_6" value="P34">市场调研</label></div>
+						<div class="checkbox"><label><input type="checkbox"   group="qt" id="check6_5"  class="idList_6" name="duo_6" value="P42">其它<input type="text" name="P42" id="Content6_5"  onChange="showValue('duo',6,5)" placeholder="请注明"></label></div> <label>8.您通过什么途径知道这个展览会（可多选）</label>
+						<input type="hidden" id="idList_7" value="c1268bc8-98c4-45c9-b31f-6c32f8517d7e" /><input type="hidden" id="IsRequired_7" value="yes" /><input type="hidden" id="Alert_7" value="请填写您通过什么途径知道这个展览会" /><input type="hidden" id="QuestionType_7" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check7_0"    class="idList_7" name="duo_7" value="P3">直邮信件/邀请函</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check7_1"    class="idList_7" name="duo_7" value="P63">互联网</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check7_2" checked="checked" class="idList_7" name="duo_7" value="P69">展商邀请</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check7_3"    class="idList_7" name="duo_7" value="P1">朋友，同事推荐</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check7_4"    class="idList_7" name="duo_7" value="P58">专业媒体广告</label></div>
+						<div class="checkbox"><label><input type="checkbox"   group="qt" id="check7_5"  class="idList_7" name="duo_7" value="P43">其它<input type="text" name="P43" id="Content7_5"  onChange="showValue('duo',7,5)" placeholder="请注明"></label></div> <label>9.我有兴趣参与以下展会同期活动</label>
+						<input type="hidden" id="idList_8" value="b0ef4046-fb9a-4680-bcbe-9add39f153dd" /><input type="hidden" id="IsRequired_8" value="yes" /><input type="hidden" id="Alert_8" value="请填写“我有兴趣参与以下展会同期活动”" /><input type="hidden" id="QuestionType_8" value="duo">
+						<div class="checkbox"><label><input type="checkbox" id="check8_0"    class="idList_8" name="duo_8" value="P18">采购洽谈会</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check8_1" checked="checked" class="idList_8" name="duo_8" value="P95">中国铸造科技成果交易洽谈会</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check8_2" checked="checked" class="idList_8" name="duo_8" value="P92">铸造创新产品发布会</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check8_3"    class="idList_8" name="duo_8" value="P24">铸造技术专家门诊</label></div>
+						<div class="checkbox"><label><input type="checkbox" id="check8_4"    class="idList_8" name="duo_8" value="P6">铸造企业管理讲堂</label></div>
+					</form>
+					<div class="group">
+						<button type="button" onclick="commit()" class="btn btn-info col-sm-12 col-xs-12" style="background:#ce2508;border:#ce2508;">提交</button>
+					</div>
+
+				</body>
+
+				</html>
+				<script type="text/javascript">
+					function showValue(obj, i, j) {
+						//$("#check" + i + "_" + j + "").attr("checked", "checked");
+						var ss = document.getElementById("check" + i + "_" + j + "");
+						ss.checked = true;
+						ss.setAttribute("onclick", "return  false;");
+
+					}
+
+					function showSonValue(obj, i, j, g) {
+						var ss = document.getElementById("check" + i + "_" + j + "");
+						ss.checked = true;
+						var gg = document.getElementById("check" + i + "_" + j + "_" + g + "");
+						gg.checked = true;
+						//$("#check" + i + "_" + j + "_"+g+"").attr("checked","checked");
+					}
+
+					function commit() {
+						var flag = true;
+						if($("#check0_0[class='idList_0']").is(':checked')) {
+							if($("[value='P57']").is(':checked')) {
+								flag = false;
+							}
+							if($("[value='P86']").is(':checked')) {
+								flag = false;
+							}
+							if($("[value='P39']").is(':checked')) {
+								flag = false;
+							}
+							if($("[value='P70']").is(':checked')) {
+								flag = false;
+							}
+							if($("[value='P62']").is(':checked')) {
+								flag = true;
+							}
+						} else {
+							flag = false;
+						}
+						if(flag) {
+							alert("请填写制造与加工的下级!");
+							return;
+						}
+
+						var qtlist = $("[group='qt']");
+						for(var i = 0; i < qtlist.length; i++) {
+							if(qtlist[i].checked) {
+								var tsid = qtlist[i].id.substring(5);
+								var test = $("#Content" + tsid).val();
+								if(test == "") {
+									alert("请填写其它!");
+									$("#Content" + tsid).focus();
+									return;
+								} else {
+									continue;
+								}
+							} else {
+								continue;
+							}
+						}
+						var array = [];
+						var num = $("#hd_id").val();
+						for(var i = 0; i < num; i++) {
+							var isRequired = $("#IsRequired_" + i).val();
+							var questionType = $("#QuestionType_" + i).val();
+							var alertmessage = $("#Alert_" + i).val();
+							var info = $("#idList_" + i).val();
+							var _info = $(".idList_" + i);
+							if(isRequired == "yes") {
+								if(questionType == "dan") {
+									if($("input[name=dan_" + i + "]").is(':checked') == false) {
+										alert(alertmessage);
+										return;
+									}
+								} else if(questionType == "duo") {
+									if($("input[name=duo_" + i + "]").is(':checked') == false) {
+										alert(alertmessage);
+										return;
+									}
+								}
+							} else {	
+								if(questionType == "dan") {
+									if($("input[name=dan_" + i + "]").is(':checked') == false) {
+										break;
+									}
+								} else if(questionType == "duo") {
+									if($("input[name=duo_" + i + "]").is(':checked') == false) {
+										break;
+									}
+								}
+							}
+							var jsonObj = "[";
+							$(_info).each(function(j) {
+								if(this.type == "checkbox") {
+									if(this.checked == true) {
+										jsonObj += "{\"QuestionInfoId\":\"" + info + "\",\"QuestionResultId\":\"" + this.value + "\",\"Result\":\"" + $("#Title_" + i + "_" + j).val() + "\",\"QuestionType\":\"" + $("#QuestionType_" + i).val() + "\"},";
+									}
+								} else if(this.type == "radio") {
+									if(this.checked == true) {
+										jsonObj += "{\"QuestionInfoId\":\"" + info + "\",\"QuestionResultId\":\"" + this.value + "\",\"Result\":\"" + $("#Title_" + i + "_" + j).val() + "\",\"QuestionType\":\"" + $("#QuestionType_" + i).val() + "\"}";
+									}
+								}
+								if(questionType == "duoxuan" && j == _info.length - 1) {
+									jsonObj = jsonObj.substr(0, jsonObj.length - 1);
+								}
+							});
+							if(_info.length == 0) {
+								if($("#txtName_" + i).val() != "") {
+									jsonObj += "{\"QuestionInfoId\":\"" + info + "\",\"Result\":\"" + $("#txtName_" + i).val() + "\",\"QuestionType\":\"" + $("#QuestionType_" + i).val() + "\"}";
+								}
+							}
+							jsonObj += "]";
+							array.push(jsonObj);
+						}
+						$.ajax({
+							type: "post",
+							traditional: true,
+							url: "/QuestionSurveyGZ/SaveResult",
+							data: $("#questionform").serialize(),
+							success: function(data) {
+								if(data == "1") {
+									location.href = "/BasicInfo/Confirmation";
+								} else if(data == "2") {
+									alert("提交失败，请联系管理员！");
+								} else {
+									location.href = "/BasicInfo/Confirmation";
+								}
+							}
+						});
+					}
+				</script>
+
+			</div>
+		</div>
+
+		<script src="js/required.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+
+			});
+
+			$(function() {
+				//顶部导航切换
+				//$("#demo-list li").click(function () {
+				//    $("#demo-list li.active").removeClass("active")
+				//    $(this).addClass("active");
+				//})
+				var num = $("#menunum").val();
+				$("#demo-list li[num='" + num + "']").addClass("active");
+			})
+
+			function openwindow(obj) {
+				window.open(obj);
+			}
+		</script>
+		<br /><br /><br />
+	</body>
+
+</html>

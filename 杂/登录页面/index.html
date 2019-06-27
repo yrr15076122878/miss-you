@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>2019世界新能源汽车大会（2019 WNEVC）</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/base-login.css" rel="stylesheet" />
+		<link href="css/animate.css" rel="stylesheet" />
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--[if lt IE 9]>
+       <script src="js/html5shiv.min.js"></script>
+       <script src="js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div>
+
+			<style>
+				@media (max-width:768px) {
+					.asd {
+						padding-left: 20px;
+					}
+					.login_in {
+						height: 100%;
+						background-color: #fff;
+						margin-top: 0px;
+						margin-bottom: 30px;
+						box-shadow: 0px 1px 2px #1b1a1a;
+					}
+					.table {
+						font-size: 13px;
+					}
+					.pz {
+						padding-left: 0px !important;
+					}
+				}
+				
+				html,
+				body {
+					font-family: Arial, 微软雅黑 !important;
+				}
+			</style>
+
+			<div class="global">
+				<div id="lbt" class="paddingZero container right-main clearfix" style="padding: 0 0;">
+
+					<img src="Images/banner-s2.gif" alt="Logo" class="img-responsive center-block" />
+				</div>
+				<div class="col-md-12 animated fadeInUp clearfix">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 clearfix" style="">
+						<div class="col-md-12" style="">
+
+							<div class="col-md-offset-1 clearfix" style="max-width: 1200px; margin: 0 auto;">
+								<h2 style="text-align: center; color: #00ABC5; margin-bottom: -15px;">会议登录</h2>
+								<div class="col-md-6 col-sm-12 col-sm-offset-3 col-xs-offset-0 loginBox">
+									<div class="col-xs-12 col-md-10 col-md-offset-1 login_in" style="">
+										<div class="col-xs-7 col-md-7 checked_in" style="text-align: right; padding: 20px 15px 20px 20px; border-right: 0;">登录</div>
+										<div class="col-xs-5 col-md-5 checked_in" style="border-left: 0; text-align: right; padding: 0;">
+											<div class="col-xs-8 col-xs-offset-2 col-md-11 col-md-offset-1" style="margin-top: 20px;">
+												<a href="/UserAuth/EmailLoginRegisterEn?Sales=">
+													<img src="Images/uk.png" title="点击切换英文版">
+												</a>
+											</div>
+										</div>
+
+										<div class="login-form col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+											<form action="/UserAuth/EmailLoginRegister" method="post">
+												<div class="sign-in-htm col-xs-12">
+													<div class="group">
+														<label for="UserMob" class="label">邮箱</label>
+														<input id="sales" name="sales" type="hidden" value="" />
+														<input class="input" id="Email" name="Email" placeholder="info@email.com" type="text" value="1406341775@qq.com" />
+														<input type="button" id="btnGetYxYzm" class="getcodeEm" value="重置密码">
+													</div>
+													<div class="group">
+														<label for="UserPass" class="label">密码</label>
+														<input class="input-validation-error input" id="Password" name="Password" placeholder="请输入密码" type="text" value="1" />
+														<span class="field-validation-error" data-valmsg-for="Password" data-valmsg-replace="true">密码错误！</span>
+													</div>
+													<div class="">
+
+														<div class="col-xs-6 col-md-6" style="padding: 0 5px;">
+															<a href="/UserAuth/RegisterIndex" class="button group_sub col-xs-12 col-md-12" style="padding-top: 15px; margin-top: 20px; text-align: center; color: #fff; padding-bottom: 15px; text-decoration: blink;">会议注册</a>
+														</div>
+														<div class="col-xs-6 col-md-6" style="padding: 0 5px;">
+															<input type="submit" class="button group_sub col-xs-12 col-md-12" style="padding-top: 15px; margin-top: 20px; padding-bottom: 15px;" value="登  录">
+														</div>
+														<br />
+														<br />
+														<br />
+														<div class="clearfix loginFooter">
+															<div class="loginFooteRright">
+																<a href="/UserAuth/Home">返回首页</a>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="bVersions">
+								请使用：IE10+，谷歌（Chrome），火狐（Firefox）等浏览器
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="container-in" style="width: 1000px;margin: auto;">
+				<form action="" method="post">
+					<input type="" value="" placeholder="11a" style="border: 1px solid black;" />
+					<input type="submit" value="submit" />
+				</form>
+			</div>
+			<script>
+				$('#CusForm').bootstrapValidator({
+					fields: {
+						//验证手机
+						'customer.mobile': { //input中的name 值
+							validators: {
+								regexp: {
+									regexp: /^1\d{10}$/,
+									message: '请输入正确的11位手机号'
+								}
+
+							}
+						},
+						//验证座机
+						'customer.phone': {
+							validators: {
+								regexp: {
+									regexp: /^$|(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/,
+									message: '请输入正确座机电话'
+								}
+
+							}
+						},
+						//验证邮箱
+						'customer.email': {
+							validators: {
+								regexp: {
+									regexp: /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+									message: '请输入正确的邮箱地址'
+								}
+
+							}
+						},
+
+					}
+				});
+			</script>
+			<style>
+				.addcolor {
+					background: #00ABC5;
+					color: rgb(255, 255, 255);
+				}
+			</style>
+			<script src="/Scripts/EmailCheck.js"></script>
+
+			<script>
+				var regmob = /^1[3456789]\d{9}$/; //验证手机
+				$(function() {
+					$('body').bind('touchstart', function(e) {
+						startX = e.originalEvent.changedTouches[0].pageX,
+							startY = e.originalEvent.changedTouches[0].pageY;
+					});
+					$('body').bind('touchmove', function(e) {
+						//获取滑动屏幕时的X,Y
+						endX = e.originalEvent.changedTouches[0].pageX,
+							endY = e.originalEvent.changedTouches[0].pageY;
+						//获取滑动距离
+						distanceX = endX - startX;
+						distanceY = endY - startY;
+						//判断滑动方向
+						if(Math.abs(distanceX) > Math.abs(distanceY) && distanceX > 0) {
+							e.preventDefault();
+							e.stopPropagation();
+
+						} else if(Math.abs(distanceX) > Math.abs(distanceY) && distanceX < 0) {
+							e.preventDefault();
+							e.stopPropagation();
+
+						} else if(Math.abs(distanceX) < Math.abs(distanceY) && distanceY < 0) {
+							console.log('往上滑动');
+						} else if(Math.abs(distanceX) < Math.abs(distanceY) && distanceY > 0) {
+							console.log('往下滑动');
+						} else {
+							e.preventDefault();
+							e.stopPropagation();
+						}
+
+					});
+					$("#Phone").bind("input", function() {
+						if(regmob.test($("#Phone").val())) {
+							$("#btnGetSjYzm").addClass("addcolor")
+
+						} else {
+							$("#btnGetSjYzm").removeClass("addcolor")
+						}
+					})
+					$("#Email").bind("input", function() {
+						if(regEmail.test($("#Email").val())) {
+							$("#btnGetYxYzm").addClass("addcolor")
+						} else {
+							$("#btnGetYxYzm").removeClass("addcolor")
+						}
+					})
+					$("#btnGetSjYzm").bind("click", function() {
+
+						if(!regmob.test($("#Phone").val())) {
+							alert("手机号码不正确!");
+							return false;
+						} else {
+							/****************************发送验证码到手机************************/
+							$.ajax({
+								type: "POST",
+								url: "/Helper/SendCheckcode.ashx?r=" + Math.random(),
+								data: {
+									ajaxdata: $("#UserMob").val()
+								},
+								async: false,
+								success: function(msg) {
+
+									if(msg != 0) {
+										$("#liCheckCode").html(msg);
+										$("#liCheckCode").css("color", "red");
+
+										return false;
+									} else {
+										$("#liCheckCode").html("手机号验证通过");
+										$("#liCheckCode").css("color", "green");
+										count = 60;
+										GetSjYzm();
+										return true;
+									}
+								},
+								error: function(xhr) {
+									$("#liCheckCode").html("Error:" + xhr.status + " " + xhr.statusText);
+									$("#liCheckCode").css("color", "red");
+
+									return false;
+								}
+							});
+							/****************************end************************/
+
+							return true;
+
+						}
+					});
+				});
+				//设置发送验证码的按钮的倒计时效果
+				//  var count = 30;
+				function GetSjYzm() {
+					$("#btnGetSjYzm").attr("disabled", "disabled");
+					$("#btnGetSjYzm").removeClass("addcolor")
+					$("#UserMob").attr("disabled", "disabled")
+					$("#btnGetSjYzm").val(count + "秒后重新获取")
+					count--;
+					if(count > 0) {
+						setTimeout(GetSjYzm, 1000);
+					} else {
+						$("#btnGetSjYzm").val("获取密码");
+						$("#btnGetSjYzm").attr("disabled", false);
+						$("#btnGetSjYzm").addClass("addcolor");
+						$("#UserMob").removeAttr("disabled");
+					}
+					return true;
+				}
+				$("#btnGetYxYzm").bind("click", function() {
+
+					if(!regEmail.test($("#Email").val())) {
+						alert("邮箱格式不正确!");
+						return false;
+					} else {
+
+						/****************************发送验证码到手机************************/
+						$.ajax({
+							type: "POST",
+							//url: "/Helper/SendCheckmail.ashx?r=" + Math.random(),
+							url: "/UserAuth/GetEmailCode",
+							data: {
+								ajaxdata: $("#Email").val(),
+								parma: $("#sales").val()
+							},
+							async: false,
+							success: function(msg) {
+								if(msg != 1) {
+									if(msg == 3) {
+										alert("该邮箱不存在！");
+										return false;
+									} else {
+										$("#liCheckCode").html(msg);
+										$("#liCheckCode").css("color", "red");
+
+										return false;
+									}
+								} else {
+
+									$("#liCheckCode").html("邮箱验证通过");
+									$("#liCheckCode").css("color", "green");
+									count = 60;
+									GetYxYzm();
+									return true;
+								}
+							},
+							error: function(xhr) {
+								$("#liCheckCode").html("Error:" + xhr.status + " " + xhr.statusText);
+								$("#liCheckCode").css("color", "red");
+
+								return false;
+							}
+						});
+						/****************************end************************/
+
+						return true;
+
+					}
+				});
+				//设置发送验证码的按钮的倒计时效果
+				//  var count = 30;
+				function GetYxYzm() {
+					$("#btnGetYxYzm").attr("disabled", "disabled");
+					$("#btnGetYxYzm").removeClass("addcolor")
+					$("#Email").attr("readonly", "readonly")
+					$("#btnGetYxYzm").val(count + "秒后重新获取")
+					count--;
+					if(count > 0) {
+						setTimeout(GetYxYzm, 2000);
+					} else {
+						$("#btnGetYxYzm").val("获取密码");
+						$("#btnGetYxYzm").attr("disabled", false);
+						$("#btnGetYxYzm").addClass("addcolor");
+						$("#Email").removeAttr("readonly");
+					}
+					return true;
+				}
+			</script>
+
+		</div>
+		<script src="js/javascript.js"></script>
+
+	</body>
+
+</html>

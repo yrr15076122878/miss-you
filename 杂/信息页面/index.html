@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta http-equiv=X-UA-Compatible content="IE=edge">
+		<meta http-equiv="Content-Type" content="charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/jquery.min.js"></script>
+	</head>
+
+	<body class="action--site-exhibitorsApplication controller--site">
+		<div class="container" id="page">
+			<div class="pageinner">
+				<div class="inside_content">
+					<div class="inside_right">
+						<div class="inside_right_title">报名信息</div>
+						<div class="apply_wrap">
+							<form action="" id="costForm" id="form1" method="post" class="signbox" name="form1">
+								<ul class='errorSummary' style="display: none;">
+								</ul>
+
+								<ul class="apply_list">
+									<li>
+										<div class="li_title">企业名称<span>*</span></div>
+										<div class="input-company_name reqired">
+											<input onkeyup="value=value.replace(/[\d]/g,'') " size="100" maxlength="128" class="text" name="costForm[company_name]" id="costForm_company_name" type="text" value="" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title" for="name">姓名<span>*</span></div>
+										<div class="input-name reqired">
+											<input size="100" maxlength="128" class="text" name="costForm[name]" id="costForm_name" type="text" value="" ōnkeyup="value=value.replace(/[\d]/g,'''')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[\d]/g,''''))" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title">部门及职位</div>
+										<div class="input-job">
+											<input size="100" maxlength="128" class="text" name="costForm[job]" id="costForm_job" type="text" value="" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title">手机号<span>*</span></div>
+										<div class="input-phone reqired">
+											<input size="100" maxlength="128" class="text" name="costForm[phone]" id="costForm_phone" type="text" onkeyup="value=value.replace(/\D/g,'')" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title">邮箱<span>*</span></div>
+										<div class="input-email reqired">
+											<input type="text" name="uname" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title">希望参展面积</div>
+										<div class="input-area">
+											<!--  -->
+											<input size="100" maxlength="128" class="text" name="costForm[area]" id="costForm_area" type="text" value="" /> </div>
+									</li>
+
+									<li>
+										<div class="li_title">主营业务</div>
+										<div class="input-tuijian">
+											<textarea size="100" maxlength="300" placeholder="请输入您主营业务名称。" name="costForm[tuijian]" id="costForm_tuijian"></textarea> </div>
+									</li>
+
+									<div class="input-zanzhu">
+										<input size="100" maxlength="128" class="hidden_input" name="costForm[zanzhu]" id="costForm_zanzhu" type="text" value="" />
+									</div>
+
+									<li>
+										<!-- <div class="li_title">参展&赞助<span>*</span></div> -->
+										<div class="li_title">参与形式<span>*</span></div>
+										<div class="choice_wrap">
+											<a>参展</a>
+											<a class="choice02">赞助</a>
+										</div>
+									</li>
+
+								</ul>
+								<div class="btn_submit">
+									<a type="submit" value="提交" id="send" style="margin-left: 70px;">提 交</a>
+								</div>
+
+							</form>
+
+							<script>
+								$(function() {
+									var check = function() {
+										return true;
+									}
+									$('#costForm').on('click', '.btn_submit', function(e) {
+										e.preventDefault();
+										if(check()) {
+											var ajax_url = '';
+											$.ajax({
+												type: "POST",
+												dataType: "html",
+												url: ajax_url,
+												data: $('#costForm').serialize(),
+												success: function(data) {
+													if($('#costForm ul.errorSummary li', data).length > 0) {
+														$('#costForm').html($('#costForm', data).html());
+														oline_init()
+
+														$('.choice_wrap a').each(function() {
+															if($(this).text() == $('.hidden_input').val()) {
+																$(this).addClass('active').siblings('a').removeClass('active')
+															}
+														})
+
+													} else {
+														alert("祝贺您，表单已成功提交！");
+														$('.apply_wrap .apply_list li>div').removeClass('error')
+														$('.apply_wrap .apply_list li div input').val('')
+														$('.apply_wrap .apply_list li textarea').val('')
+														$('.hidden_input').val('参展')
+														$('.choice_wrap a').removeClass('active')
+														$('.choice_wrap a').eq(0).addClass('active')
+													}
+													return false;
+												},
+												error: function(data) {
+													alert("表单提交失败，请检查相关填写内容是否正确");
+												}
+											});
+										}
+									});
+
+									function oline_init() {
+
+										$('.choice_wrap a').on('click', function() {
+											$(this).addClass('active').siblings('a').removeClass('active')
+											$('.hidden_input').val($(this).html())
+										})
+
+										// if($('.sex_hidden input').val()==''){
+										//     $('.online_yuding .company_form li strong').eq(0).addClass('active')    
+										// }            
+
+									}
+
+									oline_init()
+
+									$('.hidden_input').val('参展')
+									$('.choice_wrap a').eq(0).addClass('active')
+
+								});
+							</script>
+						</div>
+					</div>
+
+					<script type="text/javascript">
+						$(function() {
+
+							$('.apply_wrap .apply_list li .choice_wrap a').on('click', function() {
+								$(this).addClass('active').siblings('a').removeClass('active')
+							})
+
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		//:input 获取的是 type=text,radio,button等select textarea等元素对象
+		$(":input").blur(function() { //注册blur的事件
+			$(this).each(function() { //遍历input元素对象 
+				if("" == $(this).val()) { //判断元素对象的value值
+					$(this).addClass("blur"); //添加css样式
+				} else {
+					$(this).removeClass("blur");
+				}
+			});
+		});
+
+	});
+
+	$('.top').css('visibility', 'visible')
+
+	$('.nav_toggle').on('click', function() {
+		$('body').addClass('sideopen')
+	})
+
+	$('.shadow').on('click', function() {
+		$('body').removeClass('sideopen')
+	})
+	$('.wap_nav>li').data('onoff', true)
+	$('.wap_nav>li').on('click', function() {
+		if($(this).data('onoff')) {
+			$(this).find('.deepnav').stop().slideDown()
+			$(this).siblings().find('.deepnav').stop().slideUp()
+			$(this).siblings().data('onoff', true)
+		} else {
+			$(this).find('.deepnav').stop().slideUp()
+		}
+		$(this).data('onoff', !$(this).data('onoff'))
+
+	})
+
+	$('.xuanfu .totop').on('click', function() {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 300)
+	})
+
+	$(window).scroll(function() {
+		if($(window).scrollTop() > 0) {
+			$('.xuanfu .totop').css('display', 'block')
+			$('.top.active').fadeIn()
+		} else {
+			$('.xuanfu .totop').css('display', 'none')
+			$('.top.active').fadeOut()
+		}
+	});
+
+	$('.icon_active').click(function(e) {
+
+		var r = $(this).hasClass('active');
+		if(r) {
+			$(this).removeClass('active');
+			$('.search_form').removeClass('active');
+		} else {
+			$(this).addClass('active');
+			$('.search_form').addClass('active');
+		}
+
+	});
+	$('.icon').click(function(e) {
+
+		var r = $(this).hasClass('active');
+		if(r) {
+			$(this).removeClass('active');
+			$('.search_form').removeClass('active');
+		} else {
+			$(this).addClass('active');
+			$('.search_form').addClass('active');
+		}
+
+	});
+</script>

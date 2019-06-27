@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>Self Help Print</title>
+    <!--getinfo.ashx-->
+    <!--Bootstrap plugins-->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+    <!--SweetAlert2 plugins-->
+    <link rel="stylesheet" href="../plugins/sweetAlertT/dist/sweetalert2.min.css">
+    <!--Plugins Progress bar-->
+    <link rel="stylesheet" href="../css/modernizr.css">
+    <link rel="stylesheet" href="../css/fontFamily.css">
+    <!--Base-->
+ <link rel="stylesheet" href="css/base.css">
+ <link rel="stylesheet" href="../css/configCssAll.css">
+    <!--<link rel="shortcut icon" href="media/images/favicon.ico">-->
+    <style>
+        #calculatorTable td {
+            width: 30%;
+            font-size: 8.2em;
+        }
+        .cstj {
+            margin:0;
+            padding: 0 0 0 50px;
+            list-style:none;
+                width: 100%;
+    height: 100%;
+        }
+        .cstj li {
+            float:left;
+            padding:5px 5px;
+            box-shadow:7px 6px 32px rgba(0,0,0,.35);
+            margin:5px 10px;
+            height:120px;
+            width:120px;
+            background:#fff;
+        }
+        .cstj li a{
+            line-height: 120px;
+        }
+        .cstj li img {
+            width:110px;
+            margin:0 auto;
+        }
+        #COperative{
+            height: 263px;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<div class="col-sm-6" style="height: 100%;padding-top: 20px;padding-bottom: 20px;">
+        <div style="width:100%;height:100%;background:url(./images/left.jpg) no-repeat;background-size:100% 100%;box-shadow: 7px 11px 10px rgba(0,0,0,0.25);border-radius: 48px;">
+            <div class="clearfix" style="position: absolute;top: 50%;transform: translateY(-50%);background: rgba(255,255,255,0.5);right: 15px;padding-left: 15px;">
+            <h3>知名厂商推荐</h3>
+                <div id="COperative" class="">
+                    <ul class="cstj">
+                        <li><a href="#"><img src="images/1.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/3.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/4.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/5.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/6.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/7.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/8.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/9.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/10.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/11.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/12.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/13.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/14.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/15.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/16.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/17.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/18.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/19.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/21.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/22.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/23.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/24.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/25.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/26.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/27.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/28.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/29.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/30.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/31.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/32.jpg" alt="" style=""></a></li>
+                    </ul>
+
+                </div>
+        </div>
+        </div>
+    </div>-->
+    <div class="col-sm-6" style="height: 100%;padding-top: 20px;padding-bottom: 20px;">
+        <img src="./images/left2news.jpg" alt="" style="height:100%;margin:0 auto;display:block;" />
+
+        <div style="">
+            <div class="clearfix" style="position: absolute;top: 50%;transform: translateY(-50%);background: rgba(255,255,255,0.5);right: 0;left: 0;width: 700px;margin: 0 auto;">
+            <h3>知名厂商推荐</h3>
+                <div id="COperative" class="">
+                    <ul class="cstj">
+                        <li><a href="#"><img src="images/2014_1_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2014_7_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2014_9_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2014_15_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2014_16_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2014_22_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2016_0407_01.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2016_0407_04.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2017_0204_01.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2017_0330_01.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2017_0418_01.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2017_0419_01.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_01_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0404_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_1.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_2.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_3.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_4.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_5.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_6.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_7.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0502_logo_8.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2018_0509.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20170314-1yuefang.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20170418_gpxy.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20170418_jold.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20170418_sm.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20170504-juxianglou.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20190105.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/dbd_logo.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/lk_logo_04.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/logo_2015_1.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/logo_2015_3.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/scyq_logo.jpg" alt="" style=""></a></li>
+                    </ul>
+
+                </div>
+        </div>
+        </div>
+    </div>
+    <!--<div class="col-sm-3" style="height: 100%;">
+        <div class="clearfix" style="position: absolute;top: 50%;transform: translateY(-50%);background: rgba(255,255,255,0.5);right: -63px;width: 290px;">
+            <h3>知名厂商推荐</h3>
+                <div id="COperative" class="">
+                    <ul class="cstj">
+                        <li><a href="#"><img src="images/1.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/2.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/3.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/4.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/5.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/6.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/7.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/8.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/9.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/10.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/11.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/12.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/13.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/14.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/15.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/16.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/17.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/18.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/19.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/20.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/21.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/22.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/23.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/24.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/25.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/26.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/27.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/28.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/29.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/30.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/31.jpg" alt="" style=""></a></li>
+                        <li><a href="#"><img src="images/32.jpg" alt="" style=""></a></li>
+                    </ul>
+
+                </div>
+        </div>
+    </div>-->
+    <div class="col-sm-6">
+        <div class="search_box col-sm-12" style="height: 160px;margin-top: 125px;">
+            <input id="searchIpt" readonly="readonly" class="search-control col-md-offset-1 col-sm-8" type="text" placeholder="请输入注册号" value=""/>
+            <!--<input id="searchCode" readonly="readonly" class="search-control-cent col-sm-4" type="text" placeholder="请输入手机后4位"/>-->
+            <button class=" btn-search col-sm-2" aria-hidden="true" id="btnSearch" >搜索</button>
+        </div>
+
+        <div class="lyt_body" style="display:block;border: none;">
+            <div class="container lyt_div" style="margin-top: -1000%;border: none;">
+                 <!-- IE 插件 插入打印控件  -->
+                <object class="no-print" ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="../jatoolsPrinter/jatoolsPrinter.cab#version=8,6,0,0"></object>
+                <!-- 胸卡隐藏域 -->
+                <div class="card_hiden" style="display:block;border: none;"></div>
+                <!-- 条码暂存区域 -->
+                <div id="Div1"></div>
+            </div>
+        </div>
+
+        <div class="lyt_footer col-sm-12" style="padding:0 50px">
+            <div id="inputContent">
+                <table id="calculatorTable" border="0" cellspacing="0" cellpadding="0">
+                    <tr><td stn="1">1</td><td stn="2">2</td><td stn="3">3</td></tr>
+                    <tr><td stn="4">4</td><td stn="5">5</td><td stn="6">6</td></tr>
+                    <tr><td stn="7">7</td><td stn="8">8</td><td stn="9">9</td></tr>
+                    <tr>
+                        <td stn="delete" style="background-color:#c9302c;color:#fff;font-size:4.5em;">删除</td>
+                        <td stn="0">0</td>
+                        <td stn="empty" style="background-color:#f0ad4e;color:#fff;font-size:4.5em;">清空</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--Ie全屏需要设置html宽度为100%-->
+        <div class="full_screen" id="fullScreenP" style="bottom: 28px;right: 48%;">
+            <span class="glyphicon glyphicon-fullscreen"></span>
+        </div>
+
+    </div>
+
+    <!--<div class="container"></div>-->
+
+    <!--引入Js-->
+    <!--jQuery Plugins-->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/jquery-barcode.js"></script>
+    <script src="../js/jquery.jqprint-0.3.js"></script>
+    <!--<script src="media/js/JsBarcode.code128.min.js"></script>-->
+    <!--FullScreen-->
+    <script src="../js/screenfull.js"></script>
+    <!--SweetAlert2 plugins-->
+    <script src="../plugins/sweetAlertT/libs/core.js"></script>
+    <script src="../plugins/sweetAlertT/dist/sweetalert2.min.js"></script>
+    <!--keyboard plugins-->
+    <!--<script src="media/js/keyboard.js"></script>-->
+    <!--Auto play banner Plugins-->
+    <script src="../js/jquery.scrollbox.js"></script>
+    <script src="../js/configFontSize.js"></script>
+    <!--<script src="../js/PublicMethod.js"></script>-->
+    <!--Script-->
+    <script src="js/script.js"></script>
+    <!--引入Js结束-->
+    <script>
+        $(function () {
+			/* 知名厂商 */
+            //$('#COperative').scrollbox({
+            //    direction: 'v',
+            //    switchItems: 1,
+            //    distance: 150
+            //});
+
+            $('#COperative').scrollbox({
+                switchItems: 15,
+                distance: 180,
+                step: 10,
+                delay:6,//每次滚动间隔时间
+
+                //linear: true,
+                //step: 1,
+                //delay: 0,
+                //speed: 100
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div id="printReady">
+			<style type="text/css">
+				.interested {
+					width: 100%;
+					font-size: 13px;
+					border-collapse: collapse;
+				}
+				
+				.interested th {
+					text-align: center;
+				}
+				
+				.interested th,
+				.interested td {
+					padding: 5px;
+					border: 1px solid #ccc;
+				}
+				
+				#print-sub {
+					width: 100%;
+					margin: 0 auto 20px 0;
+					cursor: pointer;
+					border: 1px solid transparent;
+					padding: 10px;
+					border-radius: 4px;
+					outline: none;
+					background: #00ABC5;
+					color: #fff;
+				}
+				
+				#print-sub:hover {
+					opacity: 0.9 !important;
+				}
+				
+				.table-w {
+					max-width: 800px !important;
+					width: 800px;
+					margin: 0 auto;
+					padding: 15px;
+					background: #fff;
+					color: #333;
+					border-radius: 4px;
+					font-size: 16px;
+					line-height: 1.8em;
+				}
+				
+				.codegzh {
+					width: 115px;
+					float: right;
+					margin-right: 10px;
+				}
+				
+				@media (max-width:768px) {
+					.table-w {
+						width: 100%!important;
+						max-width: 100%!important;
+					}
+					.codegzh {
+						float: none;
+						margin-top: 0;
+						margin-right: 0;
+					}
+				}
+			</style>
+			<br />
+			<table border="0" cellpadding="0" cellspacing="0" class="table-w" style="width: 800px; margin: 0 auto; padding: 15px; background: #fff; color: #333; border-radius: 4px; font-size: 16px; line-height: 1.8em;" width="800">
+				<tbody>
+					<tr>
+						<td style="font-family: Helvetica, Arial, sans-serif," yahei="">
+							<img alt="banner" class="img-responsive" src="http://reg.wnevc.com/Content/Images/banner-s2.png" width="800" style="width: 800px;margin: auto;" /></td>
+					</tr>
+					<tr>
+						<td style="background: #00ABC5;;color:#fff; text-align: center; padding: 10px; font-size: 1.4em;">
+							<strong>住宿确认函</strong></td>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								尊敬的&nbsp;$UserName先生（女士）您好！房间已经为您预留，您只需要出示相关身份信息和预定好即可办理入住。<br /> 如需开具发票请至酒店前台办理
+							</p>
+							<table border="0" cellpadding="" cellspacing="" style="width: 600px; padding: 15px; background: #fff; color: #333;border-radius: 4px; font-size: 16px; line-height: 1.65em;margin: auto; border: 1px solid black;float: left;overflow: hidden;">
+								<tbody>
+									<tr>
+										<td>
+											预定号<br />Order No.
+										</td>
+										<td>
+											$Nos</td>
+										<td>
+											入住人<br /> Guest
+										</td>
+										<td>
+											$UserName</td>
+									</tr>
+									<tr>
+										<td>
+											房型<br /> Room Type
+										</td>
+										<td>
+											$Rooms</td>
+										<td>
+											餐食情况<br /> Meal
+										</td>
+										<td>
+											含早餐<br /> Breakfast Included
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											入住日期<br />Check-in
+										</td>
+										<td>
+											2019年$Moves</td>
+										<td>
+											离店日期<br />Check-out
+										</td>
+										<td>
+											2019年$Movecs1</td>
+									</tr>
+									<tr>
+										<td>
+											总价<br /> Total Price
+										</td>
+										<td style="color: red;">
+											RMB$RoomPrice.00</td>
+										<td style="color: red;" colspan="2">
+											已包含税和服务费<br /> Including tax and service charge
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+							<table border="0" cellspacing="0" cellpadding="0" style="width: 600px; padding: 15px; background: #fff; color: #333;border-radius: 4px; font-size: 16px; line-height: 1.65em;margin: auto;float: left;overflow: hidden;">
+					<tr>
+										<td colspan="4">
+											大会日程安排
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4">0
+											CONFERENCE PROGRAM
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4">
+											大会机场接驳时刻表
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4">
+											SHUTILE BUS SCHEDULE
+										</td>
+									</tr>
+				</table>
+				</td>
+				
+		</div>
+<script>
+	var x =10;
+	function f1(num) {
+		return num++
+	}
+	var y = f1(x);
+	console.log(x);console.log(y)
+</script>
+	</body>
+
+</html>

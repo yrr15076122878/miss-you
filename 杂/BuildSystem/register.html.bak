@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>搭建商注册</title>
+    <link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">
+    <link rel="stylesheet" href="plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="Application/Default/Css/register.css">
+</head>
+<body>
+<br>
+
+<form id="form_ep_login" action="#" method="post">
+<div class="col-md-12">
+    <div class="col-md-12" style="border:1px solid #b5b8c8">
+        <span class="infoSpan">基本信息</span>
+        <table class="basicInfo" border="0">
+            <tr>
+                <td class="text-right" width="20%"><label for="UserName">用户名<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="UserName" id="UserName" class="width" required reg="/^[a-zA-Z0-9_-]{6,12}$/" nTitle="用户名" errorMsg="为 6 到 12 位（字母，数字，下划线，减号）"></td>
+                <td colspan="2"><span style="padding-left: 10px;color: #a2a2a2;">用户名为 6 到 12 位（字母，数字，下划线，减号）</span></td>
+                <!--<td class="text-right" width="20%"><label for="ServiceNo">服务号<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="ServiceNo" id="ServiceNo" class="width" required data-reg="/^[\w\W]{1,}$/"></td>-->
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="password">密码<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="password" name="password" id="password" class="width" required data-reg="/^[\w\W]{4,}$/" data-bind="this|#confPass" nTitle="密码" errorMsg="有误"></td>
+                <td class="text-right" width="20%"><label for="confPass">确认密码<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="password" name="confPass" id="confPass" class="width" required data-bind="#password|this" errorMsg="两次密码输入不一致"></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="companyName">公司名称<span class="redText">*</span>：</label></td>
+                <td colspan="3"><input type="text" name="companyName" id="companyName" class="width" required data-reg="/^[\w\W]{1,}$/"></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="companyAddress">公司地址<span class="redText">*</span>：</label></td>
+                <td colspan="3"><input type="text" name="companyAddress" id="companyAddress" class="width" required data-reg="/^[\w\W]{1,}$/"></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="postcode">邮编：</label></td>
+                <td width="30%"><input type="text" name="postcode" id="postcode" class="width" data-reg="/^[1-9][0-9]{5}$/"></td>
+                <td class="text-right" width="20%"><label for="url">网址：</label></td>
+                <td width="30%"><input type="text" name="url" id="url" class="width" data-reg="/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/"/></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="scCode">统一社会信用代码<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="scCode" id="scCode" class="width" required data-reg="/^[^\u4e00-\u9fa5]{15,18}$/"></td>
+                <td class="text-right" width="20%"><label for="blDate">营业执照成立日期<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="blDate" id="blDate" class="width" placeholder="yyyy-MM-dd" required reg="/^\d{4}-\d{1,2}-\d{1,2}$/"></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="blImgUp">营业执照图片上传：</label></td>
+                <td colspan="3">
+                    <!--<input type="file" name="blImgUp" id="blImgUp" >-->
+                    <button type="button" class="layui-btn" id="blImgUp" style="height: 29px;line-height: 29px;">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <button type="button" class="layui-btn" id="opImg">
+                        <i class="layui-icon">&#xe705;</i>打开图片
+                        <input id="imgSrc" type="hidden" vaule="">
+                    </button>
+                    <button type="button" class="layui-btn" id="cancelImg">
+                        <i class="layui-icon">&#x1006;</i>删除图片
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="phone">电话<span class="redText">*</span>：</label></td>
+                <td colspan="3">
+                    <input type="text" name="pCountry" id="pCountry" placeholder="国别" style="width:50px;" data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="pRegion" id="pRegion" placeholder="地区" style="width:50px;" data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="phone" id="phone" placeholder="电话号码" required data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="extPhone" id="extPhone" placeholder="分机号码" data-reg="/^[0-9]{1,}$/">
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="fax">传真：</label></td>
+                <td colspan="3">
+                    <!--<input type="text" name="fax" id="fax">-->
+                    <input type="text" name="fCountry" id="fCountry" placeholder="国别" style="width:50px;" data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="fRegion" id="fRegion" placeholder="地区" style="width:50px;" data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="fax" id="fax" placeholder="传真号码" data-reg="/^[0-9]{1,}$/"> -
+                    <input type="text" name="extFax" id="extFax" placeholder="分机号码" data-reg="/^[0-9]{1,}$/">
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="oRemark">机构备注：</label></td>
+                <td colspan="3"><textarea name="oRemark" id="oRemark" cols="30" rows="5" class="width" style="resize: vertical;min-height:81px"></textarea></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-md-12" style="margin-top: 20px;">
+    <div class="col-md-12" style="border:1px solid #b5b8c8">
+        <span class="cpSpan">联络人</span>
+        <table class="basicInfo" border="0">
+            <tr>
+                <td class="text-right" width="20%"><label for="cpName">姓名<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="cpName" id="cpName" class="width" required data-reg="/^[\w\W]{1,}$/"></td>
+                <td class="text-right" width="20%"><label for="cpPosition">职务：</label></td>
+                <td width="30%"><input type="text" name="cpPosition" id="cpPosition" class="width"></td>
+            </tr>
+            <tr>
+                <td class="text-right" width="20%"><label for="cpPhone">手机<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="cpPhone" id="cpPhone" class="width" required data-reg="/^[0-9]{1,}$/"></td>
+                <td class="text-right" width="20%"><label for="Email">电子邮箱<span class="redText">*</span>：</label></td>
+                <td width="30%"><input type="text" name="Email" id="Email" class="width" required data-reg="/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/"></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<div class="col-md-12 clearfix okAndCan">
+    <div class="clearfix" style="width:268px;margin: 0 auto;">
+        <button id="ok">提交</button>
+        <button id="cancel">取消</button>
+    </div>
+</div>
+</form>
+<script type="text/javascript" src="Public/Js/jquery-1.9.1.min.js"></script>
+<script src="plugin/layui/layui.all.js"></script>
+<script src="Public/Js/publicM.js"></script>
+<!--<script src="Application/Default/Js/register.js"></script>-->
+<script>
+    $(function () {
+        public.valide().start("#form_ep_login","#ok");
+
+
+        $("#imgSrc").parent().parent().addClass("errorInp");
+
+
+        //点击删除按钮删除图片路径
+        // $("#imgSrc").val("");
+
+        //alert("0000");
+    });
+
+</script>
+</body>
+</html>

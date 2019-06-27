@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>首页 - 打印</title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <!-- Bootstrap -->
+    <link href="../plugins/bootstrap/css/_bootstrap.css" rel="stylesheet">
+    <!-- Smoke -->
+    <link href="../css/smoke.css" rel="stylesheet">
+    <!-- select2 -->
+    <link href="../css/select2.css" rel="stylesheet">
+    <!-- Base -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/bulkPrinTemplate.css">
+
+    <!-- 只有使用字体图标时才需要加载 Font-Awesome -->
+    <link href="../css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default no-print">
+    <div style="color:#fff;text-align:center;width:100%;height: 100%;line-height: 48px;font-size:20px;font-family: '宋体';"><span > 批量打印胸卡 </span></div>
+        <!-- <div class="container-fluid">
+             Brand and toggle get grouped for better mobile display 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CorpIT</a>
+            </div>
+             Collect the nav links, forms, and other content for toggling 
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="visitor.html">观众登记 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="VIPcard.html">VIP登记</a></li>
+                    <li><a href="exhibitor.html">展商登记</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="qrPrint.html">二维码打印</a></li>
+                            <li><a href="bulkPrint.html">批量打印</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right"> -->
+                    <!-- <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group form-search">
+                            <input type="text" class="form-control" placeholder="搜索">
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </form> 
+                    <li>
+                        <a class="btn" href="search.html"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                    </li>
+                    <li><a href="#" data-toggle="modal" data-target=".question-sign"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                    <li>
+                        <a class="btn smk-fullscreen" href="#"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span></a>
+                    </li>
+                </ul>
+                <div class="modal fade question-sign" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">问题</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+             /.navbar-collapse
+        </div>-->
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- IE 插件     插入打印控件 -->
+    <object class="no-print" ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="jatoolsPrinter.cab#version=8,6,0,0"></object>
+    <div class="container_div">
+        <div class="container col-sm-6 pull-left carder_box">
+        <div id="switch_div">
+            <label class="switch-btn">
+                <input class="checked-switch" type="checkbox" />
+                <span class="text-switch" data-yes="yes" data-no="on"></span> 
+                <span class="toggle-btn"></span> 
+            </label>
+        </div>
+        
+        <!-- 打印区域 -->
+        <div class="wrap" style="font-size: 20px;">
+            <!--<div class="pos-box name"></div>
+            <div class="pos-box company"></div>
+            <div class="pos-box city"></div>
+			<div class="pos-box boothNum"></div>
+            <div class="pos-box barcode">
+                <div class="bcTarget"></div>
+            </div>
+            <div class="pos-box category"></div>-->
+
+            <div class="col-md-12" style="position: absolute;font-family: 华文新魏;top:34mm;text-align: left;font-size: 18px;font-weight: 600;">
+                <table style="width: 100%;height:auto;">
+                    <tr>
+                        <td width="22%" valign="bottom">姓名 <br/>Name</td>
+                        <td valign="bottom">
+                            <div style="width:100%;height:1px;border-bottom: 2px solid;margin-bottom: 8px;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>公司 <br/>Company </td>
+                        <td valign="bottom">
+                            <div style="width:100%;height:1px;border-bottom: 2px solid;margin-bottom: 7px;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 职位 <br/>Position</td>
+                        <td valign="bottom">
+                            <div style="width:100%;height:1px;border-bottom: 2px solid;margin-bottom: 8px;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机<br/>Mobile </td>
+                        <td valign="bottom">
+                           <div style="width:100%;height:1px;border-bottom: 2px solid;margin-bottom: 8px;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>邮箱 <br/>Mail</td>
+                        <td valign="bottom">
+                            <div style="width:100%;height:1px;border-bottom: 2px solid;margin-bottom: 8px;"></div>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+        </div>
+        <div class="col-sm-6 control-box pull-right ">
+        <div class=""> <!-- control-box no-print fixed-right -->
+            <!-- Panel white -->
+            <div class="panel panel-white" id="enter-info">
+                        <button id="print" type="submit" class="btn btn-second btnProgressbar"><i class="fa fa-print"></i> 打印 <span class="card-number"></span></button>
+                        <!--<button class="btn btn-default empty"><i class="fa fa-refresh"></i> 清空</button>-->
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-white" id="panel1">
+                <div class="panel-heading">
+                    <h3 class="panel-title">操作选项</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">数量</label>
+                        <input type="text" class="form-control getNum" data-smk-type="number">
+                    </div>
+                    <button class="btn btn-default  add-btn-wrap"><i class="fa fa-plus-circle"></i> 添加</button>
+                    <button class="btn btn-default  " onclick="doPrint('预览')"><i class="fa fa-eye" title="打印预览"></i> 预览</button>
+                    <button class="btn btn-default  " onclick="doPrint('选项')"><i class="fa fa-eye" title="打印预览"></i> 选项</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-barcode.js"></script>
+<!-- Smoke -->
+<script src="../js/smoke.js"></script>
+<!-- select2 -->
+<script src="../js/select2.js"></script>
+<!-- language -->
+<script src="../lang/cn.js"></script>
+<script type="text/javascript" src="js/funrun.js"></script>
+<script type="text/javascript" src="js/print.js"></script>
+<script>
+$(function() {
+    $("#print").hover(function() {
+        var len = $('.wrap').length
+        $(this).find('.card-number').text(len).fadeIn('fast');
+    }, function() {
+        $(this).find('.card-number').text("").fadeOut('fast');
+    });
+    //切换种类
+    $("#category").on('click', function(event) {
+        //console.log('category');
+        var category = $(this).val()
+		if(category.indexOf("展商")>-1){
+			$("#booth_number,.boothNum").show();
+		}else{
+			$("#booth_number,.boothNum").hide();
+		}
+        $(".category").empty().text(category);
+    });
+
+    //添加卡片
+    function addCrad(num) {
+        for (var i = num - 1; i >= 0; i--) {
+            var oWrap = $('.wrap').last().clone();
+            $('.wrap').last().before(oWrap);
+        }
+        // $('.wrap').last().before(oWrap);
+
+        //删除卡片
+        // $('.wrap, .close-btn').on('mouseover', function(event) {}); 
+        var removeBtn = "<span class=\"close-btn no-print\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></span>";
+        $('.wrap').prepend(removeBtn);
+
+
+        $('.wrap').on('click', '.close-btn', function(event) {
+            if ($('.wrap').length > 1) {
+                $(this).parents('.wrap').remove();
+            }
+        });
+        // $('.wrap').on('mouseout', function(event) {
+        //     $(this).find('.close-btn').remove();
+        // });
+
+    }
+
+    // 卡片
+    $('.add-btn-wrap').on('click', function(event) {
+        var num = parseInt($('.getNum').val());
+        // console.log(!isNaN(num))
+
+        if (!isNaN(num) && num > 1) {
+            /*if (num <= 25) {
+                addCrad(num)
+            } else {
+                alert("数量大于25，请分批打印！")
+
+            }*/
+			addCrad(num);
+        } else {
+            num = 1;
+            addCrad(num);
+        }
+
+        var check = $(".checked-switch").prop("checked");
+        if(!check){
+            $('.wrap:gt(0)').hide();
+        }else{
+            $('.wrap:gt(0)').show();
+        }
+
+        var codeNum = $('.wrap');
+        var E = $(".add-num-letter").val();
+        var N = $(".add-num-code").val() - 1;
+        for (var i = 0; i < codeNum.length; i++) {
+            N++
+            var code = E + N
+            codeNum.eq(i).find('.bcTarget').empty().barcode(code, "code128", {
+                barWidth: 1.2,
+                barHeight: 24,
+                showHRI: true
+            });
+
+            console.log(N)
+        }
+        // codePrint()
+        // var code = $('.add-num-code').val();
+        // console.log(code)
+    });
+    $('.getNum').keyup(function(event) {
+        if (event.keyCode == 13) {
+            // alert("enter")
+            $('.add-btn-wrap').triggerHandler('click')
+        }
+    });
+});
+</script>
+
+</html>

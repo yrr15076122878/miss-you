@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏</title>
+    <link rel="stylesheet" href="plugins/sweetAlertT/dist/sweetalert2.min.css">
+    <style>
+        html, body {
+            background-color: #fff;
+            font-family: 微软雅黑, Arial, 宋体, sans-serif;
+        }
+
+        .main {
+            min-height: 600px;
+            max-width: 1000px;
+            border: 1px solid #ccc;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #eee;
+            padding-bottom: 50px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-bottom: 15px;
+        }
+
+            .btn:hover {
+                opacity: 0.8;
+            }
+
+        .btn-info {
+            background-color: #18b17e;
+            color: #fff;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .padding-lr {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        .zs-div {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main padding-lr">
+        <!--<div style="display:none;">
+        <h2 class="text-center">2018中国国际有机产品博览会导航栏</h2>
+        <div class="padding-lr zs-div">
+            <h4>会议代表</h4>
+            <a class="btn btn-info" href="http://103.27.4.145/HDZPrint/Print/Oprint/index.html">会议代表 Delegate</a>
+
+            <!-- <a class="btn btn-info" href="http://103.27.4.145/HDZPrint/Print/screenPrint/index.html">触摸屏打印</a>-->
+        <!--</div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>-->
+        <h2 class="text-center">2018中国国际有机产品博览会导航栏</h2>
+        <div class="padding-lr zs-div">
+            <h4>观 众 <span style="font-size: 12px"></span></h4>
+            <a class="btn btn-info" href="Oprint/index.html?category=普通观众 CONSUMER&PType=d">普通观众 CONSUMER</a>
+            <a class="btn btn-info" href="Oprint/index.html?category=专业观众 TRADE VISITOR&PType=d">专业观众 TRADE VISITOR</a>
+            <a class="btn btn-info" href="Oprint/index.html?category=演讲嘉宾 SPEAKER&PType=d">演讲嘉宾 SPEAKER</a>
+            <a class="btn btn-info" href="Oprint/index.html?category=嘉宾 VIP&PType=d">嘉宾 VIP</a>
+            <a class="btn btn-info" href="Oprint/index.html?category=媒体 MEDIA&PType=d">媒体 MEDIA</a>
+            <a class="btn btn-info" href="screenPrint/index.html">触摸屏打印(竖屏)</a>
+			<a class="btn btn-info" href="screenPrint/index_v.html">触摸屏打印(横屏)</a>
+        </div>
+        <div class="padding-lr zs-div">
+            <h4>展 商</h4>
+            <a class="btn btn-info" href="exhibitorPrint/singlePrint/index.html">展商 EXHIBITOR</a>
+        </div>
+        <div class="padding-lr zs-div">
+            <h4>特殊打印</h4>
+            <a class="btn btn-info" id="bulkPrint" href="javascript:void(0);" src="http://192.168.0.112/BFCPrint/Print/batchPrint/bulkPrint.html" onclick="quanxian();"><span>批量打印</span></a>
+            <a class="btn btn-info" onclick="quanxian1(1);">主办单位 ORGANIZER</a>
+            <a class="btn btn-info" onclick="quanxian1(2);">工作人员 STAFF</a>
+        </div>
+        <div class="padding-lr zs-div">
+            <h4>会议代表 <span style="font-size: 12px"></span></h4>
+            <a class="btn btn-info" href="news/indexnews.html">会议打印系统</a>
+             <a class="btn btn-info" href="newss/reg.html">会议代表预登记打印</a>
+             <span class="btn btn-info" href="javascript:void(0);" onclick="quanxian(3);">付款状态修改</span>
+             <span class="btn btn-info" href="javascript:void(0);" onclick="quanxian(1);">会议代表现场打印</span>
+             <!--<span class="btn btn-info" href="javascript:void(0);" onclick="quanxian(2);">主办方打印</span>-->
+        </div>
+        <!--<div class="padding-lr zs-div">
+        <h4>现场观众（不存数据）</h4>
+        <a class="btn btn-info" href="http://103.27.4.145/BFCPrint/Print/exhibitorPrint/singlePrint_ns/index.html">观众现场打印</a>
+    </div>-->
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="plugins/sweetAlertT/libs/core.js"></script>
+    <script src="plugins/sweetAlertT/dist/sweetalert2.min.js"></script>
+    <script>
+        function quanxian() {
+            swal({
+                title: '特殊打印需要输入密码！',
+                input: 'password',
+                showCancelButton: true,
+                confirmButtonText: '确定',
+                confirmButtonColor: '#31b0d5',
+                cancelButtonText: '取消',
+                // showLoaderOnConfirm: true,
+                preConfirm: function () {
+                    return new Promise(function (resolve) {
+                        resolve();
+                    });
+                },
+                allowOutsideClick: false
+            }).then(function (value) {
+                if (value == 'bfc2018' || value == 'BFC2018') {  //设置输入框密码
+                    window.location.href = $("#bulkPrint").attr("src");
+                } else {
+                    sweetAlert({
+                        title: "密码错误，如需使用请联系管理员！", text: "", type: "error", timer: 2000
+                    });
+                }
+            })
+        }
+
+
+        function quanxian1(values) {
+            swal({
+                title: '特殊打印需要输入密码！',
+                input: 'password',
+                showCancelButton: true,
+                confirmButtonText: '确定',
+                confirmButtonColor: '#31b0d5',
+                cancelButtonText: '取消',
+                // showLoaderOnConfirm: true,
+                preConfirm: function () {
+                    return new Promise(function (resolve) {
+                        resolve();
+                    });
+                },
+                allowOutsideClick: false
+            }).then(function (value) {
+                if (value == 'bfc2018' || value == 'BFC2018') {  //设置输入框密码
+                    if (values == "1") {
+                        window.location.href = "http://192.168.0.112/BFCPrint/Print/Oprint/index.html?category=主办单位 ORGANIZER&PType=d";
+                    } else {
+                        window.location.href = "http://192.168.0.112/BFCPrint/Print/Oprint/index.html?category=工作人员 STAFF&PType=d";
+                    }
+
+                } else {
+                    sweetAlert({
+                        title: "密码错误，如需使用请联系管理员！", text: "", type: "error", timer: 2000
+                    });
+                }
+            })
+        }
+
+    </script>
+</body>
+</html>

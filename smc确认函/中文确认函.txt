@@ -1,0 +1,242 @@
+<div class="clearfix" id="printReady">
+			<p>
+				<style type="text/css">
+					.table {
+						width: 100%;
+						margin-bottom: 20px;
+						font-family: Arial, "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+					}
+					
+					.table-bordered {
+						border: 1px solid #dddddd;
+					}
+					
+					.table>tbody>tr>td,
+					.table>tbody>tr>th,
+					.table>tfoot>tr>td,
+					.table>tfoot>tr>th,
+					.table>thead>tr>td,
+					.table>thead>tr>th {
+						line-height: 20px;
+						padding: 5px;
+						vertical-align: top;
+						height: 20px;
+						border: 1px solid #dddddd;
+					}
+					
+					.gray-bg {
+						background: #e8e8e8;
+						color: #222;
+					}
+					
+					.fontFamily {
+						font-family: Arial, 宋体 !important;
+					}
+					
+					.h3Title {
+						font-family: 微软雅黑;
+						text-align: center;
+						background-color: #2DBBED;
+						color: #ffffff;
+						margin: 0;
+						padding: 7px 0;
+						font-size: 20px;
+					}
+					
+					@media print {
+						@page {
+							size: A4;
+							margin: 0;
+							padding: 0;
+						}
+						.seacceTableMax {
+							font-size: 12px;
+						}
+						.h3Title {
+							background-color: #0c89e6 !important;
+							-webkit-print-color-adjust: exact;
+							color: #ffffff !important;
+						}
+					}
+					
+					.seacceTable {
+						display: none;
+					}
+					
+					@media screen and (max-width:768px) {
+						.seacceTableMax {
+							display: none!important;
+						}
+						.seacceTable {
+							display: table!important;
+						}
+						.container {
+							padding: 0 !important;
+						}
+					}
+					
+					h3,
+					.h3 {
+						font-size: 24px;
+					}
+					
+					h1,
+					.h1,
+					h2,
+					.h2,
+					h3,
+					.h3 {
+						margin-top: 20px;
+						margin-bottom: 10px;
+					}
+					
+					h1,
+					h2,
+					h3,
+					h4,
+					h5,
+					h6,
+					.h1,
+					.h2,
+					.h3,
+					.h4,
+					.h5,
+					.h6 {
+						font-family: inherit;
+						font-weight: 500;
+						line-height: 1.1;
+						color: inherit;
+					}
+					
+					.seacceTableMax tr td {
+						text-align: center;
+						vertical-align: middle;
+					}
+					
+					.textWL_Cate2 {
+						text-align: left !important;
+					}
+					
+					#table-w {
+						max-width: 800px !important;
+					}
+					
+					#print_div {
+						max-width: 800px !important;
+					}
+				</style>
+			</p>
+			<table class="col-md-12 col-xs-12" id="table-w" style="margin: 0 auto;padding:0 0 20px;border: 1px solid #cccccc;">
+				<tbody>
+					<tr>
+						<td>
+							<img alt="" src="/Content/Images/banner.jpg" style="width: 100%;/* height: 508px; */" />
+							<h3 class="h3Title">
+						<strong>确认函</strong></h3>
+							<table style="padding: 0 15px;width: 100%;">
+								<tbody>
+									<tr>
+										<td>
+											<table border="0" cellpadding="0" cellspacing="3" style="width:100%;">
+												<tbody>
+													<tr>
+														<td style="width: 48px;white-space: nowrap">
+															姓&nbsp;&nbsp;&nbsp;名</td>
+														<td style="width: 16px;">
+															：</td>
+														<td style="width: 41%">
+															$UserName$Title</td>
+														<td style="width: 68px;white-space: nowrap">
+															参会类别</td>
+														<td style="width: 16px;">
+															：</td>
+														<td style="width: 43%;white-space: nowrap">
+															$ConferenceCategory</td>
+													</tr>
+													<tr>
+														<td style="white-space: nowrap;" colspan="1">
+															注册号
+														</td>
+														<td style="width: 16px;" colspan="1">
+															：
+														</td>
+														<td colspan="1">
+															$SAERegistrationNumber
+														</td>
+														<!--<td>
+															订单时间
+														</td>
+														<td style="width: 16px;">
+															：
+														</td>
+														<td style="white-space: nowrap;">
+															$OrderTime
+														</td>-->
+													</tr>
+													<tr>
+														<td colspan="3" rowspan="2">
+															<img src="http://116.62.69.139:8066//BarCode/$SAERegistrationNumber.gif" style="width: 160px; margin-top: 6px; margin-bottom: 6px;" /></td>
+														<td style="vertical-align:top;">
+															&nbsp;</td>
+														<td style="width: 16px;vertical-align:top;">
+															&nbsp;</td>
+														<td style="vertical-align:top;">
+															&nbsp;</td>
+													</tr>
+													<tr>
+														<td>
+															&nbsp;</td>
+														<td style="width: 16px;">
+															&nbsp;</td>
+														<td>
+															&nbsp;</td>
+													</tr>
+												</tbody>
+											</table>
+											<p>
+												<br />
+												<span style="font-size:16px;">已交费：$PaymentAmount</span></p>
+											<p>
+												<span style="font-size:16px;"><span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">活动名称：</span>2019第二届国际汽车智能共享出行大会（SMC）</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">主办单位：</span>中国汽车工程协会、中国智能交通协会</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">承办单位：</span>广州市花都区人名政府</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">协办单位：</span>广州市花都汽车城管理委员会、纵思（上海）汽车技术咨询有限公司</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">时间：</span>2019年11月13-15日&nbsp;</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">地点：</span>中国 &middot; 广州花都 融创万达文华酒店&nbsp;</span><br style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;" />
+												<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-weight: bold;">会议官网：</span></span>
+												<a href="http://wnevc.com/" style="box-sizing: border-box; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; text-decoration-line: none !important;">www.issmc.org.cn</a>
+												</span><br /> &nbsp;
+											</p>
+											<p>
+												<strong>交通信息：</strong><br />
+												<strong>广州花都 融创万达文华酒店</strong></p>
+											<p>
+												30分钟车程即可抵达广州白云机场。<br /> 15分钟车程至广州火车站北站。
+											</p>
+											<p>
+												<strong><strong>组委会联系人</strong></strong>
+											</p>
+											<p>
+												<strong>冯锦山 先生</strong><br />
+												<strong>中国汽车工程学会</strong><br />
+												<strong>手机</strong><strong>：</strong><strong>+86 186 1298 2461</strong><br />
+												<strong>邮箱：<a href="mailto:fengjs@sae-china.org">fengjs@sae-china.org</a></strong></p>
+											<p>
+												<strong>宋 琪 女士</strong><br />
+												<strong>中国智能交通协会</strong><br />
+												<strong>手机</strong><strong>：</strong><strong>+86&nbsp;133 8108 1339</strong><br />
+												<strong>邮箱：<a href="songqi@itschina.org">songqi@itschina.org</a></strong></p>
+											<br />
+											<strong>期待与您相见。<br />
+									中国汽车工程学会</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br />
+		<div align="center" id="print_div" style="margin:0 auto;padding:15px;background: #fff;color: #333;border-radius: 4px;font-size:16px;line-height:1.8em;">
+			<button class="submitBtn" onclick="javascript:void(printSpecial())" style="width:100%;margin:0 auto 20px 0;cursor:pointer;padding: 6px 12px;border-radius:4px;outline: none;border: none;color:#ffffff;background-color: #2DBBED;">打印</button></div>

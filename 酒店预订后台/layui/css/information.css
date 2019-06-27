@@ -1,0 +1,119 @@
+
+.layui-container {
+	font-family: "微软雅黑";
+	padding: 0 !important;
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.tab>h2 {
+	text-align: center;
+	color: #00ABC5;
+	margin: 20px 0px;
+	font-weight: 700;
+}
+
+
+/*媒体查询*/
+
+@media screen and (max-width: 770px) {
+	.lable-tit {
+		display: block;
+	}
+	.layui-btn {
+		width: 95% !important;
+		overflow: hidden;
+		margin-bottom: 4%;
+		margin-top: 6%;
+	}
+	.layui-form-label {
+		width: 116px !important;
+	}
+	.layui-form-label {
+		width: 80px;
+	}
+	.layui-form-label {
+		float: none;
+	}
+	.layui-form-label {
+		margin-left: 20px;
+	}
+	.layui-form-label {
+		text-align: left;
+	}
+	.layui-input-block {
+		width: 70%;
+		margin-left: 32px !important;
+	}
+	input {
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.layui-container {
+		width: 1170px;
+	}
+	.layui-input-block {
+		margin-left: 0px;
+	}
+	.layui-form-label {
+		width: 188px !important;
+	}
+	.layui-btn {
+		width: 320px;
+		margin-bottom: 2%;
+		margin-top: 1%;
+	}
+}
+
+
+/*公共部分*/
+
+.layui-container-in>img {
+	display: block;
+	width: 100%;
+}
+
+.layui-row {
+	/*border: 1px solid black;*/
+	overflow: hidden;
+}
+
+.layui-container-in {
+	overflow: hidden;
+}
+
+.layui-form-select dl dd {
+	z-index: 9999;
+}
+
+.btn-tit {
+	overflow: hidden;
+	margin: auto;
+	text-align: center;
+}
+
+.layui-form-selected dl {
+	height: 120px;
+}
+
+.lable-tit>span {}
+
+.layui-input-block>input {
+	padding: 10px 8px;
+	border: 1px solid #e6e6e6;
+}
+
+.layui-form-select dl dd.layui-this {
+	background: #009688;
+}
+
+.layui-form-item {
+	margin: auto;
+}
+
+lable>span {
+	font-weight: 700;
+}

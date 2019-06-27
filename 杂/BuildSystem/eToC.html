@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <title>展会选择</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">
+    <link rel="stylesheet" href="plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="Application/Default/Css/register.css">
+    <link rel="stylesheet" href="Application/Default/Css/login.css">
+</head>
+<body>
+<div style="max-width: 1170px;margin: 10px auto;">
+    <img src="./image/syma.jpg">
+</div>
+
+<div class="container eList" style="">
+    <div class="e-date">
+        <span>展会日程</span>
+    </div>
+    <div id="eVessel">
+
+        <div class="col-md-6 col-sm-12 col-xs-12 cell">
+            <table class="tab">
+                <tr>
+                    <td rowspan="2" class="img-td">
+                        <div>
+                            <img src="./image/11111.jpg" alt="">
+                        </div>
+                    </td>
+                    <td class="title-w">2017上海国际展览会</td>
+                </tr>
+                <tr>
+                    <td class="date-click">2017/12/04 - 2017/12/06 <a href="#" class="clickToE">点击进入</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="template" class="col-md-6 col-sm-12 col-xs-12 cell">
+            <table class="tab">
+                <tr>
+                    <td rowspan="2" class="img-td">
+                        <div>
+                            <img src="./image/noPhoto.jpg" alt="">
+                        </div>
+
+                    </td>
+                    <td class="title-w">2017上海国际保温，防水材料与节能技术展览会（加个备注：我的名字很长的。。。。）</td>
+                </tr>
+                <tr>
+                    <td class="date-click">2017/12/04 - 2017/12/06 <a class="clickToE" href="#">点击进入</a></td>
+                </tr>
+            </table>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript" src="Public/Js/jquery-1.9.1.min.js"></script>
+<script src="plugin/layui/layui.all.js"></script>
+<script>
+    $(function(){
+        //假数据
+        for(var i = 0;i<50;i++){
+            var d = $("#template").clone().removeAttr("id");
+            $("#eVessel").append(d);
+        }
+
+
+        //加载展会
+        //getExhibition();
+    });
+
+    //加载展会
+    function getExhibition(){
+        $("#eVessel").html("");
+        $.ajax({
+             url:"/getExhibition/",
+             data:"",
+             type:"post",
+             dataType:"json",
+             cache:false,
+             timeout:20000,
+             async:true,
+             success:function(data){
+                 if(data===0){
+                     layer.alert('没有任何展会！', {icon: 2});
+                 }else{
+                     var dataList = eval("("+data+")");
+                     var html = "";
+                     for(var i in dataList){
+                         var obj = dataList[i];
+                         var imgSrc = obj.img || "./image/noPhoto.jpg";
+                         html += '<div class="col-md-6 col-sm-12 col-xs-12 cell">'+
+                             '<table class="tab"><tr><td rowspan="2" class="img-td"><div>'+
+                             '<img src="'+imgSrc+'" alt="">'+
+                             '</div>'+
+                             '</td>'+
+                             '<td class="title-w">obj.name</td>'+
+                             '</tr>'+
+                             '<tr>'+
+                             '<td class="date-click">obj.time<a class="clickToE" href="'+obj.url+'">点击进入</a></td>'+
+                             '</tr>'+
+                             '</table>'+
+                             '</div>';
+                     }
+                     $("#eVessel").append(html);
+                 }
+             },
+             error:function(e){
+                layer.alert('加载展会出错了！', {icon: 2});
+             }
+         });
+    }
+
+</script>
+</body>
+</html>

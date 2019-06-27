@@ -1,0 +1,124 @@
+.center-block {
+	width: 100%;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+	background: #00bfff;
+	color: #FFFFFF;
+}
+
+.nav-tabs>li {
+	border: 0px !important;
+}
+
+.nav-tabs>li>a {
+	background: #9A9A9A;
+	color: white;
+	border: 0px !important;
+}
+
+.nav-tabs>li>a:hover {
+	background: #00bfff;
+}
+
+.nav-tabs {
+	border: none;
+}
+
+#myTabContent {
+	border: 1px solid #ccc;
+}
+
+.nav-tabs>li {
+	padding: 0px;
+}
+
+.nav-tabs>li>a {
+	border-radius: 0;
+	text-align: center;
+	font-size: 21px;
+}
+
+.h3-tit {
+	margin-bottom: 32px;
+}
+
+.banner-tit {
+	overflow: hidden;
+}
+
+.banner-tits {
+	overflow: hidden;
+}
+
+.banner-tit>p:nth-child(2)>lable {
+	vertical-align: middle;
+}
+
+.banner-tits>p:nth-child(2)>lable {
+	vertical-align: middle;
+}
+
+.banner-in-bord {
+	margin: 10px 20px;
+	border: 1px solid #999999;
+	padding: 0px 10px;
+}
+
+.banner-tit-bode {
+	padding: 10px 10px;
+	margin: 10px 20px;
+}
+
+.banner-tit {
+	padding: 6px 20px;
+}
+
+.banner-tits {
+	padding: 6px 20px;
+}
+
+.banner-in-bordes {
+	border: 1px solid #CCCCCC;
+}
+
+.banner-tit>p {
+	margin-top: 2%;
+}
+
+.banner-tits>p {
+	margin-top: 2%;
+}
+
+.footer {
+	text-align: center;
+	background: #00bfff;
+	width: 20%;
+	color: white;
+	margin: 10px auto;
+	border-radius: 6px;
+	padding: 10px 0px;
+	cursor: pointer;
+}
+
+
+/*媒体查询*/
+
+@media (min-width: 1200px) {
+	.nav-tabs>li:nth-child(2),
+	.nav-tabs>li:nth-child(3) {
+		margin-left: 28px;
+	}
+	.banner-tit>p {
+		margin-top: 2%;
+	}
+}
+
+@media (max-width: 760px) {
+	.nav-tabs>li:nth-child(2),
+	.nav-tabs>li:nth-child(3) {
+		margin-top: 4%;
+	}
+}

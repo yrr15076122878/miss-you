@@ -1,0 +1,26 @@
+font-weight: normal;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 15px 30px;
+    padding: 10px 30px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    background: linear-gradient(to left,#2885fe,#2885fe);
+    background: linear-gradient(to left,,);
+    /* -webkit-animation: asss 1.5s ease-out 75ms; */
+    -moz-animation: asss 1.5s ease-out 75ms;
+    animation: asss 1.5s ease-out 75ms;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+
+
+
+
+https://www.mituo.cn/ab/jc-1/?hmsr=seo-2019513a001juery

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<style type="text/css">
+			.interested {
+				width: 100%;
+				font-size: 13px;
+				border-collapse: collapse;
+			}
+			
+			.interested th {
+				text-align: center;
+			}
+			
+			.interested th,
+			.interested td {
+				padding: 5px;
+				border: 1px solid #ccc;
+			}
+			
+			#print-sub {
+				width: 100%;
+				margin: 0 auto 20px 0;
+				cursor: pointer;
+				border: 1px solid transparent;
+				padding: 10px;
+				border-radius: 4px;
+				outline: none;
+				background: #002f68;
+				color: #fff;
+			}
+			
+			#print-sub:hover {
+				opacity: 0.9 !important;
+			}
+			
+			#print_div {
+				max-width: 800px !important;
+			}
+			
+			.table-w {
+				max-width: 800px !important;
+			}
+			
+			.content_in {
+				color: red;
+				font-weight: 600;
+			}
+			
+			.tab_in {
+				overflow: hidden;
+			}
+			
+			.tab_ins {
+				text-align: center;
+				float: left;
+				font-weight: 700;
+				border: 1px solid black;
+				margin: 10px 10px;
+				padding: 2px 8px;
+				border-radius: 10px;
+				width: 24%;
+			}
+			
+			.off {
+				float: left;
+				margin-top: 40px;
+			}
+			
+			.tab_nice {
+				overflow: hidden;
+			}
+			
+			.tab_nice_in {
+				width: 50%;
+				float: right;
+			}
+			
+			.tab_nice_in:nth-child(1) {
+				background: yellow;
+				border-radius: 26px;
+			}
+			
+			.tab_nice_in>p {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			
+			.footer_ins {
+				float: right;
+			}
+			
+			.footer_in {
+				overflow: hidden;
+				margin-top: 20px;
+			}
+			
+			.footer_ins:nth-child(1)>img {
+				margin-top: 50px;
+				margin-left: 20px;
+			}
+			
+			.tab_nice {
+				margin-top: 10px;
+			}
+			
+			table {
+				border: 1px solid black;
+				overflow: hidden;
+			}
+		</style>
+		<table border="0" cellpadding="0" cellspacing="0" class="table-w" style="margin:0 auto; padding:15px;background: #fff;color: #333; border-radius: 4px;font-size:16px; line-height:1.8em;">
+			<tbody>
+				<tr>
+					<td style="font-family: Helvetica, Arial, sans-serif, " yahei="">
+						<!--http://exhibitor.chinacastexpo.com/images/EmailCn.jpg--><img alt="banner" class="img-responsive hidden-xs" src="http://reg.diecastexpo.cn/upload/20171122193919.jpg" style="width:100%" /></td>
+				</tr>
+				<tr>
+					<td style="background: #002f68; color: #fff; text-align: center;padding: 10px; font-size: 1.4em;">
+						<strong style="padding-left: 20px;">尊享服务卡确认函</strong></td>
+				</tr>
+				<tr>
+					<td>
+						<br />
+						<span style="padding-left: 20px;">尊敬的观众 $UserName， </span><br />
+						<p style="padding-left: 20px;">
+							&nbsp;&nbsp;&nbsp;&nbsp;感谢您报名参观 CHINA DIECASTING 2019第十四届中国国际压铸展览会/2019中国有色合金及特种铸造展览会！本届展会将于2019年7月17至19日在上海新国际博览中心N1、N2、N3馆举行。 我们荣幸地通知您，经过审核，您已成功申请到CHINA DIECASTING的&ldquo;尊享服务卡&rdquo;，凭此卡将终身享受主办方提供的尊享服务。请查收以下取卡流程</p>
+						<p class="content_in">
+							<span style="padding-left: 20px;">您的注册号段为：$RegistrationNumber</span></p>
+						<p class="tab_in">
+							<span class="tab_ins">
+								至展馆2号登记大厅<br /> &ldquo;压铸展&rdquo;
+								<br /> 观众登记处
+							</span>
+							<span class="off">
+								<img alt="" src="http://reg.diecastexpo.cn/upload/off.png" /></span>
+							<span class="tab_ins">
+								出示此确认函，<br /> 至&ldquo;尊享服务卡&rdquo;通道快速打印胸卡
+							</span>
+							<span class="off">
+								<img alt="" src="http://reg.diecastexpo.cn/upload/off.png" /></span>
+							<span class="tab_ins">
+								本人凭胸卡至展馆内<br /> &ldquo;尊享服务区&rdquo;领取尊享卡及资料
+							</span>
+						</p>
+						<tr class="tab_nice" style="display: block;">
+							<td class="tab_nice_in">
+								<p style="padding-left: 20px;">
+									<strong>参观信息:</strong></p>
+								<p>
+									<strong>日期：</strong>2019年7月17日至19日</p>
+								<p>
+									<strong>时间： </strong> 09:00 &ndash; 16:30</p>
+								<p>
+									<strong>展馆：</strong>上海新国际博览中心N1、N2、N3馆</p>
+								<p style="padding-bottom: 1px;">
+									<strong>地址： </strong> 上海市浦东新区龙阳路2345号（近芳甸路花木路3号口）</p>
+							</td>
+							<td class="tab_nice_in">
+								<p>
+									<strong>凭尊享服务卡，展会现场享受以下礼遇：</strong></p>
+								<p>
+									<strong style="color: red;">使用尊享服务区（PSC Service Center） </strong></p>
+								<p>
+									免费上网、使用小型会议室、享受饮料、小食资料袋领取（含展会资料如展报、指南、技术手册等；纪念礼品）</p>
+								<p>
+									<strong style="color: red;">会议区领取会议资料 </strong></p>
+								<p style="padding-bottom: 1px;    padding-left: 20px;">
+									<strong>请点击以下链接，享受更多增值服务： </strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;color: red;">保存此确认函至手机 </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;color: red;">保存展览日期至您的手机日历 </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;"><a href="http://www.diecastexpo.cn/statics/images/zhu-zhanhui-49.jpg" target="_blank">打开交通指示 </a> </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<a href="http://exhibitor.diecastexpo.cn/catalog/search/cid.aspx"><strong style="padding-left: 20px;/* color: red; */">搜索供应商信息匹配您的需求</strong></a>
+								</p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;"><a href="http://www.diecastexpo.cn/event/jibenxinxi" target="_blank">查看展会同期信息 </a> </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<a href="http://reg.diecastexpo.cn/"><strong style="padding-left: 20px;/* color: red; */">邀请您的同事参观</strong></a>
+								</p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;"><a href="mailto:william.gu@nm-china.com.cn?subject=CHINA%20DIECASTING%202019组团参观申请" target="_blank">十人以上团队请点此联系我们，可享专人接待，陪同参观主题路线、目标供应商邀约。 </a> </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;"><a href="http://www.orient-explorer.net/CD/index.asp" target="_blank">在线酒店预定 </a> </strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;"><a href="http://www.diecastexpo.cn/visitors/servicecard" target="_blank">点击此处了解更多尊享服务内容！ </a> </strong></p>
+								<p style="text-align: center;padding-left: 20px;">
+									<strong>我们期待与您相约CHINA DIECASTING 2019第十四届中国国际压铸展览会/<br />
+						2019中国有色合金及特种铸造展览会 </strong></p>
+								<p>
+									&nbsp;</p>
+								<p style="padding: 0px;margin: 0px;">
+									<strong style="padding-left: 20px;">联系信息：</strong></p>
+								<p style="padding: 0px;margin: 0px;">
+									<span style="padding-left: 20px;">纽伦堡会展（上海）有限公司 </span></p>
+								<p style="padding: 0px;margin: 0px;">
+									<span style="padding-left: 20px;">顾闻骝 先生 </span></p>
+								<p style="padding: 0px;margin: 0px;">
+									<span style="padding-left: 20px;">+86 21 6036 1213 </span></p>
+								<p style="padding: 0px;margin: 0px;">
+									<span style="padding-left: 20px;">william.gu@nm-china.com.cn </span></p>
+							</td>
+						</tr>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<p>
+			&nbsp;</p>
+
+		<td>
+			<img src="http://116.62.69.139:8022/image/ck.png" alt="" style="width: 20px;height: 20px;position: absolute;margin-top:88px;margin-left:190px;z-index:333;">
+			<div>
+				<div class="form-group left">
+					<div class="col-sm-9" id="imgs" style="width: 88% !important;">
+						<c:foreach items="" var="imgs"><img class="pimg" src="img/logo1.png" width="200px" height="100px"></c:foreach>
+					</div>
+				</div>
+			</div>
+			<div id="outerdiv" style="position: fixed; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.7); z-index: 2; width: 100%; height: 100%; display: none;">
+				<div id="innerdiv" style="position: absolute; top: 244.5px; left: 650px;"><img id="bigimg" style="border: 5px solid rgb(255, 255, 255); width: 620px;" src="../UpFilePimg/20190412105015_330.jpg"></div>
+			</div>
+		</td>
+	</body>
+
+</html>

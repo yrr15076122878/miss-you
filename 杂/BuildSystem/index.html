@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>主场搭建系统</title>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" type="text/css" href="Application/Default/Css/console1412.css" />
+		<!--<link rel="stylesheet" type="text/css" href="Public/Css/global.css" />-->
+		<link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">
+		<link rel="stylesheet" href="plugin/layui/css/layui.css">
+		<style>
+			.ulsub {color: #fff;/*background-color: #3c4652;*/display: none;}
+			.ulsub li a{
+				padding-left: 40px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color:#fff;height: 40px;line-height: 40px;text-decoration: none;
+			}
+			.ulsub li a:hover {
+				background-color: #2f4056;
+			}
+			.ulsub li.active a {
+				background-color: #2f4056 !important;
+			}
+			.viewFramework-sidebar .sidebar-nav li.active-sub>a {
+				background: #007298;
+			}
+
+
+		</style>
+
+	</head>
+	
+	<body class="iframe-body" data-setTime="598" data-actionUrl="Admin/Index/index">
+		<!-- header  -->
+		<div class="viewFramework-topbar ng-scope">
+		<!-- topbar -->
+			<div class="aliyun-console-topbar ng-isolate-scope">
+				<div class="topbar-wrap topbar-clearfix">
+					<div class="topbar-head topbar-left">
+						<a href="#" target="_blank" class="topbar-logo topbar-left" style="width: 180px;background-image: url(image/syma.jpg);background-size: 100%;border:1px solid #0099cc;">
+							<!--<span class="icon-logo1"></span>-->
+							<!--后台管理系统-->
+						</a>
+						<!--<a href="/index.php?s=/Index/index.html" target="_self" class="topbar-home-link topbar-btn topbar-left" >
+							<span class="ng-binding">管理控制台</span>
+						</a>-->
+					</div>
+					<div style="color: #fff;font-size: 23px;line-height: 50px;margin-left: 20px;float: left;"><span class="ng-binding">有机食品展览会</span></div>
+					<!-- 顶部导航栏（左边） -->
+					 <!--<div class="topbar-head topbar-left"><a href="/index.php?s=/Member/index.html" target="_self" class="topbar-home-link topbar-btn topbar-left"><span class="ng-binding">用户管理</span></a>
+					</div>
+					<div class="topbar-head topbar-left"><a href="/index.php?s=/Access/index.html" target="_self" class="topbar-home-link topbar-btn topbar-left"><span class="ng-binding">权限管理</span></a>
+					</div>
+					<div class="topbar-head topbar-left"><a href="/index.php?s=/System/index.html" target="_self" class="topbar-home-link topbar-btn topbar-left"><span class="ng-binding">系统管理</span></a>
+					</div>-->
+
+
+					<div class="topbar-info topbar-right topbar-clearfix">
+						<!--  二维码  -->
+						<!--<div class="topbar-qrcode topbar-left ng-scope">
+							<a class="topbar-btn" href="javascript:;" target="_blank">
+								<span class="icon-qrcode"></span>
+								<span class="ng-scope ng-binding">二维码</span>
+							</a>
+							<div class="topbar-qrcode-panel">
+								<div class="topbar-qrcode-image"><img src="Application/Admin/View/Default/Images/qrcode.png" widht="100" height="100"></div>
+								<div class="topbar-qrcode-title ng-binding">扫码关注平台动态</div>
+							</div>
+						</div>-->
+
+						<!-- 铃铛 -->
+						<!--<div class="dropdown topbar-notice topbar-btn topbar-left ng-scope" >
+							<a href="javascript:;" class="dropdown-toggle topbar-btn-notice">
+								<span class="topbar-btn-notice-icon icon-bell"></span>
+								<span class="topbar-btn-notice-num ng-binding">22</span>
+							</a>
+							<div class="topbar-notice-panel">
+								<div class="topbar-notice-arrow"></div>
+								<div class="topbar-notice-head"><span class="ng-binding">站内消息通知</span></div>
+								<div class="topbar-notice-body">
+									<ul class="ng-scope">
+										<li class="ng-scope">
+											<a target="_blank" class="clearfix" href="#">
+												<span class="inline-block">
+													<span class="topbar-notice-link ng-binding">【重要通知】这里是一些通知</span>
+													<span class="topbar-notice-time ng-binding">2018-10-23</span>
+												</span>
+												<span class="inline-block topbar-notice-class ng-scope">
+													<span class="topbar-notice-class-name ng-binding">优惠活动</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="topbar-notice-foot">
+									<a class="topbar-notice-more ng-binding" target="_blank" ng-href="#" aliyun-console-spm="401" data-spm-click="gostr=/aliyun;locaid=d401;;" href="#">查看更多</a>
+								</div>
+							</div>
+						</div>-->
+
+						<!-- 支付弹窗 -->
+						<!--<div class="topbar-left topbar-accesskeys topbar-info-item ng-scope">
+							<a href="javascript:;" data-url="/index.php?s=/Common/alipay.html" class="topbar-btn ng-binding groupAuth">支付弹窗</a>
+						</div>-->
+
+						<!-- 等待添加 -->
+						<!--<div class="topbar-left topbar-workorder topbar-info-item ng-scope" ng-if="navLinks.workorder.show">
+							<div class="dropdown">
+								<a href="javascript:;" class="dropdown-toggle topbar-btn" data-toggle="dropdown" aliyun-console-spm="51" data-spm-click="gostr=/aliyun;locaid=d51;;">
+									<span ng-bind="navLinks.workorder.text" class="ng-binding">等待添加</span>
+									<span class="icon-arrow-down"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li ng-repeat="link in navLinks.workorder.links" class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+									<li ng-repeat="link in navLinks.workorder.links" class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+								</ul>
+							</div>
+						</div>-->
+
+						<!-- 清理缓存 -->
+						<!--<div class="topbar-left topbar-accesskeys topbar-info-item ng-scope">
+							<a href="javascript:;" data-url="/index.php?s=/Public/clearAdminCache.html" class="topbar-btn ng-binding delete">清理缓存</a>
+						</div>-->
+
+						<!-- 等待添加 -->
+						<!--<div class="topbar-left topbar-help topbar-info-item ng-scope" ng-if="navLinks.help.show">
+							<div class="dropdown"><a href="javascript:;" class="dropdown-toggle topbar-btn"><span class="ng-binding" id="help">等待添加</span>&lt;!&ndash; ngIf: navLinks.help.showNew &ndash;&gt;<span class="icon-arrow-down"></span></a>
+								<ul class="dropdown-menu">
+									<li class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+									<li class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+									<li class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+									<li class="topbar-info-btn ng-scope"><a href="#" target="_blank"><span class="ng-binding">等待添加</span></a></li>
+								</ul>
+							</div>
+						</div>-->
+						<!-- QQ -->
+						<div class="topbar-left ng-scope">
+							<div id='loginOut' class="dropdown topbar-info-item">
+								<a href="javascript:void(0);" class="dropdown-toggle topbar-btn">
+									<span class="ng-binding">管理员</span>
+									<span class="icon-arrow-down"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="topbar-info-btn ng-scope">
+										<a href="#" target="_self"><span class="ng-binding">退出</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header  -->
+
+		<!-- 左侧一级导航栏 -->
+		<div id='sidebar-left' class="viewFramework-body viewFramework-sidebar-full">
+			<div class="viewFramework-sidebar">
+				<div id="sidebar" product-id="account" class="sidebar-content">
+					<div class="sidebar-inner ng-scope">
+						<div id='sidebar-icon' class="sidebar-fold ng-scope icon-unfold" title="收起导航栏"></div>
+						<!--<div class="sidebar-nav main-nav">
+							<div class="sidebar-title">
+								<div class="sidebar-title-inner ng-scope">
+									<span class="sidebar-title-icon icon-arrow-down"></span>
+									<span class="sidebar-title-text ng-binding">快捷方式菜单</span>
+									<span class="sidebar-manage ng-scope">
+										<a class="icon-setup ng-isolate-scope"></a>
+									</span>
+								</div>
+							</div>
+							<ul class="sidebar-trans" style="height:auto;">
+								<li class="nav-item ng-scope">
+									<a href="/index.php?s=/Index/home.html" class="sidebar-trans ng-scope">
+										<div class="nav-icon sidebar-trans">
+											<span class="icon-wo-sitebuild"></span>
+										</div>
+										<span class="nav-title ng-binding">首页&nbsp;</span>
+									</a>
+								</li>
+								 <li class="nav-item ng-scope">
+									<a href="/index.php?s=/Access/roleList.html" class="sidebar-trans ng-scope">
+										<div class="nav-icon sidebar-trans">
+											<span class="icon-rds"></span>
+										</div>
+										<span class="nav-title ng-binding">角色管理&nbsp;</span>
+									</a>
+								</li>
+							</ul>
+						</div>-->
+						<div class="sidebar-nav">
+							<!--<div class="sidebar-title">
+								<div class="sidebar-title-inner ng-scope">
+									<span class="sidebar-title-icon">
+										<span class="icon-arrow-down"></span>
+									</span>
+									<span class="sidebar-title-text ng-binding">用户中心</span>
+									<span class="sidebar-manage ng-scope">
+										<a class="icon-setup ng-isolate-scope" title="自定义用户中心快捷入口"></a>
+									</span>
+								</div>
+							</div>-->
+							<ul class="entrance-nav sidebar-trans" id="nav" style="height:auto;">
+								<li class="nav-item ng-scope" lisub="true" status="0">
+									<a href="#" class="ng-scope">
+										<div class="nav-icon">
+											<span class="icon-account-2"></span>
+										</div>
+										<span class="nav-title ng-binding">全局</span>
+									</a>
+									<ul class="ulsub">
+										<li><a href="#" data-url="Admin/System/index2">选项1选项1选项1选项1选项1</a></li>
+										<li><a href="#" data-url="Admin/System/index2">选项2</a></li>
+										<li><a href="#" data-url="Admin/System/index2">选项3</a></li>
+										<li><a href="#" data-url="Admin/System/index2">选项4</a></li>
+									</ul>
+								</li>
+								<li class="nav-item ng-scope" lisub="true" status="0">
+									<a href="javascript:;" data-submenu="2" data-count="5" data-url="Admin/System/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="icon-ecs"></span>
+										</div>
+										<span class="nav-title ng-binding">系统</span>
+									</a>
+									<ul class="ulsub">
+										<li><a href="#" data-url="Admin/System/index1">选项1选项1选项1选项1选项1</a></li>
+										<li><a href="#" data-url="Admin/System/index1">选项2</a></li>
+										<li><a href="#" data-url="Admin/System/index1">选项3</a></li>
+										<li><a href="#" data-url="Admin/System/index1" data-sub="true"><span class="nav-title">我还有下级菜单</span></a></li>
+									</ul>
+								</li>
+								<li class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="3" data-count="4" data-url="Admin/Member/index" class="ng-scope" data-sub="true">
+										<div class="nav-icon">
+											<span class="icon-account-2"></span>
+										</div>
+										<span class="nav-title ng-binding">用户</span>
+									</a>
+								</li>
+								<li class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="4" data-count="3" data-url="Admin/Access/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="icon-yundun"></span>
+										</div>
+										<span class="nav-title ng-binding">权限</span>
+									</a>
+								</li>
+								<li class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="11" data-count="5" data-url="Admin/Database/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="category-icon icon-yunxunizhuji"></span>
+										</div>
+										<span class="nav-title ng-binding">数据</span>
+									</a>
+								</li>
+								<li class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="13" data-count="3" data-url="Admin/Monitor/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="icon-yunjiankong"></span>
+										</div>
+										<span class="nav-title ng-binding">监控</span>
+									</a>
+								</li>
+								<li class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="50" data-count="2" data-url="Admin/Addons/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="category-icon icon-rds"></span>
+										</div>
+										<span class="nav-title ng-binding">扩展</span>
+									</a>
+								</li>
+								<li id="qtt" class="nav-item ng-scope">
+									<a href="javascript:;" data-submenu="0" data-count="0" data-url="Admin/Addons/index" class="ng-scope">
+										<div class="nav-icon">
+											<span class="category-icon icon-rds"></span>
+										</div>
+										<span class="nav-title ng-binding">其他</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="time" class="time">
+							<!-- 系统时间 -->
+							<span id="today">2016-03-14 17:21:50</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='sidebal-middle' class="viewFramework-product">
+				<div class="viewFramework-product-navbar ng-scope hidden">
+					<div class="product-nav-stage ng-scope product-nav-stage-main">
+						<div class="product-nav-scene product-nav-main-scene">
+							<!-- 第二列导航title -->
+							<div class="product-nav-title ng-binding titleOne"></div>
+							<!-- 自定义内容插入点，比如商标、logo -->
+							<div customized-content="" class="ng-isolate-scope"></div>
+							<!-- 第二级 -->
+							<div class="product-nav-list" id="product-nav-list">
+
+								<ul>
+									<!--<li>
+										<div class="ng-isolate-scope">
+											<a href="javascript:;" data-url="/index.php?s=/Admin/Config/setConfig.html" class="ng-scope">
+												<div class="nav-icon"></div>
+												<div class="nav-title ng-binding">网站设置</div>
+											</a>
+										</div>
+									</li>-->
+								</ul>
+
+
+								<!--<ul class="submenu-3 hidden" data-submenu="3">
+									<li>
+										<div class="ng-isolate-scope">
+											<a href="javascript:;" data-url="/index.php?s=/Admin/Member/localUser.html" class="ng-scope">
+												<div class="nav-icon"></div>
+												<div class="nav-title ng-binding">本地用户</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="ng-isolate-scope">
+											<a href="javascript:;" data-url="/index.php?s=/Admin/Member/oauth.html" class="ng-scope">
+												<div class="nav-icon"></div>
+												<div class="nav-title ng-binding">第三方用户</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="ng-isolate-scope">
+											<a href="javascript:;" data-url="/index.php?s=/Admin/Member/groupList.html" class="ng-scope">
+												<div class="nav-icon"></div>
+												<div class="nav-title ng-binding">会员等级</div>
+											</a>
+										</div>
+									</li>
+									<li class="nav-showchild">
+										<div class="ng-isolate-scope checkChild">
+											<a href="javascript:;" class="ng-scope">
+												<div class="nav-icon">
+													<span class="i-arrow icon-arrow-right"></span>
+												</div>
+												<div class="nav-title ng-binding" ng-bind="item.title">下拉</div>
+											</a>
+										</div>
+										<ul class="ng-scope ishidden hidden">
+										<li>
+											<div class="ng-isolate-scope">
+												<a href="javascript:;" data-url="/index.php?s=/Admin/Member/refereeList.html" class="ng-scope">
+													<div class="nav-icon"></div>
+													<div class="nav-title ng-binding">小选项</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+									</li>
+									<li class="nav-showchild">
+										<div class="ng-isolate-scope checkChild">
+											<a href="javascript:;" class="ng-scope">
+												<div class="nav-icon">
+													<span class="i-arrow icon-arrow-right"></span>
+												</div>
+												<div class="nav-title ng-binding" ng-bind="item.title">会员返利</div>
+											</a>
+										</div>
+											<ul class="ng-scope ishidden hidden">
+												<li>
+													<div class="ng-isolate-scope">
+														<a href="javascript:;" data-url="/index.php?s=/Admin/Member/refereeList.html" class="ng-scope">
+															<div class="nav-icon"></div>
+															<div class="nav-title ng-binding">邀请返利列表</div>
+														</a>
+													</div>
+												</li>
+												<li>
+													<div class="ng-isolate-scope">
+														<a href="javascript:;" data-url="/index.php?s=/Admin/Member/refereeList.html" class="ng-scope">
+															<div class="nav-icon"></div>
+															<div class="nav-title ng-binding">邀请返利列表2</div>
+														</a>
+													</div>
+												</li>
+												<li>
+													<div class="ng-isolate-scope">
+														<a href="javascript:;" data-url="/index.php?s=/Admin/Member/refereeList.html" class="ng-scope">
+															<div class="nav-icon"></div>
+															<div class="nav-title ng-binding">邀请返利列表3</div>
+														</a>
+													</div>
+												</li>
+											</ul>
+									</li>
+								</ul>-->
+							</div>
+						</div>
+
+						<div class="product-nav-scene product-nav-sub-scene">
+							<div class="product-nav-title"></div>
+							<div class="product-nav-list">
+								<ul></ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="viewFramework-product-navbar-collapse ng-scope hidden">
+					<div class="product-navbar-collapse-inner">
+						<div class="product-navbar-collapse-bg"></div>
+						<div id='icon-left' class="product-navbar-collapse">
+							<span class="icon-collapse-left"></span>
+							<span class="icon-collapse-right"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="viewFramework-product-body" id="mainFrameBody" style="overflow: hidden;background-color: #fff;">
+					<!-- product body -->
+					<!--Iframe部分-->
+					<iframe id="mainFrame" src="./DeviceList.html" frameborder="0" width="100%" height="100%"></iframe>
+					<!-- /product body -->
+				</div>
+			</div>
+		</div>
+		<!-- jQuery2.0库 -->
+		<!-- <script type="text/javascript" src="Public/Js/jquery-2.1.1.min.js"></script> -->
+		<script type="text/javascript" src="Public/Js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="Public/Js/jquery.form.js"></script>
+		<!-- LayerUi库 -->
+		<script src="plugin/layui/layui.all.js"></script>
+		<script type="text/javascript" src="Public/Js/jquery.confirm.js"></script>
+		<!-- 后台JS -->
+		<script type="text/javascript" src="Application/Default/Js/index.js"></script>
+		<!--<script type="text/javascript" src="Public/Js/global.js"></script>-->
+		<script type="text/javascript" src="Application/Default/Js/main.js"></script>
+		<script src="Public/Js/jquery.nicescroll.min.js"></script>
+	</body>
+</html>

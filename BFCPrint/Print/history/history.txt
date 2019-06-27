@@ -1,0 +1,57 @@
+
+此处储存历史胸卡的样式，格式：胸卡尺寸+css样式+备注 （注意胸卡背景图片的路径）
+注意：批量打印的样式不可存放此处，应存放在批量打印的那个css文件夹中。
+
+100mm * 90 mm :
+
+/* =======================  配置胸卡 start ======================== */
+/*  胸卡的背景图片 */
+.badge-box{background:url(../../images/print_zz.gif) no-repeat;display:block;width:100mm;height:90mm;border-radius:4px;overflow:hidden;position:relative;background-size:100%;box-shadow:0 3px 6px #aaa;}
+/* 姓名(name) */
+.badge-box .card_name{top:24mm;font-size: 32px;;position:absolute;padding:0 1mm!important;text-transform:capitalize;overflow:hidden;width:100%;white-space:nowrap;font-weight:700;text-align:center}
+/* 职位(position) */
+.badge-box .card_position{top:33mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:700;text-align:center;}
+/* 公司名称(Company Name)  */
+.badge-box .card_company{top:37mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;overflow:hidden;white-space:nowrap;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:600;text-align:center;font-family:;}
+/* 国家和省份(Country and province)   */
+.badge-box .card_country_province{top:49mm;font-size:4mm;text-transform:capitalize;word-wrap:break-word;position:absolute;width:100%;height:6mm;overflow-y:hidden;font-weight:700;text-align:center;}
+/* 条码(bar code)  */
+.badge-box .card_barcode{top:50mm;position:absolute;width:100%;text-align:center;}
+.badge-box .card_barcode div{margin:0 auto}
+/* 展位号(Booth Number) */
+.badge-box .card_boothNum{top:54mm;font-size:17px;position:absolute;overflow:hidden;width:32mm;right:0mm;}
+/* 种类(Category) */
+.badge-box .card_category{top:79mm;font-size:30px;font-family:FZLTCHJW-Bold,Arial,sans-serif;position:absolute;width:100%;text-align:center;font-weight:700;font-family:FZLTCHJW-Bold,Arial,宋体,sans-serif;}
+/* =======================  配置胸卡 end ======================== */
+
+
+
+
+
+
+
+101.6mm * 127mm:
+/* =======================  配置胸卡 start ======================== */
+/* 胸卡的宽高和背景图片 */
+.badge-box{background:url(../../images/mCard.jpg) no-repeat;display:block;width:101.6mm;height:127mm;border-radius:4px;overflow:hidden;position:relative;background-size:100%;box-shadow:0 3px 6px #aaa;}
+/* card_name：姓名(name) */
+.badge-box .card_name{top:49mm;font-size: 32px;position:absolute;padding:0 1mm!important;text-transform:capitalize;overflow:hidden;width:100%;white-space:nowrap;font-weight:700;text-align:center}
+/* card_position：职位(position) */
+.badge-box .card_position{top:64mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:500;text-align:center;}
+/* card_company： 公司名称(Company Name) */
+.badge-box .card_company{top:74mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:500;text-align:center;}
+/* card_barcode：条码(bar code) */
+.badge-box .card_barcode{top:87mm;position:absolute;width:100%;text-align:center;}
+/* card_boothNum：展位号(Booth Number) */
+.badge-box .card_boothNum{top:88mm;font-size:17px;position:absolute;overflow:hidden;width:32mm;right:0mm;}
+/* card_category：种类(Category) */
+.badge-box .card_category{top:115mm;font-size:30px;font-family:FZLTCHJW-Bold,Arial,sans-serif;position:absolute;width:100%;text-align:center;font-weight:700;}
+/* 修改字体请前往：Print/Print/css/fontFamily.css  */
+/* =======================  配置胸卡 end ======================== */
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/valide.js"></script>
+	
+	
+	<body>
+		<div class="btn">
+			<div class="btn-in">
+				<form action="" id="form1" class="errorInp">
+					<!--onmouseout="s('form1')" -->
+					<lable>验证：</lable>
+					<input type="text" reg="/^[a-zA-Z0-9_-]{6,12}$/" required errorMsg="请输入正确姓名" nTitle="姓名" class="require-text showMsg" />
+					<input type="text" ID="StaffName" runat="server" class="form-control" reg="/^[\w\W]{1,}$/" nTitle="姓名" errorMsg="不能为空" required />
+
+					<input type="button" onclick="fun1('form1')" value="点击" id="funs" />
+				</form>
+				<form action="" id="form">
+					<lable>验证：</lable>
+					<input type="text" reg="/^[a-zA-Z0-9_-]{6,12}$/" required errorMsg="请输入正确姓名" nTitle="姓名" class="require-text showMsg" />
+					<input type="text" ID="StaffName" runat="server" class="form-control" reg="/^[\w\W]{1,}$/" nTitle="姓名" errorMsg="不能为空" required />
+					<input type="button" onclick="fun1('form1')" value="点击" id="funs" />
+				</form>
+				<form action="" id="form2">
+					<lable>验证：</lable>
+					<input type="text" reg="/^[a-zA-Z0-9_-]{6,12}$/" required errorMsg="请输入正确姓名" nTitle="姓名" class="require-text showMsg" />
+					<input type="text" ID="StaffName" runat="server" class="form-control" reg="/^[\w\W]{1,}$/" nTitle="姓名" errorMsg="不能为空" required />
+
+					<input type="button" onclick="fun1('form1')" value="点击" id="funs" />
+				</form>
+				<!--<form action="" id="form2">
+					<lable>验证：</lable>
+					<input type="text"  nTitle="姓名" required reg="/^[a-zA-Z0-9_-]{6,12}$/" onblur="ss('form1')" onmouseover="sx('form1')"  required  errorMsg="请输入正确姓名" required  nTitle="姓名" />
+					<input type="button" id="ok" onclick="fun1('form2')" />
+				</form>
+				<form action="" id="form3">
+					<lable>验证：</lable>
+					<input type="text"  nTitle="姓名" required reg="/^[a-zA-Z0-9_-]{6,12}$/"  required  errorMsg="请输入正确姓名"/>
+					<input type="button" id="ok" onclick="fun1('form3')" />
+				</form>-->
+			</div>
+		</div>
+		<script>
+			$( function(){
+				$("input").blur(function(){
+					checkForm()
+				}) 
+			})
+
+			
+		</script>
+	</body>
+
+</html>

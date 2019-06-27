@@ -1,0 +1,55 @@
+
+/*
+
+badge-box：胸卡的宽高和背景图片
+card_name：姓名(name)
+card_position：职位(position)
+card_company： 公司名称(Company Name)
+card_country_province：国家和省份(Country and province)
+card_barcode：条码(bar code)
+card_boothNum：展位号(Booth Number)
+card_category：种类(Category)
+ */
+
+
+/* =======================  配置胸卡 start ======================== */
+/*  胸卡的背景图片 */
+.badge-box{background:url(../images/print_zz.gif) no-repeat;display:block;width:100mm;height:90mm;border-radius:4px;overflow:hidden;position:relative;background-size:100%;box-shadow:0 3px 6px #aaa;}
+/* 姓名(name) */
+.badge-box .card_name,.pos-box.name {top:22mm;font-size: 30px;;position:absolute;padding:0 1mm!important;text-transform:capitalize;overflow:hidden;width:100%;white-space:nowrap;font-weight:700;text-align:center;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* 职位(position) */
+.badge-box .card_position{top:33mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:700;text-align:center;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* 公司名称(Company Name)  */
+.badge-box .card_company,.pos-box.company{top:37mm;font-size:20px;text-transform:capitalize;word-wrap:break-word;overflow:hidden;white-space:nowrap;padding:0 1mm!important;position:absolute;width:100%;height:9mm;overflow-y:hidden;font-weight:600;text-align:center;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* 国家和省份(Country and province)   */
+.badge-box .card_country_province{top:49mm;font-size:4mm;text-transform:capitalize;word-wrap:break-word;position:absolute;width:100%;height:6mm;overflow-y:hidden;font-weight:700;text-align:center;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* 条码(bar code)  */
+.badge-box .card_barcode,.pos-box.barcode{top:51mm;position:absolute;width:100%;text-align:center;}
+.badge-box .card_barcode div{margin:0 auto}
+/* 展位号(Booth Number) */
+.badge-box .card_boothNum,.pos-box.boothNum{top:54mm;font-size:17px;position:absolute;overflow:hidden;width:32mm;right:0mm !important;left: auto;text-align:center;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* 二维码(QRcord) */
+/*.badge-box .card_QRcode{top:53mm;font-size:17px;position:absolute;overflow:hidden;right:4mm;text-align:center}
+.card_QRcode img{width:90px;height:90px;}*/
+/* 种类(Category) */
+.badge-box .card_category,.pos-box.category{top:80mm;font-size:21px;position:absolute;width:100%;text-align:center;font-weight:700;font-family:FZLTCHJW-Bold,Arial,sans-serif;}
+/* =======================  配置胸卡 end ======================== */
+
+
+
+.badge-box .pre{
+    top: 52mm;
+    font-size: 4mm;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    position: absolute;
+    width: 100%;
+    height: 6mm;
+    overflow-y: hidden;
+    font-weight: 700;
+    padding-left: 28mm;
+    text-align: left; 
+    font-family: FZLTCHJW-Bold,Arial,sans-serif;
+    display:none;
+}
+

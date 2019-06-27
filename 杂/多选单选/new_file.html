@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>序号<input type="checkbox" checked="checked" class="loginName" id="all"></th>
+					<th>员工号</th>
+					<th>用户名称</th>
+				</tr>
+			</thead>
+			<tbody id="checklist">
+				<g:each in="" var="user" status="index" name="loginName">
+					<tr class='table-c' userId="" userName="">
+						<td>
+							<input type="checkbox" name="loginName" class="loginName" value="" onclick="chk_onclick(this)">
+						</td>
+
+						<td>
+							<input type="checkbox" name="loginName" class="loginName" value="" onclick="chk_onclick(this)">
+						</td>
+						<td></td>
+					</tr>
+				</g:each>
+			</tbody>
+		</table>
+		<script>
+			//			$(function() {
+			//				$("[name=loginName]").click(function() {
+			//					var checkAll = document.getElementsByName("loginName");
+			//					var qx = document.getElementById("loginName");
+			//					var ach = qx.getElementsByTagName("input");
+			//					for(var i = 0; i < ach.length; i++) {
+			//						ach[i].onclick = function() {
+			//							if(!this.checked) {
+			//								alert("xx");
+			//								checkAll.checked = false;
+			//							}
+			//						};
+			//					}
+			//				})
+			//			})
+			function chk_onclick(obj) {
+				var chks = document.getElementsByName("loginName");
+				var chkAll = document.getElementById("all");
+				if(obj.checked == false)
+					chkAll.checked = false;
+				else {
+					var j = 1;
+					for(var i = 0; i < chks.length; i++) {
+						if(chks[i].checked == false) {
+							j = 2;
+							break;
+						}
+					}
+					if(j == 1)
+						chkAll[0].checked = true;
+				}
+			}
+
+			//			$(function() {
+			//				/*全选按钮状态显示判断*/
+			//				$("#checklist").find("input[type='checkbox']").click(function() {
+			//					/*初始化选择为TURE*/
+			//					$("#all")[0].checked = true;
+			//					/*获取未选中的*/
+			//					var nocheckedList = new Array();
+			//					$("#checklist").find('input:not(:checked)').each(function() {
+			//						nocheckedList.push($(this).val());
+			//					});
+			//
+			//					/*状态显示*/
+			//					if(nocheckedList.length == $("#checklist").find('input').length) {
+			//						$("#all")[0].checked = false;
+			//					} else if(nocheckedList.length == 0) {
+			//						$("#all")[0].checked = true;
+			//					} else if(nocheckedList.length) {
+			//						$("#all")[0].checked = false;
+			//					}
+			//				});
+			//				// 全选/取消
+			//				$("#all").click(function() {
+			//					// alert(this.checked);
+			//					if($(this).is(':checked')) {
+			//						$("#checklist").find('input').each(function() {
+			//							$(this).prop("checked", true);
+			//						});
+			//
+			//					} else {
+			//						$("#checklist").find('input').each(function() {
+			//							$(this).removeAttr("checked", false);
+			//							// 根据官方的建议：具有 true 和 false 两个属性的属性，
+			//							// 如 checked, selected 或者 disabled 使用prop()，其他的使用 attr()
+			//							$(this).prop("checked", false);
+			//						});
+			//					}
+			//				});
+			//			});
+		</script>
+	</body>
+
+</html>

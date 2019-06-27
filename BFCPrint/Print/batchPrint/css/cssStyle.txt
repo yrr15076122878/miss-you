@@ -1,0 +1,213 @@
+
+
+100mm * 90mm 胸卡
+/* =======================  配置胸卡 start ======================== */
+/* 卡纸的宽高及背景图片  */
+.wrap {
+    display: inline-block;
+    width: 100mm;
+    height: 90mm;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #fff url(../../images/print_zz.gif) 0 0 no-repeat;
+    background-size: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 80px 8px 8px;
+    transition: all 1s ease-in-out
+}
+@media print {
+    *,*:before,*:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+    html,body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #fff
+    }
+    input {
+        border: none !important
+    }
+    object {  height: 0;  width: 0  }
+    .container {  padding: 0;  margin: 0  }
+    .no-print,.smk-alert-content,.smk-progressbar,.select2-container {
+        display: none;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border: none !important
+    }
+    .wrap {
+        display: none !important
+    }
+    .wrap.printing {
+        display: inline-block !important;
+        width: 100mm;
+        height: 90mm !important;
+        border: none !important;
+        background: transparent !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin: 0 !important;
+        color: #000 !important2;
+    }
+
+	/* 打印字体 */
+	.span_ff{
+		font-family:FZLTCHJW-Bold,Arial,sans-serif;
+	}
+}
+
+/* 名称 */
+.pos-box.name {
+    top: 24mm;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: capitalize
+}
+/* 公司 */
+.pos-box.company {
+    top: 38mm;
+    font-weight: 600;
+    font-size: 18px;
+    /* font-family: Helvetica,"微软雅黑","company ","Helvetica Neue",Helvetica,Arial,"Microsoft Yahei",sans-serif; */
+	text-transform: capitalize;
+    max-height: auto;
+    white-space: nowrap;
+    overflow: hidden
+}
+/* 条码 */
+.pos-box.barcode {
+    top: 50mm;
+}
+/* 展位号 */
+.pos-box.boothNum {
+    top: 52mm;
+    right: 1mm;
+    left: auto;
+    width: 30mm;
+    font-size: 18px;
+    text-align: right;
+}
+/* 种类 */
+.pos-box.category {
+    top: 82mm;
+    font-size: 20pt;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* =======================  配置胸卡 end ======================== */
+
+
+
+
+
+101.6mm * 127mm 胸卡
+/* =======================  配置胸卡 start ======================== */
+/* 卡纸的宽高及背景图片  */
+.wrap {
+    display: inline-block;
+    width: 101.6mm;
+    height: 127mm;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #fff url(../../images/mCard.jpg) 0 0 no-repeat;
+    background-size: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 80px 8px 8px;
+    transition: all 1s ease-in-out
+}
+@media print {
+    *,*:before,*:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+    html,body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #fff
+    }
+    input {
+        border: none !important
+    }
+    object {  height: 0;  width: 0  }
+    .container {  padding: 0;  margin: 0  }
+    .no-print,.smk-alert-content,.smk-progressbar,.select2-container {
+        display: none;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border: none !important
+    }
+    .wrap {
+        display: none !important
+    }
+    /* 打印尺寸，必须修改 */
+    .wrap.printing {
+        display: inline-block !important;
+        width: 101.6mm;
+        height: 127mm !important;
+        border: none !important;
+        background: transparent !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin: 0 !important;
+        color: #000 !important2;
+    }
+}
+
+/* 名称 */
+.pos-box.name {
+    top: 49mm;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: capitalize
+}
+/* 公司 */
+.pos-box.company {
+    top: 68mm;
+    font-weight: 500;
+    font-size: 20px;
+    /* font-family: Helvetica,"微软雅黑","company ","Helvetica Neue",Helvetica,Arial,"Microsoft Yahei",sans-serif; */
+	text-transform: capitalize;
+    max-height: auto;
+    white-space: nowrap;
+    overflow: hidden
+}
+/* 条码 */
+.pos-box.barcode {
+    top:87mm;
+    position:absolute;
+    width:100%;
+    text-align:center;
+}
+/* 展位号 */
+.pos-box.boothNum {
+    top: 88mm;
+    right: 0mm;
+    left: auto;
+    width: 32mm;
+    font-size: 18px;
+    text-align: right;
+}
+/* 种类 */
+.pos-box.category {
+    top: 115mm;
+    font-size: 20pt;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* =======================  配置胸卡 end ======================== */

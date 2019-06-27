@@ -1,0 +1,56 @@
+/**
+ *  公共的方法封装在这里
+ */
+var public = {
+
+    // 返回顶部，样式在 i-css.css 中
+    gotoTop:function(){
+        if($(".gotoTop").length===0){
+            $("body").append('<div class="gotoTop"></div>');
+        }
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 50) {
+                $(".gotoTop").fadeIn(1000);
+            } else {
+                $(".gotoTop").fadeOut();
+            }
+        });
+        $(".gotoTop").click(function () {
+            $('body,html').animate({scrollTop: 0}, 500);
+            return false;
+        });
+    },
+    //获取url参数对象
+    getUrlVal:function(){
+        var url=location.search;
+         var Request = {};
+        if(url.indexOf("?")!=-1){　　
+            var str = url.substr(1)　//去掉?号
+             var strs = str.split("&")||[];　
+             for(var i=0;i<strs.length;i++){
+                 //加密 encodeURL();
+                 var KV = strs[i].split("=")||[];
+                 Request[KV[0]] = decodeURI(KV[1]);
+             }
+             //console.log(Request);
+        }
+        return Request;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+@card-box-padding:  0 6mm !important;
+.carder_box,.carder_box_repeat{
+  position: relative;
+  height:100%;
+  padding-top:15%;
+  background: url(../images/background_watermark_pre.png) no-repeat 128px 289px;
+  background-size:60%;
+}
+.carder_box_repeat{
+  background: url(../images/background_watermark_rep.png) no-repeat 128px 289px;
+  background-size:60% ;
+}
+.carder_box_exhibitor{
+  background: url(../images/bg_watermark_exhibitor_pre.png) no-repeat 128px 289px !important;
+  background-size: 60% !important;
+}
+.badge-box{
+  display: block;
+  width: 100mm;
+  height: 90mm;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background: url(../images/background_card.png) no-repeat;
+  background-size:100%;
+  box-shadow:0 3px 6px #aaa;
+
+  .card_name{
+    position: absolute;
+    padding:@card-box-padding;
+    text-transform: capitalize;
+    overflow: hidden;
+    width: 100%;
+    top:25mm;
+    white-space: nowrap;
+    font-size:9mm;
+    //font-weight: bold;
+    font-family: FZLTCHJW-Bold, sans-serif;
+    text-align: center;
+  }
+  .card_company{
+    text-transform: capitalize;
+    word-wrap: break-word;
+    padding:@card-box-padding;
+    position: absolute;
+    width: 100%;
+    height:15mm;
+    overflow-y: hidden;
+    top:37mm;
+    font-size:5mm;
+    font-weight: bold;
+    text-align: center;
+  }
+  .card_barcode{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:52mm;
+    div{
+      margin: 0 auto;
+    }
+  }
+  .card_boothNum{
+    position: absolute;
+    overflow: hidden;
+    width: 24mm;
+    right:4mm;
+    top:52mm;
+    font-size:5mm;
+  }
+  .card_category{
+    position: absolute;
+    width: 100%;
+    top:78mm;
+    font-size:7mm;
+    text-align: center;
+  }
+}
+//@font-face {
+//  font-family: FZLTCHJW-Bold;
+//  src: url('../font/FZLTCHJW.TTF') format('truetype')/*non-IE*/;
+//}

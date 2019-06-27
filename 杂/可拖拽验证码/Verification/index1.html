@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>2019中国铸造展览会 | CHINA CAST 2019</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/jquery-accordion-menu.css" rel="stylesheet" />
+		<link href="css/font-awesome.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/verify.css">
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-accordion-menu.js"></script>
+		<script src="js/javascript.js"></script>
+		<script type="text/javascript" src="js/verify.js"></script>
+		<!--[if lt IE 9]>
+       <script src="/Content/js/html5shiv.min.js"></script>
+       <script src="/Content/js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<style>
+		@media (min-width: 1200px) {
+			#mpanel4{
+				left: 20%;
+				overflow: hidden;
+			}
+		}
+		@media (max-width: 758px){
+			#mpanel4{
+				overflow: hidden;
+				top: 6%;
+				width: 100%;
+			}
+		}
+	</style>
+
+	<body>
+		<nav class="navbar navbar-default hidden-md hidden-lg">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="#">导航栏</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li num="1">
+							<a href="/BasicInfo/Index"><i class="fa fa-glass"></i>基本信息</a>
+						</li>
+						<li num="2">
+							<a href="/QuestionSurveyGZ/Index"><i class="fa fa-list-alt"></i>问卷调查</a>
+						</li>
+						<li num="3">
+							<a href="/BasicInfo/Confirmation"><i class="fa fa-home"></i>确认函</a>
+						</li>
+						<li num="4">
+							<a href="/BasicInfo/RegisterIndex"><i class="fa fa-home"></i>帮同事注册</a>
+						</li>
+						<li num="5">
+							<a href="/BasicInfo/InvitePeers"><i class="fa fa-home"></i>邀请同行</a>
+						</li>
+
+						<li>
+							<a href="#" onclick="openwindow('http://www.chinacastexpo.com/product/product_search')"><i class="fa fa-home"></i>展商/展品预览</a>
+						</li>
+						<li num="7">
+							<a href="/BasicInfo/Contact"><i class="fa fa-home"></i>联系我们</a>
+						</li>
+						<li>
+							<a href="/UserAuth/Logout"><i class="fa fa-home"></i>账号退出</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--BannerImage-->
+		<div class="banner-images container" style="padding:0 0">
+			<img src="images/banners.jpg" alt="..." class="img-responsive center-block" style="border: 1px solid #ccc;" />
+		</div>
+		<!--Main-->
+		<div class="container" style="border: 1px solid #ccc;">
+			<!--PC Menu-->
+			<div id="jquery-accordion-menu" class="jquery-accordion-menu red col-md-3 hidden-xs hidden-sm" style="margin-top:15px;">
+				<div class="jquery-accordion-menu-header" id="form">
+					<h3>导航栏</h3>
+				</div>
+				<ul id="demo-list">
+					<li num="1">
+						<a href="/BasicInfo/Index"><i class="fa fa-glass"></i>基本信息</a>
+					</li>
+					<li num="2">
+						<a href="/QuestionSurveyGZ/Index"><i class="fa fa-list-alt"></i>问卷调查</a>
+					</li>
+					<li num="3">
+						<a href="/BasicInfo/Confirmation"><i class="fa fa-home"></i>确认函</a>
+					</li>
+					<li num="4">
+						<a href="/BasicInfo/RegisterIndex"><i class="fa fa-home"></i>帮同事注册</a>
+					</li>
+					<li num="5">
+						<a href="/BasicInfo/InvitePeers"><i class="fa fa-home"></i>邀请同行</a>
+					</li>
+
+					<li>
+						<a href="#" onclick="openwindow('http://www.chinacastexpo.com/product/product_search')"><i class="fa fa-home"></i>展商/展品预览</a>
+					</li>
+					<li num="7">
+						<a href="/BasicInfo/Contact"><i class="fa fa-home"></i>联系我们</a>
+					</li>
+					<li>
+						<a href="/UserAuth/Logout"><i class="fa fa-home"></i>账号退出</a>
+					</li>
+				</ul>
+				<div class="jquery-accordion-menu-footer">&nbsp;</div>
+			</div>
+			<div class="container col-md-9 body_t" style="border-left: 1px solid #ccc; margin-top: 17px;">
+
+				<input type="hidden" value="5" id="menunum" />
+
+				<h3 class="auto-centerh3"><strong>邀请同行</strong></h3>
+
+				<form action="/BasicInfo/InvitePeers" class="form-horizontal" method="post">
+					<div class="clearfix"></div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							邀请同行
+						</div>
+						<div class="panel-footer">
+							<div class="form-group">
+								<label for="inputFamily" class="col-sm-2 control-label">姓名</label>
+								<div class="col-sm-10">
+									<input class="input-validation-error form-control requiredTest" data-val="true" data-val-required="请输入姓名" id="UserName" name="UserName" type="text" value="" required=""/> <span class="field-validation-error" data-valmsg-for="UserName" data-valmsg-replace="true">请输入姓名</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+								<div class="col-sm-10">
+									<input class="input-validation-error form-control" data-val="true" data-val-required="请输入邮箱" required="" id="Email" name="Email" type="text" value="" /> <span class="field-validation-error" data-valmsg-for="Email" data-valmsg-replace="true">请输入邮箱</span>
+								</div>
+							</div>
+							<div class="form-group" style="margin: auto;text-align: center;">
+								<div class="col-sm-10">
+									<div id="mpanel4">
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="group">
+								<input type="submit" class="btn btn-info col-sm-12 col-xs-12" style="background:#ce2508;border:#ce2508;" value="发送邀请" disabled="disabled"  />
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</form>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						同行列表
+					</div>
+					<div class="panel-footer">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<td>姓名</td>
+									<td>邮箱</td>
+									<td>是否完成注册</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>lyj</td>
+									<td>1406341775@qq.com</td>
+									<td>
+										<span>未注册</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="js/required.js"></script>
+		<script type="text/javascript">
+//			jQuery(document).ready(function() {
+//				jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+//
+//			});
+
+			$(function() {
+				//顶部导航切换
+				//$("#demo-list li").click(function () {
+				//    $("#demo-list li.active").removeClass("active")
+				//    $(this).addClass("active");
+				//})
+				var num = $("#menunum").val();
+				$("#demo-list li[num='" + num + "']").addClass("active");
+			})
+
+			function openwindow(obj) {
+				window.open(obj);
+			}
+		</script>
+		<script>
+			$('#mpanel4').slideVerify({
+				type: 2, //类型
+				vOffset: 5, //误差量，根据需求自行调整
+				vSpace: 5, //间隔
+				imgName: ['regbanner1.jpg', '2.jpg'],
+				imgSize: {
+					width: '100%',
+					height: '100px',
+				},
+				blockSize: {
+					width: '40px',
+					height: '40px',
+				},
+				barSize: {
+					width: '100%',
+					height: '40px',
+				},
+				ready: function() {},
+				success: function() {
+					//......后续操作
+					$(".group input").removeAttr("disabled");
+				},
+				error: function() {
+					alert('验证失败');
+					return false;
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

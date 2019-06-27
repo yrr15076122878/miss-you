@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>报馆首页</title>
+    <link rel="stylesheet" href="plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">
+    <link rel="stylesheet" href="Application/Default/Css/i-css.css">
+    <link rel="stylesheet" href="plugin/DataTables-1.10.16/css/jquery.dataTables.css">
+
+
+</head>
+<body>
+<div class="col-md-12 subtitle"><span>报馆首页</span></div>
+<div class="col-md-12"><div class="triangle"></div></div>
+<div class="col-md-12 i-body">
+    <div class="left-search">
+        <input type="text" class="form-control search-input" id="search" name="search" placeholder="请输入要搜索的内容">
+        <button class="searchBtn"></button>
+    </div>
+    <br>
+    <div class="content">
+        <table id="desTable" class="table table-bordered">
+            <thead>
+            <tr>
+                <th>展台名称</th>
+                <th>展台联系人</th>
+                <th>展台搭建商</th>
+                <th>展台搭建商资质确认</th>
+                <th>当前报馆流程</th>
+                <th>更多操作</th>
+            </tr>
+            </thead>
+        </table>
+
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" src="Public/Js/jquery-1.9.1.min.js"></script>
+<script src="plugin/layui/layui.all.js"></script>
+<script src="Public/Js/publicM.js"></script>
+<script src="plugin/DataTables-1.10.16/js/jquery.dataTables.js"></script>
+<script>
+    $(function(){
+        public.gotoTop();
+        var columnsArr = [
+            {"data":"eBName"},
+            {"data":"eBLMan"},
+            {"data":"eBProducer"},
+            {"data":"PAAf"},
+            {"data":"flow"},
+            {"data":"MoreActions"}
+        ];
+        var dataList = [
+            {
+                "eBName":"E2Ko1",
+                "eBLMan":"编辑",
+                "eBProducer":"上海锁汇",
+                "PAAf":"搭建商未注册",
+                "flow":"展台图纸",
+                "MoreActions":"没有更多操作"
+            }
+        ];
+        for(var i = 0;i<45;i++){
+            var d = dataList[0];
+            dataList.push(d);
+        }
+
+        var orderArr = [[0, 'asc'],[1, 'asc'], [2, 'asc'],[3, 'desc'],[4, 'asc'],[4, 'asc']];
+        var table = public.setDataTable("#desTable",dataList,columnsArr,orderArr,function(row){
+            //$('td', row).eq(0).html();
+
+        });
+        // var url = 'data/home.ashx?SeaKey='+"";
+        //table.ajax.url(url).load();
+        //table.clear().draw();
+
+
+
+    });
+</script>
+</body>
+</html>

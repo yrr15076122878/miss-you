@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="css/layui.css" />
+		<link rel="stylesheet" href="css/layui.mobile.css" />
+		<link rel="stylesheet" type="text/css" href="css/active.css" />
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/layui.js"></script>
+		<title>
+			酒店预订
+		</title>
+		<style>
+			.labs {
+				width: 20px;
+			}
+			
+			.top_td {
+				color: red;
+				float: left;
+				display: block;
+				padding: 9px 15px;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 20px;
+				text-align: right;
+			}
+			
+			.foot {
+				float: none;
+				display: table-cell;
+			}
+			.sel-in>select{
+				background: url(images/angle.png)no-repeat;
+				background-size: 15px 15px;
+				background-position:166px 10px ;
+			}
+			@media screen and (max-width: 650px) {
+				.layui-form-label{
+					width: 200px;
+				}
+				.sel-in>select{
+				background: url(images/angle.png)no-repeat;
+				background-size: 15px 15px;
+				background-position:310px 10px ;
+			}
+				.btn-in>input{
+					margin:20px auto;
+				}
+				.come > span:nth-child(1){
+					padding-left: 0px;
+				}
+				.name > span:nth-child(1){
+					padding-left: 0px;
+				}
+				label{
+					margin-left: 20px;
+				}
+				.font-input > input{
+					
+				}
+				.layui-form-label{
+					padding: 9px 10px;
+					text-align: left;
+				}
+				.layui-container{
+					padding: 0px;
+				}
+				.cole > h3{
+					padding:0px 10px;
+				}
+				.layui-form-label{
+					padding-left: 0px;
+				}
+				.layui-container {
+					width: 100% !important;
+				}
+				.sel-in>select {
+					border: 1px solid gainsboro;
+					color: #666666;
+					padding: 6px 10px;
+					display: block;
+				}
+				.layui-input{
+					width: 100% !important;
+				}
+				.layui-input-block{
+					clear: both;
+					margin-left: 0px;
+					margin: 0 10px;
+				}
+				.container_in>span:nth-child(2) {
+					margin-left: 6%;
+					font-size: 19px;
+				}
+				.sel-in>select{
+					width: 100%;
+					margin-top: 20px;
+					/*margin: 0;*/
+					margin-left: 0px;
+
+				}
+				.ccc {
+					margin-left: 90px;
+				}
+				.top_td {
+					text-align: center;
+					padding: 0px 0px;
+					font-size: 17px;
+					float: none;
+				}
+				.foot {
+					float: left;
+					text-align: left;
+				}
+				.layui-form-item .layui-inline {
+					margin-bottom: 0px;
+				}
+				.layui-form-labels {
+					float: none;
+				}
+				table>tr>td:nth-child(3) {
+					display: block;
+					width: 100% !important;
+				}
+				.layui-form-selected dl {
+					/*min-width: 12.6rem !important;
+                margin-left: 0rem !important;*/
+				}
+				#psd1>input {
+					width: 26rem !important;
+				}
+				.layui-select-title>input {}
+				.layui-select-title .layui-edge {
+					/*left: 10rem !important;*/
+				}
+				.labs {
+					width: 100%;
+				}
+			}
+			
+			.layui-form-select dl dd.layui-this {
+				background: #01abc5;
+			}
+			
+			.layui-form-selected dl {
+				/*margin-left: 1.6rem;
+            min-width: 15.5rem;*/
+			}
+			
+			@media only screen and (min-width: 1200px) {
+				.tab-1{
+					margin-top:20px;
+				}
+				table>tbody>tr {
+					float: none;
+				}
+				.layui-input-block {
+					margin-left: 0px;
+				}
+				.container_in>span:nth-child(2) {
+					width: 77%;
+					text-align: center;
+					border-radius: 6px;
+					font-size: 19px;
+					list-style: none;
+					text-decoration: none;
+					display: inline-block;
+					height: 37px;
+					line-height: 37px;
+				}
+			}
+			
+			.container-imgs h3 {
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+				padding: 0 20px;
+				background-color: #01abc5 !important;
+				color: #fff;
+				white-space: nowrap;
+				text-align: center;
+				font-size: 16px;
+				border: none;
+				border-radius: 2px;
+				margin-top: 0;
+				font-size: 20px;
+			}
+			
+			.select-box {
+				position: relative;
+			}
+			
+			.select-box img {
+				position: absolute;
+				width: 15px;
+				top: 10px;
+				right: 5px;
+			}
+			
+			.select-box select {
+				border: 1px solid #ddd;
+				width: 230px;
+				height: 36px;
+				padding-left: 20px;
+				border-radius: 2px;
+				margin-top: 2%;
+				cursor: pointer;
+				background-color: #fff;
+				-webkit-tap-highlight-color: transparent;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+			
+			@media screen and (min-width: 1200px) {
+				.layui-form-label {
+					width: 280px;
+				}
+				.sel-in>select{
+				background: url(images/angle.png)no-repeat;
+				background-size: 15px 15px;
+				background-position:240px 10px ;
+			}
+				.sel-in>select {
+					border: 1px solid gainsboro;
+					color: #666666;
+					padding: 6px 10px;
+					margin-top: 2%;
+					width: 40%;
+				}
+				.sel-in>select:nth-child(2) {
+					margin-left: 30px;
+				}
+				.cole>h3 {
+					color: black;
+					line-height: 30px;
+					font-size: 20px;
+				}
+				.btn-in {
+					width: 30%;
+					margin: auto;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<form method="post" action="HotelOrder.aspx?RoomId=1" id="form1">
+			<div class="aspNetHidden">
+				<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTc4NzMxODYzMA9kFgICAQ9kFgZmDxAPFgYeDURhdGFUZXh0RmllbGQFCFJvb21EYXRlHg5EYXRhVmFsdWVGaWVsZAUCSWQeC18hRGF0YUJvdW5kZ2QQFQUJNuaciDI55pelCTbmnIgzMOaXpQg35pyIMeaXpQg35pyIMuaXpQg35pyIM+aXpRUFATEBMgEzATQBNRQrAwVnZ2dnZ2RkAgEPEA8WBh8ABQhSb29tRGF0ZR8BBQJJZB8CZ2QQFQUJNuaciDMw5pelCDfmnIgx5pelCDfmnIgy5pelCDfmnIgz5pelCDfmnIg05pelFQUBMgEzATQBNQE2FCsDBWdnZ2dnZGQCAg8QDxYGHwAFCFJvb21OYW1lHwEFCFJvb21OYW1lHwJnZBAVAhXpq5jnuqfmiL/vvIjlpKfluorvvIkV6auY57qn5oi/77yI5Y+M5bqK77yJFQIV6auY57qn5oi/77yI5aSn5bqK77yJFemrmOe6p+aIv++8iOWPjOW6iu+8iRQrAwJnZ2RkZFz06VCajJBaB8PZgtHG8a6PrcAe0xDICxBYlq3Hn9Yi" />
+			</div>
+
+			<div class="aspNetHidden">
+
+				<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDgLS9fLbBALJ9qfmBALI9qfmBALL9qfmBALK9qfmBALN9qfmBALI9tPCAwLL9tPCAwLK9tPCAwLN9tPCAwLM9tPCAwKByrO9DQKaxrO9DQKM54rGBglynj60zN4EFTqm1sdtZZACfhquRKfWnOFZlk9Efwl/" />
+			</div>
+			<div class="container-imgs">
+				<img src="images/banner-s2.gif" alt="" style="width: 100%;" />
+			</div>
+			<div class="container-imgs" style="clear: botd;">
+				<h3>博鳌亚洲论坛大酒店
+            </h3>
+			</div>
+			<div class="layui-container">
+
+				<div class="layui-col-lg12" style="clear: both; height: 1.5rem; background: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEEEE), to(#FFFFFF)); border-bottom: 2px solid #F8F8F8;">
+				</div>
+
+				<input type="hidden" id="HRoomId" value="1" />
+				<input type="hidden" id="hid" value="550" />
+				<input type="hidden" id="hids" name="hids" />
+
+				<div id="Panel1">
+
+					<div class="layui-col-lg12" style="clear: both; height: 4rem; background: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEEEE), to(#FFFFFF)); border-bottom: 2px solid #F8F8F8;">
+					</div>
+					<div class="layui-col-lg12 cole">
+						<h3>I hereby authorized BFA Hotel to charge the under-listed expenses to my credit card account： <br />
+						我授权博鳌亚洲论坛大酒店从我的信用卡收取下列费用：  
+						</h3>
+					</div>
+					<div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+						<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+							<label class="layui-form-label data come"><span>
+								All Charge Total Amount (CNY):
+								 <br />
+								总计金额（人民币）:  
+							</span><span style="color: red;">*</span></label>
+							<div class="layui-input-block font-input layui-col-md7 company">
+								<input type="text" id="company" name="company" lay-verify="required|company" placeholder="总计金额" autocomplete="off" class="layui-input layui-form-danger" value="">
+							</div>
+						</div>
+						<label class="layui-form-label data name">
+							<span>
+								Cardholder's Name: <br />
+								持卡人姓名：
+							</span>
+							<span style="color: red;">*</span>
+						</label>
+
+						<div class="layui-input-block font-input layui-col-md7">
+							<input type="text" id="username" name="username" lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input layui-form-danger" style="display: inline-block;" value="" />
+						</div>
+					</div>
+					<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+						<label class="layui-form-label data come"><span>Credit Card Details: <br />
+                                     信用卡信息：
+</span><span style="color: red;">*</span></label>
+						<div class="layui-input-block font-input layui-col-md7">
+							<input type="text" id="inf" name="inf" lay-verify="required|inf" placeholder=" 信用卡信息" autocomplete="off" class="layui-input layui-form-danger" value="" />
+						</div>
+					</div>
+					<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+						<label class="layui-form-label data come"><span>Credit card Number: <br />
+信用卡号码：
+</span><span style="color: red;">*</span></label>
+						<div class="layui-input-block font-input layui-col-md7">
+							<input type="text" id="phone" name="phone" lay-verify="required|phone" placeholder="信用卡号码" autocomplete="off" class="layui-input layui-form-danger" value="" />
+						</div>
+					</div>
+					<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+						<label class="layui-form-label data come"><span>Type of Card: <br />
+卡种： 
+</span><span style="color: red;">*</span></label>
+						<div class="layui-input-block font-input layui-col-md7">
+							<img src="images/angle.png" alt="" / style="position: absolute;width: 15px;top: 12px;right: 5px;">
+							<select name="" style="border:1px solid gainsboro;color: #666666; padding-left: 10px;padding: 6px 10px;" class="layui-input layui-form-danger" id="card" name="card" lay-verify="required|card" >
+								<option Value="Master">Master</option>
+								<option Value="Amex">Amex</option>
+								<option Value="Diners">Diners</option>
+							</select>
+
+						</div>
+					</div>
+					<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+						<label class="layui-form-label data come"><span>Expire Date: <br />
+有效期：
+</span><span style="color: red;">*</span></label>
+						<div class="layui-input-block font-input layui-col-lg8 sel-in">
+							
+							<select name="" ID=" MDate " runat="server" class="layui-input-block font-input layui-col-lg8 layui-col-md5">
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<label class="layui-col-lg1 tab-1">MM</label>
+							<select name="" ID="YDate" runat="server" class="layui-input-block font-input layui-col-lg8 layui-col-md5">
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+							</select>
+							<label class="layui-col-lg1 tab-1">
+								YY
+							</label>
+						</div>
+					</div>
+					<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 items">
+						<label class="layui-form-label data come"><span>Passport Number: <br />护照号：
+</span><span style="color: red;">*</span></label>
+						<div class="layui-input-block font-input layui-col-md7">
+							<input type="text" id="Email" name="Email" lay-verify="required|Email" placeholder="护照号" autocomplete="off" class="layui-input layui-form-danger" value="" />
+						</div>
+					</div>
+
+					<div class="layui-form-item">
+						<div class="layui-input-block btn-in" style="margin: auto;">
+							<input type="submit" name="Button1" value="立即提交" onclick="return Submits();" id="Button1" class="layui-btn" lay-filter="demo1" lay-submit="" style="cursor: pointer;" />
+						</div>
+					</div>
+
+					<div class="layui-col-lg12" style="clear: both; height: 1.5rem; background: -webkit-gradient(linear, 0 0, 0 100%, from(#EDEDED), to(#FFFFFF)); border-bottom: 2px solid #F8F8F8;">
+					</div>
+					<div class="layui-form">
+					</div>
+
+				</div>
+			</div>
+		</form>
+
+		<script>
+			$(function() {
+				$("#psd1").change(function() { //省份下拉菜单的change事件         
+					var psd1 = $("#psd1").val(); //此处参数名要注意和后台方法参数名要一致         
+					var psd2 = $("#psd2").val();
+					var psd3 = $("#psd3").val();
+					showpro(psd1, psd2, psd3);
+				});
+
+			});
+
+			$(function() {
+				$("#psd2").change(function() { //省份下拉菜单的change事件         
+					var psd1 = $("#psd1").val(); //此处参数名要注意和后台方法参数名要一致         
+					var psd2 = $("#psd2").val();
+					var psd3 = $("#psd3").val();
+					showpro(psd1, psd2, psd3);
+				});
+
+				$("#psd3").change(function() { //省份下拉菜单的change事件         
+					var psd1 = $("#psd1").val(); //此处参数名要注意和后台方法参数名要一致         
+					var psd2 = $("#psd2").val();
+					var psd3 = $("#psd3").val();
+					showpro(psd1, psd2, psd3);
+				});
+
+			});
+
+			function showpro(psd1, psd2, psd3) {
+				var RoomId = $("#HRoomId").val();
+				if(psd1 != "" && psd2 != "" && psd3 != "" && parseInt(psd1) < parseInt(psd2)) {
+					$.ajax({
+						url: "Handler/feeslist.ashx", //提交的页面/方法名     
+						//datatype: "text",        //类型       
+						type: "POST",
+						data: {
+							psd1s: psd1,
+							psd2s: psd2,
+							psd3s: psd3,
+							RoomIds: RoomId,
+						},
+						//contentType: "application/json; charset=utf-8",
+						async: false,
+						success: function(msg) {
+
+							if(msg == "1") {
+								$(".top_td").html("您预订的时间段此房型已满房！");
+
+								//alert("！");
+								$("#pans").css("display", "none");
+								$("#Panel1").css("display", "none");
+							} else {
+								var jsonarray = $.parseJSON(msg);
+								$(".top_td").html("");
+								$.each(jsonarray, function(i, n) {
+									$("#hid").val(n.RoomPrice);
+									$("#lbs").html(n.RoomPrices);
+								});
+
+								$("#Panel1").css("display", "block");
+								$("#pans").css("display", "block");
+							}
+
+						},
+						error: function(xhr, msg, e) {
+							alert("error");
+						}
+
+					});
+				} else {
+					$(".top_td").html("时间选择错误！");
+					$("#Panel1").css("display", "none");
+					$("#pans").css("display", "none");
+				}
+			}
+
+			$(function() {
+				var ss = '550';
+				$("#hids").val(ss);
+
+			})
+			layui.use('form', function() {
+				var form = layui.form;
+
+				//监听提交
+				form.on('submit(formDemo)', function(data) {
+					layer.msg(JSON.stringify(data.field));
+					return false;
+				});
+			});
+			layui.use('laydate', function() {
+				var laydate = layui.laydate;
+
+				//点我触发
+				laydate.render({
+					elem: '#test25',
+					eventElem: '#test25-1',
+					trigger: 'click'
+				});
+
+				//双击我触发
+				lay('#test26-1').on('dblclick', function() {
+					laydate.render({
+						elem: '#test26',
+						show: true,
+						closeStop: '#test26-1'
+					});
+				});
+			});
+
+			layui.use('form', function() {
+				var form = layui.form;
+				//监听提交
+
+				//form.on('select(psd1)', function (data) {
+				//    var p1 = parseInt(data.value);
+				//    var p2 = parseInt($("#psd2").val());
+
+				//    var p3 = p2 - p1;
+				//    if (p3 > 0) {
+				//        var ss = parseInt($("#hid").val());
+				//        ss = ss * p3;
+				//        $("#hids").val(ss);
+				//        $("#lbs").text(ss);
+				//    }
+				//});
+
+				//form.on('select(psd2)', function (data) {
+				//    var p1 = parseInt($("#psd1").val());
+				//    var p2 = parseInt(data.value);
+
+				//    var p3 = p2 - p1;
+				//    if (p3 > 0) {
+				//        var ss = parseInt($("#hid").val());
+				//        ss = ss * p3;
+				//        $("#hids").val(ss);
+				//        $("#lbs").text(ss);
+				//    }
+				//});
+
+				form.on('submit(formDemo)', function(data) {
+					// layer.msg(JSON.stringify(data.field));
+					return false;
+				});
+
+				// 验证
+				form.verify({
+					username: function(value, item) { //value：表单的值、item：表单的DOM对象
+						if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
+							return '姓名不能有特殊字符';
+						}
+					},
+					//数组形式：两个值分别代表：[正则匹配（用 / / 包裹起来）、匹配不符时的提示文字]
+					country: [
+						/^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$/, '国籍不能有特殊字符'
+					],
+					time_len: [
+						/^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$/, '时长不能有特殊字符'
+					],
+					language: [
+						/^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$/, '语言不能有特殊字符'
+					],
+
+				});
+
+			});
+
+$(document).ready(function(){
+  
+});
+			function Submits() {
+
+				//				var psd1 = document.getElementById("psd1").value;
+				//				var psd2 = document.getElementById("psd2").value;
+				//				if(psd1 == psd2) {
+				//					alert("日期不能一致，请重新选择！");
+				//					return false;
+				//				}
+				//				if(parseInt(psd1) >= parseInt(psd2)) {
+				//					alert("时间选择错误！");
+				//					return false;
+				//				}
+
+				var phone = $("#phone").val();
+				var phone1 = $("#phone1").val();
+
+				//if (phone != "") {
+				//    if (phone == phone1) {
+				//        alert("手机号不能一致!");
+				//        return false;
+				//    }
+				//}
+
+				var username = $("#username").val();
+				var company = $("#company").val();
+				var Email = $("#Email").val();
+				var data = $("#data").val();
+				var card = $("#card").val();
+				var inf = $("#inf").val()
+				if(username == "") {
+					alert("请输入姓名");
+					$("#username").focus();
+					return false;
+				}
+				if(inf == "") {
+					alert("请填写信用卡信息");
+					$("#inf").focus();
+					return false;
+				}
+				if(data == "") {
+					alert("请选择有效期");
+					$("#data").focus();
+					return false;
+				}
+				if(card == "") {
+					alert("请选择卡种");
+					$("#card").focus();
+					return false;
+				}
+				if(company == "") {
+					alert("请输入总金额");
+					$("#company").focus();
+					return false;
+				}
+
+				if(phone == "") {
+
+					alert("请输入信用卡号");
+					$("#phone").focus();
+					return false;
+				}
+
+				if(Email == "") {
+					alert("请输入信用卡号");
+					$("#Email").focus();
+					return false;
+				}
+
+				//$.ajax({
+				//    type: "POST",
+				//    url: "Handler/GetCodes.ashx",
+				//    data: {
+				//        phone: $("#phone").val(),
+				//        phone1: $("#phone1").val()
+				//    },
+				//    async: false,
+				//    success: function (msg) {
+				//        if (msg == 1) {
+				//            return true;
+				//        } else {
+				//            //alert("该手机已存在！");
+				//            //$("#phone1").val('');
+				//            //$("#" + msg).focus();
+				//            return false;
+				//        }
+				//    },
+				//    error: function (xhr) {
+				//        //$("#liCheckCode").html("Error:" + xhr.status + " " + xhr.statusText);
+				//        //$("#liCheckCode").css("color", "red");
+
+				//        return false;
+				//    }
+				//});
+
+			}
+		</script>
+
+	</body>
+
+</html>

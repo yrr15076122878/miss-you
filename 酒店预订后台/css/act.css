@@ -1,0 +1,60 @@
+.tab-in>tr>td {
+			text-align: center;
+			font-size: 18px;
+		}
+		
+		.tab-in>tr>td {
+			font-size: 14px;
+		}
+		
+		.btn-ins>h3 {
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			background-color: #01abc5 !important;
+			color: #fff;
+			white-space: nowrap;
+			text-align: center;
+			font-size: 16px;
+			border: none;
+			border-radius: 2px;
+		}
+		
+		@media (max-width:768px) {
+			.layui-table>tbody {
+				overflow-y: scroll;
+			}
+			.tab-td>div{
+			padding-left:0px !important;display: inline-block;	
+		}
+			table thead,
+			tbody tr {
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+			}
+			.layui-table td,
+			.layui-table th {
+				position: relative;
+				padding: 9px 8px;
+				min-height: 20px;
+				line-height: 20px;
+				font-size: 14px;
+			}
+		}
+		.sub>h2{
+			text-align: center;
+			background-color: #01abc5 !important;
+			width: 14rem;;
+			margin: auto;
+			padding: 8px 14px;
+			color: #ffffff;
+			border-radius: 6px;
+		}
+		.sub>h2:hover{
+				cursor: pointer;
+		}
+		.tab-td>div{
+			padding-left:20px;display: inline-block;	
+		}

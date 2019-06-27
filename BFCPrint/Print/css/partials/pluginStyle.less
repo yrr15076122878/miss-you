@@ -1,0 +1,63 @@
+//dataTables Style
+@varColor:      #2b2f3a                 !important;
+@varRGBAW:      rgba(255,255,255,.3)    !important;
+@textColor:     #737373                 !important;
+@disabledColor: #efeff4                 !important;
+@searchborderColor: #ccc                !important;
+
+//dataTables Style
+//分页条
+.dataTables_wrapper .dataTables_paginate {
+  .paginate_button{
+    border:1px solid #dadada;
+  }
+  .paginate_button:hover{
+    background-image: none;
+    color:@textColor;
+    background-color: @varRGBAW;
+  }
+  .paginate_button.current,.paginate_button.current:hover{
+    background-image: none;
+    color:@textColor;
+    background-color: @varColor;
+  }
+  .paginate_button.disabled{
+    background-color: @disabledColor;
+  }
+}
+//Search
+div.dataTables_wrapper div.dataTables_filter input{
+  border:1px solid @searchborderColor;
+  border-radius:4px;
+  outline: hidden;
+}
+//结果表
+table.dataTable {
+  border: 1px solid @searchborderColor;
+  thead{
+    tr th{
+      border-right:1px solid @searchborderColor;
+      border-left:2px solid transparent;
+      border-bottom: 1px solid @searchborderColor;
+    }
+  }
+  tbody{
+    tr td{
+      border-right: 1px solid @searchborderColor;
+      span{
+        padding:2px 4px;
+        border-radius: 4px;
+      }
+    }
+    tr:hover{
+      background-color:#B0BED9;
+      color:white;
+      cursor:pointer;
+    }
+    tr.selected{
+      background-color: @varColor;
+      box-shadow: 0 2px 4px @varColor;
+      color:white;
+    }
+  }
+}

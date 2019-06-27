@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+
+	<body>
+
+		<input type="checkbox" id="chkAll" name="chkAll" onclick="chkAll_onclick(this)" />全选
+		<div id="div1">
+			<input type="checkbox" id="chk" name="chk" <!--onclick="chk_onclick(this)-->" />1
+			<input type="checkbox" id="chk1" name="chk" <!--onclick="chk_onclick(this)-->" />2
+			<input type="checkbox" id="chk2" name="chk" <!--onclick="chk_onclick(this)-->" />3
+			<input type="checkbox" id="chk3" name="chk" <!--onclick="chk_onclick(this)-->" />4
+			<input type="checkbox" id="chk4" name="chk" <!--onclick="chk_onclick(this)-->" />5
+		</div>
+		<script>
+			function chkAll_onclick(obj) {
+				var chks = document.getElementsByName("chk");
+				for(var i = 0; i <
+					chks.length; i++) {
+					chks[i].checked = obj.checked;
+				}
+			}
+			$("[name=chk]").click(function() {
+				var chks = document.getElementsByName("chk");
+				var chkAll = document.getElementById("chkAll");
+				if(this.checked == false) {
+					var j = 1;
+					var x = 0;
+					for(var i = 0; i < chks.length; i++) {
+						if(chks[i].checked == false) {
+							x += 1;
+						}
+					}
+					if(x == chks.length) {
+						chkAll.checked = false;
+					}
+				} else {
+					chkAll.checked = true;
+				}
+			})
+		</script>
+		<script>
+			$(function() {
+				$('#myModal').modal('hide')
+			});
+		</script>
+	</body>
+
+</html>

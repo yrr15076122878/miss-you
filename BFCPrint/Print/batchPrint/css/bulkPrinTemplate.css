@@ -1,0 +1,72 @@
+
+/*  卡纸宽高及背景图片  */
+.wrap {
+    display: inline-block;
+    width: 100mm;
+    height: 90mm;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #fff url(../../images/mCard.jpg) 0 0 no-repeat;
+    background-size: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 80px 8px 8px;
+    transition: all 1s ease-in-out
+}
+
+/* 打印区域宽高，必须配置  */
+@media print {
+    *,*:before,*:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+    html,body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #fff
+    }
+    input {
+        border: none !important
+    }
+    object {  height: 0;  width: 0  }
+    .container {  padding: 0;  margin: 0  }
+    .no-print,.smk-alert-content,.smk-progressbar,.select2-container {
+        display: none;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border: none !important
+    }
+    .wrap {
+        display: none !important
+    }
+
+    /* （必须）  width: 打印的宽度，height：打印的高度，配置时只改数值   */
+    .wrap.printing {
+        display: inline-block !important;
+        width: 100mm;
+        height: 90mm !important;
+        border: none !important;
+        background: transparent !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin: 0 !important;
+        color: #000 !important
+    }
+
+    /* .wrap.printing.chromeSize {
+         width: 100mm;
+         height: 90mm !important
+     }*/
+}
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+﻿
+
+
+/* =======================  配置胸卡 start ======================== */
+/* 卡纸的宽高及背景图片  */
+.wrap {
+    display: inline-block;
+    width: 100mm;
+    height: 90mm;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #fff url(../../images/2019.jpg) 0 0 no-repeat;
+    background-size: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 80px 8px 8px;
+    transition: all 1s ease-in-out
+}
+@media print {
+    *,*:before,*:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+    html,body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #fff
+    }
+    input {
+        border: none !important
+    }
+    object {  height: 0;  width: 0  }
+    .container {  padding: 0;  margin: 0  }
+    .no-print,.smk-alert-content,.smk-progressbar,.select2-container {
+        display: none;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border: none !important
+    }
+    .wrap {
+        display: none !important
+    }
+    .wrap.printing {
+        display: inline-block !important;
+        width: 101.6mm;
+        height: 90mm !important;
+        border: none !important;
+        background: transparent !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        margin: 0 !important;
+        color: #000 !important;
+    }
+
+	/* 打印字体 */
+	.span_ff{
+		font-family:FZLTCHJW-Bold,Arial,sans-serif;
+	}
+}
+
+/* 名称 */
+/*.pos-box.name {
+    top: 29mm;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family:FZLTCHJW-Bold,Arial,sans-serif;
+}*/
+/* 公司 */
+/*.pos-box.company {
+    top: 42mm;
+    font-weight: 600;
+    font-size: 20px;
+	text-transform: capitalize;
+    max-height: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family:FZLTCHJW-Bold,Arial,sans-serif;
+}*/
+/* 条码 */
+/*.pos-box.barcode {
+    top: 60mm;
+}*/
+/* 展位号 */
+/*.pos-box.boothNum {
+    top: 62mm;
+    right: 1mm;
+    left: auto;
+    width: 30mm;
+    font-size: 18px;
+    text-align: right;
+    font-family:FZLTCHJW-Bold,Arial,sans-serif;
+}*/
+/* 种类 */
+/*.pos-box.category {
+    font-family:FZLTCHJW-Bold,Arial,sans-serif; 
+    top: 78mm;
+    font-size: 21px;
+    font-weight: bold;
+
+}*/
+
+/* =======================  配置胸卡 end ======================== */

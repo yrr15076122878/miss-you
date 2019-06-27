@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>搭建商管理后台</title>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" type="text/css" href="css/console1412.css" />
+		<!--<link rel="stylesheet" type="text/css" href="Public/Css/global.css" />-->
+		<link rel="stylesheet" href="css/_bootstrap.css">
+		<link rel="stylesheet" href="css/layui.css">
+		<script src="js/news.js"></script>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<style>
+			.ulsub {
+				color: #fff;
+				display: none;
+				margin-top: 20px!important;
+				height: 40px;
+				width: 500px;
+			}
+			.ulsub li {
+				width: 85px;
+			}
+			.ulsub li a {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				color: #64707d;
+				background-color:#FFFFFF;
+				height: 50px;
+				line-height: 50px;
+				text-decoration: none;
+			}
+			
+			.ulsub li a:hover {
+				background-color: #999;
+				color: #FFFFFF;
+				}
+			
+			.ulsub li.active a {
+				background-color: #999;
+				color: #FFFFFF;
+			}
+			
+			.ulsub li.active a span {
+				background-color: #999;
+				color: #FFFFFF;
+			}
+			.viewFramework-sidebar .sidebar-nav .nav-item .ulsub li{
+				height: 40px;
+				float: left;
+				text-align: center;
+				
+			}
+			.viewFramework-sidebar .sidebar-nav .nav-item .ulsub li a{
+				height: 40px;
+			}
+		</style>
+
+	</head>
+
+	<body class="iframe-body" data-settime="598" data-actionurl="Admin/Index/index">
+		<form method="post" action="upDesign.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxMzQ5MzQyMzFkZCqSbDH6XooDmagu0bXgiegS3Z7LUHpyjqtKiqXcXJI2">
+</div>
+
+        <div class="col-md-12 subtitle-top">
+            <div class="subtitle">
+                <span>展台设计上传</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="triangle"></div>
+        </div>
+        <div class="col-md-12 i-body">
+
+            <div class="row" style="margin-top: 20px;">
+
+                <div class="col-md-12" style="padding: 0;">
+                    
+
+                    <div class="col-md-12">
+                        <div class="piece">
+                            <div class="ptitle2">
+                                <span>展台设计</span>
+                            </div>
+                            <div class="content">
+                                <div class="tab">
+                                    <div class="tab_in">
+                                        <table border="0" cellspacing="0" cellpadding="0" class="tab_ins">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:10%;"><span>报图类型</span></th>
+                                                    <th class="pic" style="width:30%;"><span>报图要求</span></th>
+                                                    <th style="width:15%;"><span>图例</span></th>
+                                                    <th style="width:15%;"><span>缩略图</span></th>
+                                                    <th style="width:10%;"><span>审批状态</span></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tab_top"><td>效果图</td><td><p>
+	aaa</p></td><td><img src="../UpFilePimg/20190412105015_330.jpg" width="200px" height="100px" style="margin-top:20px;"></td><td><img src="../Boothimg/20190412105025_88.jpg" width="200px" height="100px" style="margin-top:20px;"></td><td>未通过</td><td><input class="layui-btn" value="上传文件" style="" onclick="showBDesign(4,4)"></td></tr><tr class="tab_innes"><td><span>审批意见：</span><span>bbbb</span></td></tr><tr class="tab_in_bottom"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+<script>
+
+</script>
+
+<script>
+    function del() {
+        if (confirm("确定要删除吗？")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
+<script>
+   
+</script>
+</div></form>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyMTQ2MDU5NjVkZPD1PTccOKVXrY4Z1DQWW6/YFsem4F8roqvVq3Pg4+lv" />
+</div>
+
+			<!-- header  -->
+			<div class="viewFramework-topbar ng-scope">
+				<!-- topbar -->
+				<div class="aliyun-console-topbar ng-isolate-scope">
+					<div class="topbar-wrap topbar-clearfix">
+						<div class="topbar-head topbar-left">
+							<a href="#" class="topbar-logo topbar-left" style="width: 182px;  background-size: 100%;">
+                                <img src="../image/logo.png" style="height:40px">
+								<!--后台管理系统-->
+							</a>
+
+						</div>
+						<div style="margin-left: 190px; margin-right: 128px;height: 50px;line-height: 50px;" class="row">
+							<div style="color: #595757; line-height: 50px;height: 50px; padding: 0;" class="col-sm-9">
+								<span class="ng-binding " id="zhmc" style="font-size: 13px;">第十八届上海汽车工业展览会</span>
+							</div>
+							<div style="color: #ce0000; font-size: 15px; line-height: 50px;height: 50px; float: right; padding: 0; text-align: right;" class="col-sm-3"><span class="ng-binding">项目截止日期：2019-04-01</span></div>
+						</div>
+				
+
+					<div class="topbar-info topbar-right topbar-clearfix">
+
+						<div class="topbar-left ng-scope">
+							<div id='loginOut' class="dropdown topbar-info-item">
+								<a href="javascript:void(0);" class="dropdown-toggle topbar-btn">
+									<span class="ng-binding">管理员</span>
+									<span class="icon-arrow-down"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="topbar-info-btn ng-scope">
+										<a href="logout.aspx?showcode=2e52d537-a97d-4431-b376-e84e5ad7e2bc" target="_self"><span class="ng-binding">退出</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- /header  -->
+
+			<!-- 左侧一级导航栏 -->
+			<div id='sidebar-left' class="viewFramework-body viewFramework-sidebar-full">
+				<div class="viewFramework-sidebar">
+					<div id="sidebar" product-id="account" class="sidebar-content">
+						<div class="sidebar-inner ng-scope">
+							<!-- <div id='sidebar-icon' class="sidebar-fold ng-scope icon-unfold" title="收起导航栏"></div>
+-->
+							<div class="sidebar-nav">
+
+								<ul class="entrance-nav sidebar-trans" id="nav" style="height: auto;">
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="boothinfo.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">展台信息</span></span>
+										</a>
+									</li>
+									
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="ExhibitorManual.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">展商手册</span></span>
+										</a>
+									</li>
+									
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="payment.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">押金支付</span></span>
+										</a>
+									</li>
+
+									
+
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="orders.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">订单</span></span>
+										</a>
+									</li>
+									
+									<li class="nav-item ng-scope" lisub="true" status="0">
+										<a href="javascript:;" data-submenu="2" data-count="5" data-url="Admin/System/index" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-ecs"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">展台资料提交</span></span>
+										</a>
+										<ul class="ulsub">
+
+											<li>
+												<a href="#" data-url="upDesign.aspx"><span>设计上传</span></a>
+											</li>
+											<li>
+												<a href="#" ><span>电工证</span></a>
+											</li>
+											<li>
+												<a href="#" data-url="upFiles.aspx"><span>资料上传</span></a>
+											</li>
+											<li>
+												<a href="#" data-url="SpecialForm.aspx"><span>特殊表格</span></a>
+											</li>
+										</ul>
+									</li>
+									
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="Payable.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">应付账单</span></span>
+										</a>
+									</li>
+
+									
+									<li class="nav-item ng-scope">
+										<a href="javascript:;" data-submenu="4" data-count="3" data-url="Fapiaoinfo.aspx" class="ng-scope">
+											<div class="nav-icon">
+												<span class="icon-yundun"></span>
+											</div>
+											<span class="nav-title ng-binding"><span class="text">汇款底单/开票</span></span>
+										</a>
+									</li>
+									
+                                       <li class="nav-item ng-scope">
+                                    <a href="javascript:;" data-submenu="4" data-count="3" data-url="Notice.aspx" class="ng-scope">
+                                        <div class="nav-icon">
+                                            <span class="icon-yundun"></span>
+                                        </div>
+                                        <span class="nav-title ng-binding"><span class="text">公告栏</span></span>
+                                    </a>
+                                </li>
+                                       <li class="nav-item ng-scope">
+                   
+			
+			</div>
+			
+			<form style="width: 200px;height: 100px; display: block;overflow: hidden;">
+			<div>
+				<div class="form-group left">
+					<div class="col-sm-9" id="imgs" style="width: 88% !important;">
+						<c:forEach items="" var="imgs">
+							<img class="pimg" src="img/11.jpg" width="200px" height="100px" /> 　　 
+						</c:forEach>
+					</div>
+				</div>
+			</div>
+
+			<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+				<div id="innerdiv" style="position:absolute;">
+					<img id="bigimg" style="border:5px solid #fff;" src="img/1.jpg" /> 　　 
+				</div>
+			</div>
+		</form>
+
+			
+			<script>
+			    $(function () {
+
+			        ztsx();
+			    });
+
+			    function ztsx() {
+			        if ($("#zhmc").width() > 1200) {
+			            var fontsize = parseInt($("#zhmc").css("font-size").substr(0, 2));
+			            fontsize--;
+			            $("#zhmc").css("font-size", fontsize + "px");
+			            ztsx();
+			        }
+			    }
+			</script>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,168 @@
+.container_in>h2 {
+	text-align: center;
+	color: #000000;
+	font-family: "simhei";
+	font-size: 30px;
+}
+
+
+/*.container_in1{
+				margin-bottom: 20px;
+			}*/
+
+.container_in {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.container_in2 {
+	font-size: 18px;
+	color: #666666;
+}
+
+.container_in2>h2 {
+	margin: 14px 0px;
+}
+
+.data>span:nth-child(1) {
+	color: #666666 !important;
+	font-size: 18px !important;
+}
+
+.layui-form-checked span {
+	background-color: #01abc5;
+}
+
+.layui-form-checked:hover span {
+	background-color: #01abc5;
+}
+
+.layui-form-checked i,
+.layui-form-checked:hover i {
+	color: #01abc5;
+}
+
+.float {}
+
+.botm {
+	padding-bottom: 10px;
+}
+
+.cole {
+	padding-bottom: 30px;
+	padding-top: 0px;
+}
+
+.cole>h3 {
+	color: #999999;
+	/*font-family: "simhei";*/
+	font-size: 18px;
+	background: url(../images/icon1.png)no-repeat;
+	padding-left: 28px;
+}
+
+.data>span:nth-child(2) {
+	margin-left: 4px;
+}
+
+.name>span:nth-child(1) {
+	background: url(../images/icon2.png)no-repeat;
+	padding-left: 28px;
+}
+
+.come>span:nth-child(1) {
+	background: url(../images/icon4.png)no-repeat;
+	padding-left: 28px;
+}
+
+.phone>span:nth-child(1) {
+	background: url(../images/icon3.png)no-repeat;
+	padding-left: 28px;
+}
+
+.font-input>input {
+	font-size: 14px;
+	color: #666666;
+}
+
+.layui-btn {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 18px;
+	background-color: #01abc5 !important;
+	color: #fff;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 231px;
+	box-shadow: 6px 6px 14px #00ABC5;
+	border-radius: 6px;
+}
+
+.layui-form {
+	clear: both;
+}
+
+@media screen and (min-width: 1200px) {
+	.layui-container {
+		width: 1021px !important;
+	}
+	.layui-input-block {
+		margin-left: 10px;
+		min-height: 36px;
+	}
+	.btn-in {
+		margin-left: 380px;
+	}
+	.layui-input {
+		width: 182px !important;
+		margin-left: 20px !important;
+	}
+	.cole {
+		margin-top: 20px;
+	}
+}
+
+.layui-btn {
+	margin-top: 20px;
+}
+
+@media (max-width:768px) {
+	.layui-input {
+		width: 148px !important;
+	}
+	.items {
+		clear: both;
+	}
+	.btn-in {
+		margin-left: 60px !important;
+	}
+	.container_in>h2 {
+		font-size: 20px !important;
+	}
+	.container_in2>h2 {
+		font-size: 18px !important;
+		margin-top: 0px;
+		margin-left: 20px;
+	}
+	.items_in {
+		margin-top: 16px;
+	}
+	.cole {
+		padding-top: 20px !important;
+		/*margin-bottom: 0px !important;*/
+	}
+	.cole>h3 {
+		clear: both;
+	}
+	.layui-form-item {
+		/*margin-bottom: 4px !important;*/
+	}
+	.layui-btn {
+		margin-top: 20px;
+	}
+}

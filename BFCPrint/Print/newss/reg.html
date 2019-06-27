@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>网上预登记</title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <!--Bootstrap Plugins-->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+    <!-- DataTables Plugin -->
+    <link rel="stylesheet" href="../plugins/dataTables/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/dataTables/css/dataTables.jqueryui.min.css">
+    <!--SweetAlert2 plugins-->
+    <link rel="stylesheet" href="../plugins/sweetAlertT/dist/sweetalert2.min.css">
+    <!-- Plugins Progress bar -->
+    <link rel="stylesheet" href="../css/modernizr.css">
+    <link rel="stylesheet" href="../css/fontFamily.css">
+     <link href="../css/smoke.css" rel="stylesheet">
+    <!--My style-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="../css/configCssAll.css">
+    <!-- <link rel="Shortcut Icon" href="media/images/favicon.ico"> -->
+</head>
+<body>
+<nav class="navbar navbar-inverse no-print navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-ul">
+            	<li><a href="../index.html">返回首页</a></li>
+                <!--<li><a href="visitor.html">登记注册</a></li>-->
+                <!--<li class="select"><a href="reg.html">网上预登记</a></li>
+                <li><a href="reprint.html">修改重打</a></li>
+                <li><a href="../index.html">返回首页</a></li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="semiRegister.html" class="btn" id="btnPrompt"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="#" class="btn" id="printPreview"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                <li>
+                    <a class="btn smk-fullscreen" id="fullScreenP" href="#"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- IE 插件 插入打印控件 -->
+<object class="no-print" ID="jatoolsPrinter" CLASSID="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="../jatoolsPrinter/jatoolsPrinter.cab#version=8,6,0,0"></object>
+<!-- 打印操作区域 -->
+<!--胸卡隐藏域-->
+<!--<div class="card_hiden"></div>-->
+<div class="container col-sm-4 pull-left carder_box">
+    <!--胸卡-->
+    <!--<div class="badge-box center-block" id="page1">-->
+    <!--<div class="cont-box card_name">name</div>-->
+    <!--<div class="cont-box card_company">company</div>-->
+    <!--<div class="cont-box card_barcode"><div id="jQBarcode">barcode</div></div>-->
+    <!--<div class="cont-box card_category">category</div>-->
+    <!--</div>-->
+</div>
+<div class="control-box col-sm-8 pull-right ">
+    <!-- Panel white -->
+    <div class="panel panel-white" id="enter-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">预登记信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group box-search" style="margin-bottom: 20px;">
+                <label class="control-label">请输入注册号、姓名、公司</label>
+                <input type="text" name="SeaKey" class="form-control input-lg" id="searchIpt">
+                <button type="button" class="btn-search pull-right" id="btnSearch">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+                <input type="hidden" id="pageCate" type-val="preprint" />
+            </div>
+            <table class="table table-striped va-m " id="search-result" border="0" style="width: 100%">
+                <!--<caption>搜索结果：</caption>-->
+                <thead>
+                <!-- Table表头顺序不要轻易更改会影响点击数据添加到胸卡上，eq(i)实现 -->
+                <tr>
+                    <th width="50">打印</th>
+                    <th width="80">条码</th>
+                    <th width="80">姓名</th>
+                    <th width="80">职位</th>
+                    <th>公司</th>
+                    <th width="120">类别</th>
+                    <th width="60">预登记</th>
+                </tr>
+                </thead>
+            </table>
+            <br>
+            <div class="btn-box">
+                <button id="print" type="button" class="btn btn-info col-sm-12">
+                    <i class="glyphicon glyphicon-print"></i> 打印</button>
+                <button id="clearCard" class="btn btn-default col-sm-12">
+                    <i class="glyphicon glyphicon-refresh"></i> 清空</button>
+            </div>
+        </div>
+    </div>
+    <span style="font-family: FZLTCHJW-Bold;"></span>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JsBarCode -->
+<!--<script src="media/js/JsBarcode.code128.min.js"></script>-->
+<!-- JQPrint -->
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/jquery.jqprint-0.3.js"></script>
+<script src="../js/jquery-barcode.js"></script>
+<script src="../js/smoke.js"></script>
+<!--FullScreen-->
+<script src="../js/screenfull.js"></script>
+<!-- Plugins Progress bar-->
+<script src="../js/modernizr.js"></script>
+<script src="../js/configFontSize.js"></script>
+<!--SweetAlert2 plugins-->
+<script src="../plugins/sweetAlertT/libs/core.js"></script>
+<script src="../plugins/sweetAlertT/dist/sweetalert2.min.js"></script>
+<script src="../js/PublicMethod.js"></script>
+<!-- dataTables Plugin -->
+<script src="../plugins/dataTables/js/jquery.dataTables.min.js"></script>
+<!--My Script-->
+<script src="js/semiRegister.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.input-lg').focus();
+        })
+    </script>
+</body>
+</html>

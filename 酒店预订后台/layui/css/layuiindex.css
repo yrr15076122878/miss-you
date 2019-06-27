@@ -1,0 +1,206 @@
+/*容器*/
+
+.layui-container {
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+}
+
+.layui-container {
+	padding: 0 !important;
+}
+
+
+/*banner部分*/
+
+.layui-container-in>img {
+	display: block;
+	width: 100%;
+}
+
+
+/*媒体查询*/
+
+@media(max-width:768px) {
+	/*登录外层包裹*/
+	.tables-in {
+		width: 80%;
+		margin: auto;
+		box-shadow: 0px 4px 4px;
+	}
+	.layui-container {
+		padding: 0;
+		margin: 0;
+	}
+	tr {
+		display: block;
+		width: 242px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	/*登录外层包裹*/
+	.tables-in {
+		width: 40%;
+		margin: auto;
+		box-shadow: 0px 4px 4px;
+	}
+	tr {
+		display: block;
+		width: 310px;
+	}
+}
+@media screen and (min-width: 770px){
+	.tables-in {
+		width: 460px;
+		margin: auto;
+		box-shadow: 0px 4px 4px;
+	}
+}
+/*公共样式*/
+
+.tab-boder {
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+
+table {
+	margin: auto;
+	overflow: hidden;
+}
+
+.layui-btn {
+	border-radius: 6px;
+}
+
+.layui-btn {
+	line-height: 0px;
+	width: 120px;
+	margin-top: 12%;
+}
+
+.us-icon {
+	margin: 30% 0px;
+	cursor: pointer;
+}
+
+.getcodeCh {
+	padding: 10px 26px;
+}
+
+lable {
+	line-height: 44px;
+	font-size: 16px;
+	color: #aaa;
+}
+
+.tables-in {
+	overflow: hidden;
+	margin-bottom: 4%;
+}
+
+.tab>h2 {
+	text-align: center;
+	color: #00ABC5;
+	margin: 20px 0px;
+}
+
+.btn-auto {
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.tables {
+	margin: auto;
+}
+
+.addcolor {
+	background: #00ABC5 !important;
+	color: rgb(255, 255, 255);
+}
+
+input {
+	border: none;
+}
+
+.pad {
+	padding-left: 10px;
+	background: no-repeat;
+}
+input{
+	width: 298px;
+}
+input:-internal-autofill-selected{
+	padding-top: 9px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	width: 298px;
+	border-radius: 6px;
+}
+
+input:-internal-autofill-selected:hover {
+	padding-top: 9px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	width: 100%;
+	border-radius: 6px;
+}
+input {
+	padding-top: 9px;
+	padding-bottom: 12px;
+	padding-left: 8px;
+}
+
+input:-internal-autofill-selected::after{
+	padding-top: 10px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	width: 298px;
+	border-radius: 6px;
+}
+
+.getcodeCh{
+	width: 100%;
+}
+
+.tables-in {
+	overflow: hidden;
+}
+
+.tables-in-tit {
+	float: left;
+}
+
+.chock {
+	border-top: 4px solid #00bfff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background-color: #fff;
+	height: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: default;
+	width: 50%;
+}
+
+.unchock {
+	border-top: 4px solid #f1f1f1;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #f1f1f1;
+	height: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	width: 50%;
+}
+
+.form-tit {
+	margin-top: 8%;
+}

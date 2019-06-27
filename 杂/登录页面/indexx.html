@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+	<body>
+		<style>
+			.nones{
+				display: none;
+			}
+		</style>
+		<div id="badge-box">
+			<form action="" method="post" id="news">
+
+				<input type="" value="" onblur="ne()" id="news11" />
+				<span class="nones" id="phone" style="color: red;">请输入手机号码!</span>
+			</form>
+		</div>
+		<script>
+			function ne(){
+				var obj = document.getElementById("news11"); 
+				var pho = document.getElementById("phone")
+				var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+				if($("#news11").val() ==''&& !reg.test(obj.value)){
+						$("#phone").removeClass("nones");
+					}else{
+						$("#phone").addClass("nones");
+					}	
+			}
+			
+				//手机号验证
+//				function ne() {
+//					var obj = document.getElementById("news11"); 
+//					var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+//					if($("#news11").val() =='') {
+//						 $(this).prev('span').remove();
+//						var top = "200";
+//						var $Badge = "<span>test0000000</span>"
+//						$("#news").append($Badge);
+//						$("span").attr("color","red");
+//					}else(!reg.test(obj.value)){
+//						alert("请输入正确手机号")
+//						var top = "200";
+//						$(this).prev('span').remove();
+//						var $Badge = "<span style='color: red;'>请输入正确手机号</span>"
+//						$("#news").append($Badge);
+//						$("span").attr("color","red");
+//					}
+//					else if{
+//						  $(this).prev('span').remove();
+//					}
+//					else{
+//						
+//					}
+//					
+//				}
+		</script>
+	</body>
+
+</html>

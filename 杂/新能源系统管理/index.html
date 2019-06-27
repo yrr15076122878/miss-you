@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2019世界新能源汽车大会（2019 WNEVC）参会预登记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/base-home-s.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+</head>
+<body>
+<style>
+        .detail-tit {
+           
+            font-weight: bold;
+        }
+        .indent-p {
+          
+            text-indent: 32px;
+            line-height: 1.5;
+            margin-bottom: 1%;
+        }
+       .text-center{
+       	font-weight: 700;
+       }
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       .tit-in>h3{
+       	text-align: center;
+       	font-weight: 600;
+       	font-size: 20px;
+       }
+       .tit-in>a>img{
+       	display: block;
+       	width: 90%;
+       	text-align: center;
+       	margin:20% auto;
+       }
+       .fadeInUp>h2{
+       	font-size: 24px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container box-width">
+        <img src="Images/banner-s2.gif" alt="Logo" class="img-responsive center-block" />
+        <div class="content-body animated fadeInUp">
+            <hr>
+            <h2 class="text-center">新能源系统管理链接</h2>
+            <div class="row">
+				<div class="col-md-3  col-xs-6 tit-in">
+					<h3>
+						观众注册<br />
+					</h3>
+					<a href="http://reg.wnevc.com/" target="_Blank">
+					<img src="images/6.png"/>
+					</a>
+					<a href="http://reg.wnevc.com/userlist/login" target="_Blank">
+						<img src="images/2.png" alt="" />
+					</a>
+					
+				</div>
+				<div class="col-md-3  col-xs-6 tit-in">
+					<h3>会议注册</h3>
+					<a href="http://m.wnevc.com/UserAuth/EmailLoginRegister" target="_Blank">
+					<img src="images/4.png"/>
+					</a>
+					<a href="http://m.wnevc.com/UserAuth/EmailLoginRegister" target="_Blank">
+						<img src="images/5.png" alt="" />
+					</a>
+					<a href="http://m.wnevc.com/Group/Login" target="_Blank">
+					<img src="images/7.png"/>
+					</a>
+					<a href="http://reg.wnevc.com/userlist/login" target="_Blank">
+					<img src="images/2.png"/>
+					</a>
+					
+				</div>
+				<div class="col-md-3  col-xs-6 tit-in">
+					<h3>酒店预订</h3>
+					<a href="http://wnevc.com/Hotels/PhoneLogin.aspx" target="_Blank">
+					<img src="images/3.png"/>
+					</a>
+					<a href="http://reg.wnevc.com/userlist/login" target="_Blank">
+						<img src="images/2.png" alt="" />
+					</a>
+				</div>
+				<div class="col-md-3  col-xs-6 tit-in">
+					<h3>
+						官方网站
+					</h3>
+					<a href=" http://wnevc.com/" target="_Blank">
+					<img src="images/1.png"/>
+					</a>
+					<a href=" http://reg.wnevc.com/userlist/login" target="_Blank">
+						<img src="images/2.png" alt="" />
+					</a>
+				</div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script src="css/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var obj = $('#sticky');
+            var offset = obj.offset();
+            var topOffset = offset.top;
+            var leftOffset = offset.left;
+            var marginTop = obj.css("marginTop");
+            var marginLeft = obj.css("marginLeft");
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop >= topOffset) {
+                    obj.css({
+                        marginTop: 0,
+                        marginLeft: leftOffset,
+                        position: 'fixed',
+                    });
+                }
+                if (scrollTop < topOffset) {
+                    obj.css({
+                        marginTop: marginTop,
+                        marginLeft: marginLeft,
+                        position: 'relative',
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</body>
+</html>

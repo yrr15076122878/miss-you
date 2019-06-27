@@ -1,0 +1,190 @@
+<div class="clearfix" id="printReady">
+	<style type="text/css">
+.table {
+            width: 100%;
+            margin-bottom: 20px;
+font-family: Arial,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+        }
+        .table-bordered {
+            border: 1px solid #dddddd;
+        }
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            line-height: 20px;
+            padding: 5px;
+            vertical-align: top;
+            height: 20px;
+            border: 1px solid #dddddd;
+        }
+        .gray-bg {
+            background: #e8e8e8; color: #222;
+        }
+        .fontFamily {
+            font-family: Arial, ËÎÌå !important;
+        }
+        .h3Title {font-family: Î¢ÈíÑÅºÚ;text-align: center;background-color: #2DBBED;color: #ffffff;margin: 0;padding: 7px 0;font-size: 20px;}
+        @media print {
+            @page  {
+                size: A4;
+                margin:0;
+                padding:0;
+            }
+           .seacceTableMax{
+               font-size: 12px;
+           }
+           .h3Title {background-color: #0c89e6 !important;
+             -webkit-print-color-adjust: exact;color: #ffffff !important;
+	   }
+
+        }
+        .seacceTable {display: none;}
+        @media screen and (max-width:768px) {
+            .seacceTableMax {display: none!important;}
+            .seacceTable {display: table!important;}
+.container {padding:0 !important;}
+        }
+        h3, .h3 {
+            font-size: 24px;
+        }
+
+        h1, .h1, h2, .h2, h3, .h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+        .seacceTableMax tr td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .textWL_Cate2 {
+            text-align: left !important;
+        }#print_div {
+            max-width: 800px !important;
+        }
+        #table-w {
+            max-width: 800px !important;
+        }	</style>
+	<table class="col-md-12 col-xs-12" id="table-w" style="margin: 0 auto;padding:0 0 20px;border: 1px solid #cccccc;">
+		<tbody>
+			<tr>
+				<td>
+					<img alt="" src="/Content/Images/banner.jpg" style="width: 100%;/* height: 508px; */" />
+					<h3 class="h3Title">
+						<strong>Confirmation Letter</strong></h3>
+					<table style="padding: 0 15px;width: 100%;">
+						<tbody>
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="3" style="width:100%;">
+										<tbody>
+											<tr>
+												<td style="width: 48px;white-space: nowrap">
+													Registered Name</td>
+												<td style="width: 16px;">
+													£º</td>
+												<td style="    white-space: nowrap;">
+													$Title$UserName</td>
+												<td style="width: 68px;white-space: nowrap">
+													Conference Category</td>
+												<td style="width: 16px;">
+													£º</td>
+												<td style="width: 43%;">
+													$ConferenceCategory</td>
+											</tr>
+											<tr>
+												<td style="width:55px;white-space: nowrap" colspan="1">
+													Registered Number
+												</td>
+												<td style="width: 16px;" colspan="1">
+													£º
+												</td>
+												<td colspan="1">
+													$SAERegistrationNumber
+												</td>
+												<!--<td>
+													Order Time</td>
+												<td style="width: 16px;">
+													£º</td>
+												<td style="white-space: nowrap">
+													$OrderTime</td>-->
+											</tr>
+											<tr>
+												<td colspan="3" rowspan="2">
+													<img src="http://116.62.69.139:8066//BarCode/$SAERegistrationNumber.gif" style="width: 160px; margin-top: 6px; margin-bottom: 6px;" /></td>
+												<td style="vertical-align:top;">
+													&nbsp;</td>
+												<td style="width: 16px;vertical-align:top;">
+													&nbsp;</td>
+												<td style="vertical-align:top;">
+													&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+													&nbsp;</td>
+												<td style="width: 16px;">
+													&nbsp;</td>
+												<td>
+													&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>
+										$dines</p>
+									<p>
+										Already Paid:$PaymentAmount</p>
+									<p>
+										<strong>Event name:</strong>the second car-only travel sharing conference (SMC) in 2019<br />
+										<strong>Sponsor:</strong></p>
+									<ul>
+										<li>
+											China automobile engineering association</li>
+										<li>
+											China transportation association</li>
+									</ul>
+									<strong>Organizer:</strong>
+									<ul>
+										<li>
+											name government of huadu district, guangzhou city</li>
+									</ul>
+									<strong>Date:</strong>November 13-15, 2019<br />
+									<strong>Location:</strong>Huadu Rongchuang Wanda Wenhua Hotel, Guangzhou, China<br />
+									<strong>Website:</strong><a href="http://wnevc.com">www.issmc.org.cn</a>
+									<p>
+										<span style="font-size:16px;"><strong>Transportation</strong><strong>£º</strong></span><br />
+										<strong><span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Microsoft YaHei&quot;, &quot;\\5FAEÈíÑÅºÚ&quot;, &quot;\\5B8BÌå&quot;, &quot;Malgun Gothic&quot;, Meiryo, sans-serif; font-size: 14px; font-variant-numeric: normal; font-variant-east-asian: normal; line-height: 26px; text-align: justify; background-color: rgb(247, 248, 250);">Wanda Vista, Huadu, Guangzhou, China</span></strong></p>
+									<p>
+										<span style="color: rgb(51, 51, 51); font-family: Arial, &quot;Microsoft YaHei&quot;, &quot;\\5FAEÈíÑÅºÚ&quot;, &quot;\\5B8BÌå&quot;, &quot;Malgun Gothic&quot;, Meiryo, sans-serif; font-size: 14px; font-variant-numeric: normal; font-variant-east-asian: normal; line-height: 26px; text-align: justify; background-color: rgb(247, 248, 250);">&nbsp;30mins away from Guangzhou Baiyun Airport to Wanda Vista</span><br />
+										<span style="font-size: 16px;">&nbsp;15mins away from North Rail Station of Guangzhou to Wanda Vista</span></p>
+									<p>
+										&nbsp;</p>
+									<p align="left">
+										<strong>Contact us</strong></p>
+									<p align="left">
+										Congress Speech<br />
+										<strong>Mr Jianshan FENG</strong><br />
+										China SAE<br />
+										Cell£º186 1298 2461<br />
+										Email£º<a href="mailto:fengjs@sae-china.org">fengjs@sae-china.org</a></p>
+									<p align="left">
+										<strong>Ms. Qi SONG</strong><br />
+										ITS China<br />
+										Cell£º133 8108 1339<br />
+										Emial£º<a href="mailto:fengjs@sae-china.org">songqi@itschina.org</a></p>
+									<p align="left">
+										<strong>We are looking forward to seeing you.</strong><br />
+										<strong>CHINA-SMC TEAM</strong></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div align="center" id="print_div" style="margin:0 auto;padding:15px;background: #fff;color: #333;border-radius: 4px;font-size:16px;line-height:1.8em;">
+	<button class="submitBtn" onclick="javascript:void(printSpecial())" style="width:100%;margin:0 auto 20px 0;cursor:pointer;padding: 6px 12px;border-radius:4px;outline: none;border: none;color:#ffffff;background-color: #2DBBED;">Print</button></div>

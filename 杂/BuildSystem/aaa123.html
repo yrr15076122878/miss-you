@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="plugin/bootstrap/css/_bootstrap.css">
+    <link rel="stylesheet" href="Application/Default/Css/i-css.css">
+</head>
+<body>
+<input type="text" id="date1">
+<input type="text" id="date2">
+
+
+
+
+<script type="text/javascript" src="Public/Js/jquery-1.9.1.min.js"></script>
+<script src="plugin/layui/layui.all.js"></script>
+<script>
+    $(function(){
+        var endObj = "";
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#date1' //指定元素
+                ,min:"1900-01-01"
+                //,max: 0
+                //,value:"2017-12-19"
+                ,theme: '#393D49'//主题
+                ,done: function(value, date, endDate){//日期选择完成后的回调
+                    $('#date2').val(value);
+                    var valueArr = value.split("-");
+                    if(endObj){
+                        var min = endObj.config.min;
+                        min.year = parseInt(valueArr[0]);
+                        min.month = parseInt(valueArr[1])-1;
+                        min.date = parseInt(valueArr[2]);
+                    }
+
+                }
+            });
+        });
+
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+            //执行一个laydate实例
+            endObj = laydate.render({
+                elem: '#date2' //指定元素
+                ,min:"1900-01-01"
+                ,theme: '#393D49'//主题
+                ,done: function(value, date, endDate){//日期选择完成后的回调
+
+                }
+            });
+        });
+
+    });
+
+</script>
+</body>
+</html>
